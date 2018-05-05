@@ -1,7 +1,7 @@
 apply plugin: 'war'
 
 dependencies {
-    compile project(':movie-core')
+    compile project(':donation-core')
 
     compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
 
