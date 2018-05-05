@@ -6,9 +6,13 @@ dependencies {
 
     compile group: 'org.hibernate', name: 'hibernate-core', version: "$hibernateVersion"
 
-    compile group: 'org.postgresql', name: 'postgresql', version: "$postgresqlVersion"
+    //compile group: 'org.postgresql', name: 'postgresql', version: "$postgresqlVersion"
 //    compile group: 'postgresql', name: 'postgresql', version: "$jdbcpostgreSqlVersion"
     //---
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+
 
     compile group: 'org.springframework', name: 'spring-jdbc', version: "$springVersion"
 //    compile group: 'org.postgresql', name: 'postgresql', version: "$postgresqlVersion"
