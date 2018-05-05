@@ -1,0 +1,41 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : ro.ubb : donation-web-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="donation-web_main/web/Web Gradle : donation-web-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="donation-web_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/donation-web/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.0.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:5.0.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-dbcp2:2.2.0" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.10.0" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.8.0-alpha2" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-1.2-api:2.10.0" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.10.0" />
+          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.16.20" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.0.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:5.0.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.0.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.0.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.0.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-pool2:2.5.0" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.10.0" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.0.3.RELEASE" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
