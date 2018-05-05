@@ -1,4 +1,0 @@
-rootProject.name = 'blood-donation'
-include 'donation-core'
-include 'donation-web'
-
