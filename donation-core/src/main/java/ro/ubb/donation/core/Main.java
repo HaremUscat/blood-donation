@@ -7,17 +7,13 @@ import ro.ubb.donation.core.repository.RoleRepository;
 import ro.ubb.donation.core.repository.UserRepository;
 import ro.ubb.donation.core.service.RoleService;
 import ro.ubb.donation.core.service.UserService;
-import ro.ubb.donation.core.service.UserServiceImpl;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args){
         AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext("ro.ubb.donation.core.config");
+                new AnnotationConfigApplicationContext("ro.ubb.donation.core");
 
         RoleRepository roleRepository = context.getBean(RoleRepository.class);
 
@@ -42,12 +38,13 @@ public class Main {
         userRepository.save(u1);
         userRepository.save(u2);
 
-        userService.deleteUser(1);
-//
-//        List<User> list=userRepository.findAll();
-//        for (User u:list){
-//            System.out.println(u);
-//        }
+        userService.deleteUser(2);
+        roleService.deleteRole(1);
+
+        List<User> list=userRepository.findAll();
+        for (User u:list){
+            System.out.println(u);
+        }
 
         System.out.println("------------------------------------");
         List<Role> list2=roleRepository.findAll();

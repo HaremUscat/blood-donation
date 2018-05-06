@@ -25,7 +25,7 @@ public class User {
     @Column(name = "logged", nullable = false)
     private boolean logged;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name="role_id")
     private Role role;
 

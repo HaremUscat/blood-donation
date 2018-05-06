@@ -49,15 +49,15 @@ public class JpaConfig {
      * @return
      */
 
-    @Bean
-    public UserService userService(){
-        return new UserServiceImpl();
-    }
-
-    @Bean
-    public RoleService roleService(){
-        return new RoleServiceImpl();
-    }
+//    @Bean
+//    public UserService userService(){
+//        return new UserServiceImpl();
+//    }
+//
+//    @Bean
+//    public RoleService roleService(){
+//        return new RoleServiceImpl();
+//    }
 
     @Bean
     public DataSource dataSource() {
