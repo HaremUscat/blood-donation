@@ -63,7 +63,11 @@ class Register extends React.Component {
             );
         } else {
             return (
-                <h3>You are already logged in!</h3>
+                <div className="container" style={{minHeight: '100vh'}}>
+                    <div className="row align-items-center justify-content-center" style={{minHeight: '100vh'}}>
+                        <h3>You are already logged in!</h3>
+                    </div>
+                </div>
             );
         }
     }
