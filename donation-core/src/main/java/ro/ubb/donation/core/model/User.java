@@ -5,7 +5,8 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user",
+        uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -25,10 +26,13 @@ public class User {
     @Column(name = "logged", nullable = false)
     private boolean logged;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="role_id")
     private Role role;
 
+    public void removeRole(){
+        this.role = null;
+    }
 
     @Override
     public String toString() {

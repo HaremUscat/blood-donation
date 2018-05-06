@@ -37,7 +37,7 @@ public class JpaConfig {
     private String username = "root";
 
     //@Value("${db.password}")
-    private String password = "admin0";
+    private String password = "pass";
 
     //@Value("${db.generateDDL}")
     private Boolean generateDDL=true;

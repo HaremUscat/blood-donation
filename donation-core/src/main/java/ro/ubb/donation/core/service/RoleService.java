@@ -14,8 +14,12 @@ public interface RoleService {
 
     Role updateRole(int roleId, String description, Set<Integer> users);
 
-    Role createRole(int roleId, String description);
+    Role createRole(String description);
 
     void deleteRole(int roleId);
+
+    Optional<Role> getRoleByDescription(String description);
+
+    Optional<String> getRoleDescriptionById(Integer roleId);
 
 }

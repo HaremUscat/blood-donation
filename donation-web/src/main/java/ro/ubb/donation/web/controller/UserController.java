@@ -3,16 +3,15 @@ package ro.ubb.donation.web.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ro.ubb.donation.core.model.Role;
 import ro.ubb.donation.core.model.User;
 import ro.ubb.donation.core.service.RoleService;
 import ro.ubb.donation.core.service.UserService;
 import ro.ubb.donation.web.converter.UserConverter;
 import ro.ubb.donation.web.dto.UserDto;
+import ro.ubb.donation.web.requests.LoginForm;
+import ro.ubb.donation.web.response.AuthenticationResponse;
 
 import java.util.HashSet;
 import java.util.List;
@@ -46,19 +45,85 @@ public class UserController {
         return userDtos;
     }
 
-    @RequestMapping(value = "/users", method = RequestMethod.POST)
-    public UserDto createUser(
-            @RequestBody final UserDto userDto) {
-        log.trace("createUser: userDto={}", userDto);
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public AuthenticationResponse loginUser(
+            @RequestHeader String username) {
 
-        Optional<Role> role = roleService.findRole(1);
+        Optional<User> userOptional = userService.getUser(username);
 
-        User user = userService.createUser(userDto.getUsername(),userDto.getPassword(), true, role.get());
+        if(userOptional.isPresent()){
+            User user = userOptional.get();
+            Optional<String> role = roleService.getRoleDescriptionById(user.getRole().getId());
 
-        UserDto result = userConverter.convertModelToDto(user);
+            AuthenticationResponse authenticationResponse = AuthenticationResponse.builder()
+                    .status("Success")
+                    .userDto(userConverter.convertModelToDto(user))
+                    .message("User found!")
+                    .role(role.orElse(null))
+                    .build();
+            return authenticationResponse;
+        }
+        return AuthenticationResponse.builder()
+                .status("failure")
+                .message("No registered user with this username")
+                .role("")
+                .userDto(null).build();
+    }
 
-        log.trace("createUser: result={}", result);
+    @RequestMapping(value = "/user", method = RequestMethod.POST)
+    public AuthenticationResponse createUser(
+            @RequestBody final LoginForm loginForm) {
 
-        return result;
+        Optional<User> userOptional = userService.getUser(loginForm.getUsername());
+
+        if(userOptional.isPresent()) {
+            return AuthenticationResponse.builder()
+                    .status("failure")
+                    .userDto(null)
+                    .message("There already exists a user with this username.")
+                    .role("")
+                    .build();
+        }
+
+        Optional<Role> role = roleService.getRoleByDescription("Donor");
+        User user = userService.createUser(loginForm.getUsername(), loginForm.getPassword(), true, role.orElse(null));
+
+        UserDto userDto1 = userConverter.convertModelToDto(user);
+
+        log.trace("createUser: result={}", userDto1);
+
+        return AuthenticationResponse.builder()
+                .status("success")
+                .role("Donor")
+                .userDto(userDto1)
+                .message("The user was successfully created")
+                .build();
+    }
+
+    @RequestMapping(value = "/user", method = RequestMethod.PUT)
+    public AuthenticationResponse updateUserState(
+        @RequestBody UserDto userDto){
+
+        Optional<User> user = userService.getUser(userDto.getUsername());
+
+        if(user.isPresent()){
+            User updatedUser = userService.updateUser(user.get().getId(),userDto.getUsername(),
+                    userDto.getPassword(),userDto.isLogged(),user.get().getRole());
+
+            return AuthenticationResponse.builder()
+                    .status("Success")
+                    .role(roleService.getRoleDescriptionById(user.get().getRole().getId()).orElse(null))
+                    .message("The user was successfully updated")
+                    .userDto(userConverter.convertModelToDto(updatedUser))
+                    .build();
+        }
+
+        return AuthenticationResponse.builder()
+                .status("failure")
+                .role("")
+                .userDto(null)
+                .message("The user doesn't exist")
+                .build();
+
     }
 }

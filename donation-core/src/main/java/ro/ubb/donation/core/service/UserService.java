@@ -16,4 +16,6 @@ public interface UserService {
     User createUser(String username, String password, boolean logged, Role role);
 
     void deleteUser(int userId);
+
+    Optional<User> getUser(String username);
 }

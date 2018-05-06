@@ -7,10 +7,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ro.ubb.donation.core.model.Role;
 import ro.ubb.donation.core.model.User;
+import ro.ubb.donation.core.repository.RoleRepository;
 import ro.ubb.donation.core.repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -18,6 +20,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private RoleRepository roleRepository;
 
     @Override
     public Optional<User> findUser(int userId) {
@@ -58,6 +63,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public User createUser(String username, String password, boolean logged, Role role) {
         log.trace("createUser: username={}, password={}, logged={}, role={}",
                 username, password, logged, role);
@@ -84,4 +90,16 @@ public class UserServiceImpl implements UserService {
 
         log.trace("deleteUser - method end");
     }
+
+    public Optional<User> getUser(String username){
+        List<User> users = userRepository.findAll();
+        users = users.stream()
+                .filter(u -> username.equals(u.getUsername())).collect(Collectors.toList());
+
+        if(users.isEmpty())
+            return Optional.empty();
+
+        return Optional.ofNullable(users.get(0));
+    }
+
 }

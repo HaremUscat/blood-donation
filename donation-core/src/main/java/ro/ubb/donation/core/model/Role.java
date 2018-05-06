@@ -21,11 +21,16 @@ public class Role{
     @Column(name = "description", nullable = false)
     private String description;
 
-    @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "role", fetch = FetchType.EAGER)
     private Set<User> users = new HashSet<>();
 
     public void addUser(User user) {
         users.add(user);
+        user.setRole(this);
+    }
+
+    public void removeUser(User user){
+        users.remove(user);
     }
 
     @Override

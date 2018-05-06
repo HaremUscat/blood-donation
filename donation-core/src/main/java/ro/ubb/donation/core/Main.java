@@ -15,44 +15,29 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("ro.ubb.donation.core");
 
-        RoleRepository roleRepository = context.getBean(RoleRepository.class);
-
-        Role r1 = Role.builder().description("Donor").build();
-        Role r2 = Role.builder().description("Doctor").build();
-
-        UserRepository userRepository = context.getBean(UserRepository.class);
-
-        User u1 = User.builder().logged(false).username("mariaungur").password("pass").build();
-        User u2 = User.builder().logged(false).username("marialazar").password("pass").build();
-
-        UserService userService= context.getBean(UserService.class);
-
         RoleService roleService = context.getBean(RoleService.class);
+        roleService.createRole("Donor");
+        roleService.createRole("Doctor");
+        roleService.createRole("Hospital Personnel");
 
-        roleRepository.save(r1);
-        roleRepository.save(r2);
+        UserService userService = context.getBean(UserService.class);
+        userService.createUser("mariaungur1","pass",true,roleService.getRoleByDescription("Donor").orElse(null));
+        userService.createUser("marialazar1","pass",false,roleService.getRoleByDescription("Donor").orElse(null));
+        userService.createUser("nicoletaungur1","pass",true,roleService.getRoleByDescription("Doctor").orElse(null));
+        userService.createUser("mariaungur2","pass",true,roleService.getRoleByDescription("Hospital Personnel").orElse(null));
+        userService.createUser("marialazar2","pass",false,roleService.getRoleByDescription("Hospital Personnel").orElse(null));
+        userService.createUser("nicoletaungur2","pass",true,roleService.getRoleByDescription("Hospital Personnel").orElse(null));
+//        userService.deleteUser(1);
+//        userService.deleteUser(4);
+//        roleService.deleteRole(3);
 
-        u1.setRole(r1);
-        u2.setRole(r2);
+//        List<Role> roles = roleService.findAll();
+//        roles.forEach(System.out::println);
+//
+//        List<User> users = userService.findAll();
+//        users.forEach(System.out::println);
+//        System.out.print("Bye");
 
-        userRepository.save(u1);
-        userRepository.save(u2);
-
-        userService.deleteUser(2);
-        roleService.deleteRole(1);
-
-        List<User> list=userRepository.findAll();
-        for (User u:list){
-            System.out.println(u);
-        }
-
-        System.out.println("------------------------------------");
-        List<Role> list2=roleRepository.findAll();
-        for (Role u:list2){
-            System.out.println(u);
-        }
-
-        System.out.print("Bye");
 
     }
 }

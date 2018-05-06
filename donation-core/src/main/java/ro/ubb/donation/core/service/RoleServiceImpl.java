@@ -50,7 +50,7 @@ public class RoleServiceImpl implements RoleService {
             r.setUsers(new HashSet<>());
 
             //luam din repo userii
-            List<User> userList=userRepository.findAllById(users);
+            List<User> userList = userRepository.findAllById(users);
 
             userList.forEach(r::addUser);
 
@@ -63,8 +63,8 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     @Transactional
-    public Role createRole(int roleId, String description) {
-        log.trace("createRole: description={}",description);
+    public Role createRole(String description) {
+        log.trace("createRole: description={}", description);
 
         Role role = Role.builder()
                 .description(description)
@@ -81,9 +81,24 @@ public class RoleServiceImpl implements RoleService {
     public void deleteRole(int roleId) {
         log.trace("deleteRole: roleId={}", roleId);
 
+        roleRepository.findById(roleId).ifPresent(r -> {
+            r.getUsers().forEach(User::removeRole);
+        });
         roleRepository.deleteById(roleId);
 
         log.trace("deleteRole - method end");
     }
 
+    @Override
+    public Optional<Role> getRoleByDescription(String description) {
+
+        List<Role> roles = roleRepository.findAll();
+        return roles.stream().filter(r -> description.equals(r.getDescription())).findFirst();
+    }
+
+    @Override
+    public Optional<String> getRoleDescriptionById(Integer roleId) {
+        Optional<Role> role = roleRepository.findById(roleId);
+        return role.map(Role::getDescription);
+    }
 }

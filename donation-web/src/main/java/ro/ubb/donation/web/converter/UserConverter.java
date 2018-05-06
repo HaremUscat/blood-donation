@@ -8,11 +8,19 @@ import ro.ubb.donation.web.dto.UserDto;
 public class UserConverter extends AbstractConverter<User, UserDto> implements Converter<User, UserDto> {
     @Override
     public User convertDtoToModel(UserDto userDto) {
-        return null;
+        return User.builder()
+                .username(userDto.getUsername())
+                .password(userDto.getPassword())
+                .logged(userDto.isLogged())
+                .build();
     }
 
     @Override
     public UserDto convertModelToDto(User user) {
-        return null;
+        return UserDto.builder()
+                .username(user.getUsername())
+                .password(user.getPassword())
+                .logged(user.isLogged())
+                .build();
     }
 }
