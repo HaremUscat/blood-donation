@@ -45,11 +45,11 @@ public class UserController {
         return userDtos;
     }
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public AuthenticationResponse loginUser(
-            @RequestHeader String username) {
+            @RequestBody LoginForm loginForm) {
 
-        Optional<User> userOptional = userService.getUser(username);
+        Optional<User> userOptional = userService.getUser(loginForm.getUsername());
 
         if(userOptional.isPresent()){
             User user = userOptional.get();
@@ -57,17 +57,76 @@ public class UserController {
 
             AuthenticationResponse authenticationResponse = AuthenticationResponse.builder()
                     .status("Success")
-                    .userDto(userConverter.convertModelToDto(user))
+                    .userDto(null)
                     .message("User found!")
                     .role(role.orElse(null))
+                    .isError(false)
                     .build();
             return authenticationResponse;
         }
         return AuthenticationResponse.builder()
-                .status("failure")
+                .status("error")
                 .message("No registered user with this username")
                 .role("")
-                .userDto(null).build();
+                .userDto(null)
+                .isError(true)
+                .build();
+    }
+
+    @RequestMapping(value = "/users/{username}", method = RequestMethod.GET)
+    public AuthenticationResponse logAndGetUser(
+            @PathVariable String username) {
+
+        Optional<User> user = userService.getUser(username);
+
+        if(user.isPresent()){
+            User updatedUser = userService.updateUser(user.get().getId(),user.get().getUsername(),
+                    user.get().getPassword(),true,user.get().getRole());
+
+            return AuthenticationResponse.builder()
+                    .status("Success")
+                    .role(roleService.getRoleDescriptionById(user.get().getRole().getId()).orElse(null))
+                    .message("The user is now logged")
+                    .isError(false)
+                    .userDto(userConverter.convertModelToDto(updatedUser))
+                    .build();
+        }
+
+        return AuthenticationResponse.builder()
+                .status("failure")
+                .role("")
+                .userDto(null)
+                .message("The user doesn't exist")
+                .isError(true)
+                .build();
+
+    }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.POST)
+    public AuthenticationResponse logoutUser(
+            @RequestBody LoginForm loginForm) {
+
+        Optional<User> user = userService.getUser(loginForm.getUsername());
+
+        if(user.isPresent()){
+            User updatedUser = userService.updateUser(user.get().getId(),user.get().getUsername(),
+                    user.get().getPassword(),false,user.get().getRole());
+
+            return AuthenticationResponse.builder()
+                    .status("Success")
+                    .message("The user is now logged out")
+                    .isError(false)
+                    .build();
+        }
+
+        return AuthenticationResponse.builder()
+                .status("failure")
+                .role("")
+                .userDto(null)
+                .message("The user doesn't exist")
+                .isError(true)
+                .build();
+
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)

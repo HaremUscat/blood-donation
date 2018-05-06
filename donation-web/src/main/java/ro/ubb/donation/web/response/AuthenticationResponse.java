@@ -10,6 +10,7 @@ import ro.ubb.donation.web.dto.UserDto;
 @Builder
 public class AuthenticationResponse {
     private String status;
+    private Boolean isError;
     private UserDto userDto;
     private String role;
     private String message;
