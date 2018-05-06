@@ -18,7 +18,7 @@ class Login extends React.Component {
     this.handleChangedUsername = this.handleChangedUsername.bind(this);
     this.handleChangedPassword = this.handleChangedPassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    //this.login = authApi.login.bind(this);
+    this.login = authApi.login.bind(this);
   }
 
   handleChangedUsername(event) {
@@ -30,8 +30,8 @@ class Login extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    //this.login();
+      event.preventDefault();
+      this.login();
   }
 
   render() {

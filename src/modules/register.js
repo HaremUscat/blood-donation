@@ -19,7 +19,7 @@ class Register extends React.Component {
         this.handleChangedEmail = this.handleChangedEmail.bind(this);
         this.handleChangedPassword = this.handleChangedPassword.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        //this.register = usersApi.register.bind(this);
+        this.register = usersApi.register.bind(this);
     }
 
     handleChangedUsername(event) {
@@ -36,7 +36,7 @@ class Register extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        //this.register();
+        this.register();
     }
 
     render() {
