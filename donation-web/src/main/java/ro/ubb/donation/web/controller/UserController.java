@@ -129,7 +129,7 @@ public class UserController {
 
     }
 
-    @RequestMapping(value = "/user", method = RequestMethod.POST)
+    @RequestMapping(value = "/users", method = RequestMethod.POST)
     public AuthenticationResponse createUser(
             @RequestBody final LoginForm loginForm) {
 
@@ -145,7 +145,7 @@ public class UserController {
         }
 
         Optional<Role> role = roleService.getRoleByDescription("Donor");
-        User user = userService.createUser(loginForm.getUsername(), loginForm.getPassword(), true, role.orElse(null));
+        User user = userService.createUser(loginForm.getUsername(), loginForm.getPassword(), false, role.orElse(null));
 
         UserDto userDto1 = userConverter.convertModelToDto(user);
 
