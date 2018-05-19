@@ -5,7 +5,7 @@ function redirectToPrevious(p) {
         localStorage.removeItem("prevComponentPath");
         this.props.history.push(p);
     } else {
-        this.props.history.push('/user-dashboard');   //TODO: add path of page which appears after login
+        this.props.history.push('/user-dashboard');
     }
 }
 

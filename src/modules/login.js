@@ -19,6 +19,7 @@ class Login extends React.Component {
     this.handleChangedPassword = this.handleChangedPassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.login = authApi.login.bind(this);
+    localStorage.setItem("loggedInUser", "userfoo");  //TODO: remove this! for testing purposes only!
   }
 
   handleChangedUsername(event) {
@@ -53,7 +54,7 @@ class Login extends React.Component {
                 <br/>
               </div>
 
-              <BlockButton color='#ec0a0b' onClick={this.handleSubmit}>Log In</BlockButton>
+              <BlockButton color='#ec0a0b' onClick={this.handleSubmit} fontFamily="Questrial">LOG IN</BlockButton>
             </div>
           </div>
         </div>

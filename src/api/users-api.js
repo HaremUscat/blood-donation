@@ -13,7 +13,7 @@ function register() {
                                     localStorage.setItem("loggedInUser", this.state.username);
                                     //localStorage.setItem("loggedInUserEmail", result.data.rows[0].email);
 
-                                    this.props.history.push('/user-dashboard');    //TODO: add path of page which appears after login
+                                    this.props.history.push('/user-dashboard');
                                 })
                                 .catch(err => { alert(err); });
                         } else {
@@ -30,4 +30,21 @@ function register() {
         });
 }
 
-module.exports = {register};
+function submitMyInfo(myInfo) {
+    return axios.post('/my-info/'+localStorage.getItem("loggedInUser"), myInfo)
+        .then((response) => {
+            if (response.data.isError) {
+                alert(response.data.message);       //TODO: get rid of alerts!
+            }
+        })
+        .catch(function(err) {
+            alert(err);
+        });
+}
+
+function getMyInfo() {
+    //return {"firstName": "Ada", "lastName": "Simion", "allergies": "yes", "diseases": "no", "chronicIllness": "no"};  //TODO: remove this test
+    return axios.get('/my-info/'+localStorage.getItem("loggedInUser"));
+}
+
+module.exports = {register, submitMyInfo, getMyInfo};

@@ -14,10 +14,10 @@ class UserOrButtons extends React.Component {
             return (
                 <ul className="navbar-user navbar-nav my-navbar-list">
                     <li className="nav-item navbar-visible-link">
-                        <a className="nav-link" href="/login">Log In</a>
+                        <a className="nav-link" href="/login">LOG IN</a>
                     </li>
                     <li className="nav-item navbar-visible-link">
-                        <a className="nav-link" href="/register">Sign Up</a>
+                        <a className="nav-link" href="/register">SIGN UP</a>
                     </li>
                 </ul>
             );
@@ -26,20 +26,11 @@ class UserOrButtons extends React.Component {
                 <ul className="navbar-user navbar-nav my-navbar-list">
                     <li className="nav-item dropdown navbar-visible-profile-link">
                         <a className="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {localStorage.loggedInUserName}
+                            {localStorage.loggedInUser.toUpperCase()}
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a className="dropdown-item" href="/logout">Log Out</a>
                         </div>
-                    </li>
-
-                    <li className="nav-item">
-                        <a className="nav-link" href="">
-                            <img
-                                src={"/images/user-icon.svg"}
-                                alt="Avatar" id="profile-img"
-                            />
-                        </a>
                     </li>
                 </ul>
             );

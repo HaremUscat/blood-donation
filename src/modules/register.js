@@ -56,7 +56,7 @@ class Register extends React.Component {
                             <br/>
                             <br/>
 
-                            <BlockButton color='#ec0a0b' onClick={this.handleSubmit}>Register</BlockButton>
+                            <BlockButton color='#ec0a0b' onClick={this.handleSubmit} fontFamily="Questrial">REGISTER</BlockButton>
                         </div>
                     </div>
                 </div>
