@@ -27,10 +27,25 @@ public class User {
     private boolean logged;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="role_id")
+    @JoinColumn(name = "role_id")
     private Role role;
 
-    public void removeRole(){
+    @OneToOne
+    @JoinColumn(name="address_id")
+    private Address address;
+
+    @OneToOne
+    @JoinColumn(name="profile_id")
+    private Profile profile;
+
+    public User(String username, String password, boolean logged, Role role) {
+        this.username = username;
+        this.password = password;
+        this.logged = logged;
+        this.role = role;
+    }
+
+    public void removeRole() {
         this.role = null;
     }
 
@@ -40,7 +55,9 @@ public class User {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", logged=" + logged+
+                ", logged=" + logged +
+                ", address=" + address +
+                ", profile=" + profile +
                 '}';
     }
 }

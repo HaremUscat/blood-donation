@@ -81,7 +81,7 @@ public class UserController {
 
         if(user.isPresent()){
             User updatedUser = userService.updateUser(user.get().getId(),user.get().getUsername(),
-                    user.get().getPassword(),true,user.get().getRole());
+                    user.get().getPassword(),true,user.get().getRole(), user.get().getAddress(), user.get().getProfile());
 
             return AuthenticationResponse.builder()
                     .status("Success")
@@ -110,7 +110,7 @@ public class UserController {
 
         if(user.isPresent()){
             User updatedUser = userService.updateUser(user.get().getId(),user.get().getUsername(),
-                    user.get().getPassword(),false,user.get().getRole());
+                    user.get().getPassword(),false,user.get().getRole(), user.get().getAddress(), user.get().getProfile());
 
             return AuthenticationResponse.builder()
                     .status("Success")
@@ -167,7 +167,7 @@ public class UserController {
 
         if(user.isPresent()){
             User updatedUser = userService.updateUser(user.get().getId(),userDto.getUsername(),
-                    userDto.getPassword(),userDto.isLogged(),user.get().getRole());
+                    userDto.getPassword(),userDto.isLogged(),user.get().getRole(), user.get().getAddress(), user.get().getProfile());
 
             return AuthenticationResponse.builder()
                     .status("Success")

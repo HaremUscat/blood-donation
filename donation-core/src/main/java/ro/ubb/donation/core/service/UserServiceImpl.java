@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ro.ubb.donation.core.model.Address;
+import ro.ubb.donation.core.model.Profile;
 import ro.ubb.donation.core.model.Role;
 import ro.ubb.donation.core.model.User;
 import ro.ubb.donation.core.repository.RoleRepository;
@@ -45,8 +47,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public User updateUser(int userId, String username, String password, boolean logged, Role role) {
-        log.trace("updateUser: username={}, password={}, logged={}, role={}", username, password, logged, role);
+    public User updateUser(int userId, String username, String password, boolean logged, Role role, Address address, Profile profile) {
+        log.trace("updateUser: username={}, password={}, address, profile", username, password, logged, role, address, profile);
 
         Optional<User> user = userRepository.findById(userId);
 
@@ -55,6 +57,8 @@ public class UserServiceImpl implements UserService {
             u.setPassword(password);
             u.setLogged(logged);
             u.setRole(role);
+            u.setAddress(address);
+            u.setProfile(profile);
         });
 
         log.trace("updateUser: user={}", user.get());
@@ -75,7 +79,6 @@ public class UserServiceImpl implements UserService {
                 .role(role)
                 .build();
         user = userRepository.save(user);
-
         log.trace("createUser: user={}", user);
 
         return user;
