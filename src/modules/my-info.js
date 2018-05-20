@@ -117,7 +117,7 @@ class MyInfo extends React.Component {
     render() {
         return (
             <div>
-                <Navbar extraLinks={[
+                <Navbar notLoggedIn={false} extraLinks={[
                     {text: "DASHBOARD", reference: "/user-dashboard", extraClasses: ''},
                     {text: "NEXT DONATION", reference: "/next-donation", extraClasses: ''},
                     {text: "TEST RESULTS", reference: "/test-results-history", extraClasses: ''},

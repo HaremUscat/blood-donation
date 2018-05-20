@@ -81,3 +81,42 @@ body {
 }
 
 /* --------------------------------------------------------------------------------- */
+
+/* USER DASHBOARD */
+
+.user-dashboard {
+    position: relative;
+    z-index: 1;
+    min-height: 90vh;
+}
+
+.user-dashboard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/images/user-dashboard.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.dashboard-link {
+    color: #560001;
+    font-style: italic;
+}
+
+.dashboard-link:hover, .dashboard-link:focus{
+    color: #560001;
+}
+
+/* ----------------------------------------------------------------------------- */

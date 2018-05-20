@@ -4,6 +4,7 @@ import Login from "./login";
 import Logout from "./logout";
 import Register from "./register";
 import MyInfo from "./my-info";
+import UserDashboard from "./user-dashboard";
 import {
     BrowserRouter,
     Route
@@ -21,7 +22,7 @@ class App extends React.Component {
                     <Route path="/logout" render={(props) => EnsureLoggedIn(Logout, "/home", props)}/>
                     <Route path="/register" component={Register}/>
                     <Route path="/my-info" render={(props) => EnsureLoggedIn(MyInfo, "/my-info", props)}/>
-                    {/*<Route path="/user-dashboard" component={UserDashboard}/>*/}
+                    <Route path="/user-dashboard" render={(props) => EnsureLoggedIn(UserDashboard, "/user-dashboard", props)}/>
                 </div>
             </BrowserRouter>
         );
