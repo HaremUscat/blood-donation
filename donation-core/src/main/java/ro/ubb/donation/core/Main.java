@@ -36,22 +36,15 @@ public class Main {
         Address addr = addressService.createAddress("home1", "curhome", "city", "coun", "curc", "curc");
         Address addr2 = addressService.createAddress("home2", "curhome", "city", "coun", "curc", "curc");
 
+        //Profile p = profileService.createProfile("profile1", "ln", "21/12/2012", "female", "type", "st", "+", "a", "29708062334", "yes", "yes", "yes");
+        //Profile p2 = profileService.createProfile("prof2", "last", "02/02/2000", "F", "2", "298748736287", "+", "A", "8473285", "yes", "no", "no");
 
-
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        try {
-            Date d = sdf.parse("21/12/2012");
-            Profile p = profileService.createProfile("profile1", "ln", d, "female", "type");
-            Profile p2 = profileService.createProfile("profile2", "ln", d, "female", "type");
-
-            User u1=userService.createUser("user1", "pas1", true, donor);
-            u1.setProfile(p);
-            u1.setAddress(addr);
-            User u2=userService.createUser("user2", "pas2", true, doctor);
-            userService.updateUser(u2.getId(), u2.getUsername(), u2.getPassword(), u2.isLogged(), u2.getRole(), addr2, p2);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        Profile p2=profileService.createProfile("f", "l","02-02-2000", "f", "+", "984329", "+", "kdjsk", "98432", "no", "mo", "no");
+        //User u1 = userService.createUser("user1", "pas1", true, donor);
+        //u1.setProfile(p);
+        //u1.setAddress(addr);
+        User u2 = userService.createUser("user2", "pas2", true, doctor);
+        userService.updateUser(u2.getId(), u2.getUsername(), u2.getPassword(), u2.isLogged(), u2.getRole(), addr2, p2);
 
         //addressService.deleteAddress(1);
         //profileService.deleteProfile(1);
@@ -67,8 +60,8 @@ public class Main {
 
 
         System.out.println("###############################################3");
-        List<Address> adrs=addressService.findAll();
-        for (Address a:adrs){
+        List<Address> adrs = addressService.findAll();
+        for (Address a : adrs) {
             System.out.println(a);
         }
         System.out.println("###############################################3");
@@ -79,10 +72,9 @@ public class Main {
         System.out.println("#################################################33333333");
         //UserService userService = context.getBean(UserService.class);
         List<User> users = userService.findAll();
-        for (User user : users){
+        for (User user : users) {
             System.out.println(user);
         }
-
 
 
 //        userService.createUser("mariaungur1","pass",true,roleService.getRoleByDescription("Donor").orElse(null));
@@ -103,10 +95,10 @@ public class Main {
 //        System.out.print("Bye");
 
 
-
     }
+
     @Transactional
-    public void seteaza(User u2, Address addr2, Profile p2){
+    public void seteaza(User u2, Address addr2, Profile p2) {
         u2.setAddress(addr2);
         u2.setProfile(p2);
     }

@@ -13,7 +13,15 @@ import java.util.Date;
 public class ProfileDto implements Serializable{
     private String firstName;
     private String lastName;
-    private Date birthDate;
+    private String  birthDate;
     private String gender;
     private String bloodType;
+    private String cnp;
+    private String rh;
+    private String email;
+    private String phone;
+    private String allergies;
+    private String diseases;
+    private String chronicIllness;
+
 }

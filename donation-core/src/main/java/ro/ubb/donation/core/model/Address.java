@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Builder
+@EqualsAndHashCode
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +35,7 @@ public class Address {
     @Column(name = "current_country", nullable = false)
     private String currentCountry;
 
-    @OneToOne(mappedBy = "address", orphanRemoval = true)
+    @OneToOne(mappedBy = "address", orphanRemoval = true, optional = true)
     private User user;
 
     @Override

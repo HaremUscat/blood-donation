@@ -33,16 +33,23 @@ public class ProfileServiceImpl implements ProfileService {
 
     @Override
     @Transactional
-    public Profile updateProfile(int profileId, String firstName, String lastName, Date birthDate, String gender, String bloodType) {
-        log.trace("updateProfile: profileId={}, firstName={}, lastName={}, birthDate={}, gender={}, bloodType={}", profileId, firstName, lastName, birthDate, gender, bloodType);
+    public Profile updateProfile(int profileId, String firstName, String lastName, String birthDate, String gender, String bloodType, String cnp, String rh, String email, String phone, String allergies, String diseases, String chronicIllness) {
+        log.trace("updateProfile: profileId={}, firstName={}, lastName={}, birthDate={}, gender={}, bloodType={}, cnp={}, rh={}, email={}, phone={}, allergies={}, diseases={}, chronicIllness={}", profileId, firstName, lastName, birthDate, gender, bloodType, cnp, rh, email, phone, allergies, diseases, chronicIllness);
 
         Optional<Profile> profile = profileRepository.findById(profileId);
         profile.ifPresent(p -> {
-                p.setFirstName(firstName);
-                p.setLastName(lastName);
-                p.setBirthDate(birthDate);
-                p.setGender(gender);
-                p.setBloodType(bloodType);
+            p.setFirstName(firstName);
+            p.setLastName(lastName);
+            p.setBirthDate(birthDate);
+            p.setGender(gender);
+            p.setBloodType(bloodType);
+            p.setEmail(email);
+            p.setPhone(phone);
+            p.setCnp(cnp);
+            p.setRh(rh);
+            p.setDiseases(diseases);
+            p.setAllergies(allergies);
+            p.setChronicIllness(chronicIllness);
             }
         );
 
@@ -52,15 +59,22 @@ public class ProfileServiceImpl implements ProfileService {
 
     @Override
     @Transactional
-    public Profile createProfile(String firstName, String lastName, Date birthDate, String gender, String bloodType) {
-        log.trace("updateProfile: profileId={}, firstName={}, lastName={}, birthDate={}, gender={}, bloodType={}, address={}", firstName, lastName, birthDate, gender, bloodType);
-        Profile profile=Profile.builder()
-                            .firstName(firstName)
-                            .lastName(lastName)
-                            .birthDate(birthDate)
-                            .gender(gender)
-                            .bloodType(bloodType)
-                            .build();
+    public Profile createProfile(String firstName, String lastName, String birthDate, String gender, String bloodType, String cnp, String rh, String email, String phone, String allergies, String diseases, String chronicIllness) {
+        log.trace("createProfile: profileId={}, firstName={}, lastName={}, birthDate={}, gender={}, bloodType={}, address={}, cnp={}, rh={}, email={}, phone={}, allergies={}, diseases={}, chronicIllness={}", firstName, lastName, birthDate, gender, bloodType, cnp, rh, email, phone, allergies, diseases, chronicIllness);
+        Profile profile = Profile.builder()
+                .firstName(firstName)
+                .lastName(lastName)
+                .birthDate(birthDate)
+                .gender(gender)
+                .bloodType(bloodType)
+                .email(email)
+                .phone(phone)
+                .cnp(cnp)
+                .rh(rh)
+                .diseases(diseases)
+                .allergies(allergies)
+                .chronicIllness(chronicIllness)
+                .build();
         profileRepository.save(profile);
 
         log.trace("updateProfile={}");
@@ -73,13 +87,13 @@ public class ProfileServiceImpl implements ProfileService {
         log.trace("deleteProfile: profileId={}", profileId);
 
         Optional<Profile> profile = profileRepository.findById(profileId);
-        profile.ifPresent(p-> profileRepository.delete(p));
+        profile.ifPresent(p -> profileRepository.delete(p));
     }
 
     @Override
     public Optional<Profile> getProfileByUser(User user) {
         log.trace("getProfileByUser: user = {}", user);
 
-        return profileRepository.findAll().stream().filter(p->user.equals(user)).findFirst();
+        return profileRepository.findAll().stream().filter(p -> user.equals(user)).findFirst();
     }
 }

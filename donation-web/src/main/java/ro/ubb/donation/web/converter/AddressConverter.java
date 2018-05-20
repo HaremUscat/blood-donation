@@ -1,8 +1,10 @@
 package ro.ubb.donation.web.converter;
 
+import org.springframework.stereotype.Component;
 import ro.ubb.donation.core.model.Address;
 import ro.ubb.donation.web.dto.AddressDto;
 
+@Component
 public class AddressConverter implements Converter<Address, AddressDto> {
     @Override
     public Address convertDtoToModel(AddressDto addressDto) {

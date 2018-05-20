@@ -13,9 +13,9 @@ public interface ProfileService {
 
     List<Profile> findAll();
 
-    Profile updateProfile(int profileId, String firstName, String lastName, Date birthDate, String gender, String bloodType);
+    Profile updateProfile(int profileId, String firstName, String lastName, String birthDate, String gender, String bloodType, String cnp, String rh, String email, String phone, String allergies, String diseases, String chronicIllness);
 
-    Profile createProfile(String firstName, String lastName, Date birthDate, String gender, String bloodType);
+    Profile createProfile(String firstName, String lastName, String birthDate, String gender, String bloodType, String cnp, String rh, String email, String phone, String allergies, String diseases, String chronicIllness);
 
     void deleteProfile(int profileId);
 

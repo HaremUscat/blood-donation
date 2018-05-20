@@ -35,15 +35,15 @@ public class AddressServiceImpl implements AddressService {
         log.trace("updateAddress: addressId={}, homeAddress={}, currentHomeAddress={}, city={}, country={}, currentCity={}, currentCountry={}", addressId, homeAddress, currentHomeAddress, city, country, currentCity, currentCountry);
 
         Optional<Address> address = addressRepository.findById(addressId);
-        address.ifPresent(a -> {
-                    a.setHomeAddress(homeAddress);
-                    a.setCurrentHomeAddress(currentHomeAddress);
-                    a.setCity(city);
-                    a.setCountry(country);
-                    a.setCurrentCity(currentCity);
-                    a.setCurrentCountry(currentCountry);
-                }
-        );
+        if (address.isPresent()){
+            Address a =address.get();
+            a.setHomeAddress(homeAddress);
+            a.setCurrentHomeAddress(currentHomeAddress);
+            a.setCity(city);
+            a.setCountry(country);
+            a.setCurrentCity(currentCity);
+            a.setCurrentCountry(currentCountry);
+        }
 
         log.trace("updateAddress={}");
         return address.orElse(null);

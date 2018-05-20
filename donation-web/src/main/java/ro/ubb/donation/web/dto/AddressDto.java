@@ -17,5 +17,4 @@ public class AddressDto implements Serializable {
     private String country;
     private String currentCity;
     private String currentCountry;
-
 }
