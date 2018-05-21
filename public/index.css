@@ -120,3 +120,17 @@ body {
 }
 
 /* ----------------------------------------------------------------------------- */
+
+/* DONATION FORM */
+
+.donation-form-card > h5 > button {
+    font-family: 'Questrial', 'sans-serif';
+    color: black;
+    font-size: large;
+}
+
+.donation-form-card > h5 > button:hover, .donation-form-card > h5 > button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

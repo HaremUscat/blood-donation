@@ -14,9 +14,9 @@ class MyInfo extends React.Component {
             lastName: '',
             dateOfBirth: '',
             gender: '',
-            CNP: '',
+            cnp: '',
             bloodGroup: '',
-            Rh: '',
+            rh: '',
             email: '',
             phone: '',
             homeAddress: '',      //din buletin
@@ -104,13 +104,14 @@ class MyInfo extends React.Component {
         let ok = true;
         for (let field in this.state) {
             if (this.state.hasOwnProperty(field) && this.state[field] === '') {
-                alert("All fields are mandatory!");     //TODO: remove all alerts!
                 ok = false;
             }
         }
         if (ok) {
             this.submitMyInfo(this.state);
             window.location.reload();
+        } else {
+            alert("All fields are mandatory!");     //TODO: remove all alerts!
         }
     }
 
@@ -137,9 +138,9 @@ class MyInfo extends React.Component {
                                 <Input name="lastName" label="Last name" type="text" placeholder={this.state.lastName}/>
                                 <Input name="dateOfBirth" label="Date of birth" type="text" placeholder={this.state.dateOfBirth}/>
                                 <Input name="gender" label="Gender" type="text" placeholder={this.state.gender}/>
-                                <Input name="CNP" label="CNP" type="text" placeholder={this.state.CNP}/>
+                                <Input name="cnp" label="CNP" type="text" placeholder={this.state.cnp}/>
                                 <Input name="bloodGroup" label="Blood group" type="text" placeholder={this.state.bloodGroup}/>
-                                <Input name="Rh" label="Rh" type="text"  placeholder={this.state.Rh}/>
+                                <Input name="rh" label="Rh" type="text"  placeholder={this.state.rh}/>
                                 <Input name="email" label="Email (one address, please)" type="text" placeholder={this.state.email}/>
                                 <Input name="phone" label="Phone number" type="text" placeholder={this.state.phone}/>
 

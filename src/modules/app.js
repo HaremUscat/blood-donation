@@ -5,6 +5,7 @@ import Logout from "./logout";
 import Register from "./register";
 import MyInfo from "./my-info";
 import UserDashboard from "./user-dashboard";
+import NextDonation from "./next-donation";
 import {
     BrowserRouter,
     Route
@@ -23,6 +24,7 @@ class App extends React.Component {
                     <Route path="/register" component={Register}/>
                     <Route path="/my-info" render={(props) => EnsureLoggedIn(MyInfo, "/my-info", props)}/>
                     <Route path="/user-dashboard" render={(props) => EnsureLoggedIn(UserDashboard, "/user-dashboard", props)}/>
+                    <Route path="/next-donation" render={(props) => EnsureLoggedIn(NextDonation, "/next-donation", props)}/>
                 </div>
             </BrowserRouter>
         );
