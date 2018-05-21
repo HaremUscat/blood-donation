@@ -10,24 +10,28 @@ class MyInfo extends React.Component {
         super(props);
 
         this.state = {
-            firstName: '',
-            lastName: '',
-            dateOfBirth: '',
-            gender: '',
-            cnp: '',
-            bloodGroup: '',
-            rh: '',
-            email: '',
-            phone: '',
-            homeAddress: '',      //din buletin
-            city: '',             //din buletin
-            country: '',          //din buletin
-            currentHomeAddress: '',
-            currentCity: '',
-            currentCountry: '',
-            allergies: '',
-            diseases: '',
-            chronicIllness: '',
+            profileDto: {
+                firstName: '',
+                lastName: '',
+                dateOfBirth: '',
+                gender: '',
+                cnp: '',
+                bloodGroup: '',
+                rh: '',
+                email: '',
+                phone: '',
+                allergies: '',
+                diseases: '',
+                chronicIllness: ''
+            },
+            addressDto: {
+                homeAddress: '',      //din buletin
+                city: '',             //din buletin
+                country: '',          //din buletin
+                currentHomeAddress: '',
+                currentCity: '',
+                currentCountry: ''
+            },
             username: localStorage.getItem("loggedInUser")
         };
 
@@ -41,29 +45,31 @@ class MyInfo extends React.Component {
     }
 
     componentWillMount() {
-        this.setState(this.prefillFields(), function() {
+        this.prefillFields().then((res) => {
+            this.setState(res, function() {
 
-            if (this.state["allergies"] === 'yes') {
-                this.refs.allergiesYes.checked = true;
-            } else
-                if (this.state["allergies"] !== '') {
+                if (this.state["profileDto.allergies"] === 'yes') {
+                    this.refs.allergiesYes.checked = true;
+                } else
+                if (this.state["profileDto.allergies"] !== '') {
                     this.refs.allergiesNo.checked = true;
                 }
 
-            if (this.state["diseases"] === 'yes') {
-                this.refs.diseasesYes.checked = true;
-            } else
-                if (this.state["diseases"] !== '') {
+                if (this.state["profileDto.diseases"] === 'yes') {
+                    this.refs.diseasesYes.checked = true;
+                } else
+                if (this.state["profileDto.diseases"] !== '') {
                     this.refs.diseasesNo.checked = true;
                 }
 
-            if (this.state["chronicIllness"] === 'yes') {
-                this.refs.chronicYes.checked = true;
-            } else
-                if (this.state["chronicIllness"] !== '') {
+                if (this.state["profileDto.chronicIllness"] === 'yes') {
+                    this.refs.chronicYes.checked = true;
+                } else
+                if (this.state["profileDto.chronicIllness"] !== '') {
                     this.refs.chronicNo.checked = true;
                 }
 
+            });
         });
     }
 
@@ -77,25 +83,25 @@ class MyInfo extends React.Component {
 
     handleChangedAllergies(event) {
         if (event.target.id==='allergiesYes' && event.target.checked) {
-            this.setState({allergies: 'yes'});
+            this.setState({profileDto: {allergies: 'yes'}});
         } else {
-            this.setState({allergies: 'no'});
+            this.setState({profileDto: {allergies: 'no'}});
         }
     }
 
     handleChangedDiseases(event) {
         if (event.target.id==='diseasesYes' && event.target.checked) {
-            this.setState({diseases: 'yes'});
+            this.setState({profileDto: {diseases: 'yes'}});
         } else {
-            this.setState({diseases: 'no'});
+            this.setState({profileDto: {diseases: 'no'}});
         }
     }
 
     handleChangedChronic(event) {
         if (event.target.id==='chronicYes' && event.target.checked) {
-            this.setState({chronicIllness: 'yes'});
+            this.setState({profileDto: {chronicIllness: 'yes'}});
         } else {
-            this.setState({chronicIllness: 'no'});
+            this.setState({profileDto: {chronicIllness: 'no'}});
         }
     }
 
@@ -134,23 +140,23 @@ class MyInfo extends React.Component {
                         <div className="col-11 col-sm-8 col-md-6 col-lg-5" style={{textAlign: 'center'}}>
                             <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedTextField}>
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px'}}>General Information</h3>
-                                <Input name="firstName" label="First name" type="text" placeholder={this.state.firstName}/>
-                                <Input name="lastName" label="Last name" type="text" placeholder={this.state.lastName}/>
-                                <Input name="dateOfBirth" label="Date of birth" type="text" placeholder={this.state.dateOfBirth}/>
-                                <Input name="gender" label="Gender" type="text" placeholder={this.state.gender}/>
-                                <Input name="cnp" label="CNP" type="text" placeholder={this.state.cnp}/>
-                                <Input name="bloodGroup" label="Blood group" type="text" placeholder={this.state.bloodGroup}/>
-                                <Input name="rh" label="Rh" type="text"  placeholder={this.state.rh}/>
-                                <Input name="email" label="Email (one address, please)" type="text" placeholder={this.state.email}/>
-                                <Input name="phone" label="Phone number" type="text" placeholder={this.state.phone}/>
+                                <Input name="profileDto['firstName']" label="First name" type="text" placeholder={this.state.profileDto.firstName}/>
+                                <Input name="profileDto['lastName']" label="Last name" type="text" placeholder={this.state.profileDto.lastName}/>
+                                <Input name="profileDto['dateOfBirth']" label="Date of birth" type="text" placeholder={this.state.profileDto.dateOfBirth}/>
+                                <Input name="profileDto['gender']" label="Gender" type="text" placeholder={this.state.profileDto.gender}/>
+                                <Input name="profileDto['cnp']" label="CNP" type="text" placeholder={this.state.profileDto.cnp}/>
+                                <Input name="profileDto['bloodGroup']" label="Blood group" type="text" placeholder={this.state.profileDto.bloodGroup}/>
+                                <Input name="profileDto['rh']" label="Rh" type="text"  placeholder={this.state.profileDto.rh}/>
+                                <Input name="profileDto['email']" label="Email (one address, please)" type="text" placeholder={this.state.profileDto.email}/>
+                                <Input name="profileDto['phone']" label="Phone number" type="text" placeholder={this.state.profileDto.phone}/>
 
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px', marginTop: '50px'}}>Address</h3>
-                                <Input name="homeAddress" label="Permanent home address (from your ID)" type="text" placeholder={this.state.homeAddress}/>
-                                <Input name="city" label="City (from your ID)" type="text" placeholder={this.state.city}/>
-                                <Input name="country" label="Country (from your ID)" type="text" placeholder={this.state.country}/>
-                                <Input name="currentHomeAddress" label="Current address" type="text" placeholder={this.state.currentHomeAddress}/>
-                                <Input name="currentCity" label="Current city" type="text" placeholder={this.state.currentCity}/>
-                                <Input name="currentCountry" label="Current country" type="text" placeholder={this.state.currentCountry}/>
+                                <Input name="addressDto['homeAddress']" label="Permanent home address (from your ID)" type="text" placeholder={this.state.addressDto.homeAddress}/>
+                                <Input name="addressDto['city']" label="City (from your ID)" type="text" placeholder={this.state.addressDto.city}/>
+                                <Input name="addressDto['country']" label="Country (from your ID)" type="text" placeholder={this.state.addressDto.country}/>
+                                <Input name="addressDto['currentHomeAddress']" label="Current address" type="text" placeholder={this.state.addressDto.currentHomeAddress}/>
+                                <Input name="addressDto['currentCity']" label="Current city" type="text" placeholder={this.state.addressDto.currentCity}/>
+                                <Input name="addressDto['currentCountry']" label="Current country" type="text" placeholder={this.state.addressDto.currentCountry}/>
                             </Form>
 
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px', marginTop: '50px'}}>General Health Survey</h3>

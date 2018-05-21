@@ -31,7 +31,7 @@ function register() {
 }
 
 function submitMyInfo(myInfo) {
-    return axios.post('/my-info/'+localStorage.getItem("loggedInUser"), myInfo)
+    return axios.post('/my-info', myInfo)
         .then((response) => {
             if (response.data.isError) {
                 alert(response.data.message);       //TODO: get rid of alerts!
@@ -43,15 +43,15 @@ function submitMyInfo(myInfo) {
 }
 
 function getMyInfo() {
-    //return {"firstName": "Ada", "lastName": "Simion", "allergies": "yes", "diseases": "no", "chronicIllness": "no"};  //TODO: remove this test
-    return axios.get('/my-info/'+localStorage.getItem("loggedInUser"));
+    return {"firstName": "Ada", "lastName": "Simion", "allergies": "yes", "diseases": "no", "chronicIllness": "no"};  //TODO: remove this test
+    //return axios.get('/my-info/'+localStorage.getItem("loggedInUser"));
 }
 
 function getDashboardInfo() {
     //TODO: remove these two test cases
-    //return {"firstName": "John", "hasNewTestResults": true, "illnessDiscovered": true, "illnessInfo": "We are sorry to inform you that you might suffer from hepatitis.", "nextPossibleDonationDate": ''};
+    return {"firstName": "John", "hasNewTestResults": true, "illnessDiscovered": true, "illnessInfo": "We are sorry to inform you that you might suffer from hepatitis.", "nextPossibleDonationDate": ''};
     //return {"firstName": "Hannah", "hasNewTestResults": false, "illnessDiscovered": false, "illnessInfo": "", "nextPossibleDonationDate": '03.06.2018'};
-    return axios.get('/dashboard-info/'+localStorage.getItem("loggedInUser"));
+    //return axios.get('/dashboard-info/'+localStorage.getItem("loggedInUser"));
 }
 
 module.exports = {register, submitMyInfo, getMyInfo, getDashboardInfo};
