@@ -46,6 +46,7 @@ class MyInfo extends React.Component {
     }
 
     componentWillMount() {
+
         this.prefillFields().then((res) => {
             this.setState(res, function() {
 
@@ -69,10 +70,6 @@ class MyInfo extends React.Component {
                 if (this.state["profileDto.chronicIllness"] !== '') {
                     this.refs.chronicNo.checked = true;
                 }
-
-                if (this.state.profileDto.dateOfBirth === '')
-                    console.log(this.refs.dob);
-                    this.refs.dob.props.placeholder = 'dd-mm-yyyy';
 
             });
         });
@@ -167,7 +164,7 @@ class MyInfo extends React.Component {
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px'}}>General Information</h3>
                                 <Input name="firstName" label="First name" type="text" placeholder={this.state.profileDto.firstName}/>
                                 <Input name="lastName" label="Last name" type="text" placeholder={this.state.profileDto.lastName}/>
-                                <Input name="dateOfBirth" label="Date of birth" type="text" placeholder={this.state.profileDto.dateOfBirth} ref="dob"/>
+                                <Input name="dateOfBirth" label="Date of birth (dd-mm-yyyy)" type="text" placeholder={this.state.profileDto.dateOfBirth} ref="dob"/>
                                 <Input name="gender" label="Gender" type="text" placeholder={this.state.profileDto.gender}/>
                                 <Input name="cnp" label="CNP" type="text" placeholder={this.state.profileDto.cnp}/>
                                 <Input name="bloodGroup" label="Blood group" type="text" placeholder={this.state.profileDto.bloodGroup}/>

@@ -39,7 +39,9 @@ class NextDonation extends React.Component {
             recentTattoos: '',
             pregnantOrMenstruating: '',
             surgeryPast6Months: '',
-            donationBeneficiary: ''
+            donationBeneficiary: '',
+
+            disabledSubmitButton: true     //ignore this in the back-end
         };
 
         this.handleChangedTextField = this.handleChangedTextField.bind(this);
@@ -48,6 +50,7 @@ class NextDonation extends React.Component {
         this.handleChangedPregnant = this.handleChangedPregnant.bind(this);
         this.handleChangedSurgeries = this.handleChangedSurgeries.bind(this);
         this.handleChangedTattoos = this.handleChangedTattoos.bind(this);
+        this.handleChangedCorrectInfo = this.handleChangedCorrectInfo.bind(this);
         this.submitDonation = donationsApi.submitDonation.bind(this);
         this.prefillFields = usersApi.getMyInfo.bind(this);
         this.optionals = ["bloodPressure", "pulse", "donationBeneficiary"];
@@ -118,6 +121,13 @@ class NextDonation extends React.Component {
         } else {
             this.setState({pregnantOrMenstruating: 'no'});
         }
+    }
+
+    handleChangedCorrectInfo(event) {
+        if (event.target.checked)
+            this.setState({disabledSubmitButton: false});
+        else
+            this.setState({disabledSubmitButton: true});
     }
 
     handleSubmit(event) {
@@ -320,7 +330,9 @@ class NextDonation extends React.Component {
                             </Form>
 
                             <div style={{marginTop: '90px', marginBottom: '100px'}}>
-                                <BlockButton onClick={this.handleSubmit} color="#ec0a0b" width="220px" fontFamily="Questrial">SUBMIT DONATION FORM</BlockButton>
+                                <input type="checkbox" id="checkedCorrectInfo" ref="checkedCorrectInfo" onChange={this.handleChangedCorrectInfo}/>
+                                <label style={{fontWeight: 'lighter', marginLeft: '5px'}}>I have checked that the submitted information is correct.</label>
+                                <BlockButton onClick={this.handleSubmit} color="#ec0a0b" width="220px" fontFamily="Questrial" disabled={this.state.disabledSubmitButton}>SUBMIT DONATION FORM</BlockButton>
                             </div>
                         </div>
                     </div>
