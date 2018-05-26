@@ -13,7 +13,6 @@ class BlockButton extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    console.log("HEY");
     this.setState({disabled: newProps.disabled});
   }
 
