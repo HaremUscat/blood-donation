@@ -1,5 +1,9 @@
 const axios = require('axios');
 
+function getDonationFormInfo() {
+    return axios.get('/donation-forms/'+localStorage.getItem("loggedInUser"));
+}
+
 function submitDonation(donation) {
     return axios.post('/donation-forms', donation)
         .then((response) => {
@@ -12,4 +16,4 @@ function submitDonation(donation) {
         });
 }
 
-module.exports = {submitDonation};
+module.exports = {submitDonation, getDonationFormInfo};

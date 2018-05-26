@@ -54,7 +54,7 @@ class NextDonation extends React.Component {
         this.handleChangedCorrectInfo = this.handleChangedCorrectInfo.bind(this);
         this.goToNewForm = this.goToNewForm.bind(this);
         this.submitDonation = donationsApi.submitDonation.bind(this);
-        this.prefillFields = usersApi.getMyInfo.bind(this);
+        this.prefillFields = donationsApi.getDonationFormInfo.bind(this);
         this.optionals = ["bloodPressure", "pulse", "donationBeneficiary"];
     }
 
