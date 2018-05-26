@@ -13,9 +13,9 @@ import java.util.Date;
 public class ProfileDto implements Serializable{
     private String firstName;
     private String lastName;
-    private String  birthDate;
+    private String dateOfBirth;
     private String gender;
-    private String bloodType;
+    private String bloodGroup;
     private String cnp;
     private String rh;
     private String email;

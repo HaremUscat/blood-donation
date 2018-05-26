@@ -40,13 +40,11 @@ public class Main {
         //Profile p2 = profileService.createProfile("prof2", "last", "02/02/2000", "F", "2", "298748736287", "+", "A", "8473285", "yes", "no", "no");
 
         Profile p2=profileService.createProfile("f", "l","02-02-2000", "f", "+", "984329", "+", "kdjsk", "98432", "no", "mo", "no");
-        //User u1 = userService.createUser("user1", "pas1", true, donor);
-        //u1.setProfile(p);
-        //u1.setAddress(addr);
+
         User u2 = userService.createUser("user2", "pas2", true, doctor);
         userService.updateUser(u2.getId(), u2.getUsername(), u2.getPassword(), u2.isLogged(), u2.getRole(), addr2, p2);
 
-        //addressService.deleteAddress(1);
+        addressService.deleteAddress(2);
         //profileService.deleteProfile(1);
         //userService.deleteUser(1);
 
