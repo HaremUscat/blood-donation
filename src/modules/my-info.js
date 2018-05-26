@@ -35,7 +35,8 @@ class MyInfo extends React.Component {
             username: localStorage.getItem("loggedInUser")
         };
 
-        this.handleChangedTextField = this.handleChangedTextField.bind(this);
+        this.handleChangedProfileTextField = this.handleChangedProfileTextField.bind(this);
+        this.handleChangedAddressTextField = this.handleChangedAddressTextField.bind(this);
         this.handleChangedAllergies = this.handleChangedAllergies.bind(this);
         this.handleChangedDiseases = this.handleChangedDiseases.bind(this);
         this.handleChangedChronic = this.handleChangedChronic.bind(this);
@@ -69,39 +70,63 @@ class MyInfo extends React.Component {
                     this.refs.chronicNo.checked = true;
                 }
 
+                if (this.state.profileDto.dateOfBirth === '')
+                    console.log(this.refs.dob);
+                    this.refs.dob.props.placeholder = 'dd-mm-yyyy';
+
             });
         });
     }
 
-    handleChangedTextField(event) {
+    handleChangedProfileTextField(event) {
         let field = event.target.name;
         let value = event.target.value;
         let myInfo = this.state;
-        myInfo[field]=value;
+        myInfo['profileDto.'+field]=value;
+        this.setState(myInfo);
+    }
+
+    handleChangedAddressTextField(event) {
+        let field = event.target.name;
+        let value = event.target.value;
+        let myInfo = this.state;
+        myInfo['addressDto.'+field]=value;
         this.setState(myInfo);
     }
 
     handleChangedAllergies(event) {
         if (event.target.id==='allergiesYes' && event.target.checked) {
-            this.setState({profileDto: {allergies: 'yes'}});
+            let myInfo = this.state;
+            myInfo['profileDto.allergies']='yes';
+            this.setState(myInfo);
         } else {
-            this.setState({profileDto: {allergies: 'no'}});
+            let myInfo = this.state;
+            myInfo['profileDto.allergies']='no';
+            this.setState(myInfo);
         }
     }
 
     handleChangedDiseases(event) {
         if (event.target.id==='diseasesYes' && event.target.checked) {
-            this.setState({profileDto: {diseases: 'yes'}});
+            let myInfo = this.state;
+            myInfo['profileDto.diseases']='yes';
+            this.setState(myInfo);
         } else {
-            this.setState({profileDto: {diseases: 'no'}});
+            let myInfo = this.state;
+            myInfo['profileDto.diseases']='no';
+            this.setState(myInfo);
         }
     }
 
     handleChangedChronic(event) {
         if (event.target.id==='chronicYes' && event.target.checked) {
-            this.setState({profileDto: {chronicIllness: 'yes'}});
+            let myInfo = this.state;
+            myInfo['profileDto.chronicIllness']='yes';
+            this.setState(myInfo);
         } else {
-            this.setState({profileDto: {chronicIllness: 'no'}});
+            let myInfo = this.state;
+            myInfo['profileDto.chronicIllness']='no';
+            this.setState(myInfo);
         }
     }
 
@@ -138,25 +163,27 @@ class MyInfo extends React.Component {
                             <h1 className="questrial-font" style={{marginBottom: '90px', marginTop: '100px', fontSize: '40px'}}>Edit Personal Information</h1>
                         </div>
                         <div className="col-11 col-sm-8 col-md-6 col-lg-5" style={{textAlign: 'center'}}>
-                            <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedTextField}>
+                            <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedProfileTextField}>
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px'}}>General Information</h3>
-                                <Input name="profileDto['firstName']" label="First name" type="text" placeholder={this.state.profileDto.firstName}/>
-                                <Input name="profileDto['lastName']" label="Last name" type="text" placeholder={this.state.profileDto.lastName}/>
-                                <Input name="profileDto['dateOfBirth']" label="Date of birth" type="text" placeholder={this.state.profileDto.dateOfBirth}/>
-                                <Input name="profileDto['gender']" label="Gender" type="text" placeholder={this.state.profileDto.gender}/>
-                                <Input name="profileDto['cnp']" label="CNP" type="text" placeholder={this.state.profileDto.cnp}/>
-                                <Input name="profileDto['bloodGroup']" label="Blood group" type="text" placeholder={this.state.profileDto.bloodGroup}/>
-                                <Input name="profileDto['rh']" label="Rh" type="text"  placeholder={this.state.profileDto.rh}/>
-                                <Input name="profileDto['email']" label="Email (one address, please)" type="text" placeholder={this.state.profileDto.email}/>
-                                <Input name="profileDto['phone']" label="Phone number" type="text" placeholder={this.state.profileDto.phone}/>
+                                <Input name="firstName" label="First name" type="text" placeholder={this.state.profileDto.firstName}/>
+                                <Input name="lastName" label="Last name" type="text" placeholder={this.state.profileDto.lastName}/>
+                                <Input name="dateOfBirth" label="Date of birth" type="text" placeholder={this.state.profileDto.dateOfBirth} ref="dob"/>
+                                <Input name="gender" label="Gender" type="text" placeholder={this.state.profileDto.gender}/>
+                                <Input name="cnp" label="CNP" type="text" placeholder={this.state.profileDto.cnp}/>
+                                <Input name="bloodGroup" label="Blood group" type="text" placeholder={this.state.profileDto.bloodGroup}/>
+                                <Input name="rh" label="Rh" type="text"  placeholder={this.state.profileDto.rh}/>
+                                <Input name="email" label="Email (one address, please)" type="text" placeholder={this.state.profileDto.email}/>
+                                <Input name="phone" label="Phone number" type="text" placeholder={this.state.profileDto.phone}/>
+                            </Form>
 
+                            <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedAddressTextField}>
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px', marginTop: '50px'}}>Address</h3>
-                                <Input name="addressDto['homeAddress']" label="Permanent home address (from your ID)" type="text" placeholder={this.state.addressDto.homeAddress}/>
-                                <Input name="addressDto['city']" label="City (from your ID)" type="text" placeholder={this.state.addressDto.city}/>
-                                <Input name="addressDto['country']" label="Country (from your ID)" type="text" placeholder={this.state.addressDto.country}/>
-                                <Input name="addressDto['currentHomeAddress']" label="Current address" type="text" placeholder={this.state.addressDto.currentHomeAddress}/>
-                                <Input name="addressDto['currentCity']" label="Current city" type="text" placeholder={this.state.addressDto.currentCity}/>
-                                <Input name="addressDto['currentCountry']" label="Current country" type="text" placeholder={this.state.addressDto.currentCountry}/>
+                                <Input name="homeAddress" label="Permanent home address (from your ID)" type="text" placeholder={this.state.addressDto.homeAddress}/>
+                                <Input name="city" label="City (from your ID)" type="text" placeholder={this.state.addressDto.city}/>
+                                <Input name="country" label="Country (from your ID)" type="text" placeholder={this.state.addressDto.country}/>
+                                <Input name="currentHomeAddress" label="Current address" type="text" placeholder={this.state.addressDto.currentHomeAddress}/>
+                                <Input name="currentCity" label="Current city" type="text" placeholder={this.state.addressDto.currentCity}/>
+                                <Input name="currentCountry" label="Current country" type="text" placeholder={this.state.addressDto.currentCountry}/>
                             </Form>
 
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px', marginTop: '50px'}}>General Health Survey</h3>
