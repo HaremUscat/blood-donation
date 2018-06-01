@@ -4,7 +4,6 @@ import Button from "../components/button";
 import Navbar from "../components/navbar";
 import Form from "../components/form";
 import Input from "../components/input";
-const usersApi = require('../api/users-api');
 const donationsApi = require('../api/donations-api');
 
 class NextDonation extends React.Component {

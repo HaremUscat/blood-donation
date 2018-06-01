@@ -56,7 +56,10 @@ class Register extends React.Component {
                             <br/>
                             <br/>
 
-                            <BlockButton color='#ec0a0b' onClick={this.handleSubmit} fontFamily="Questrial">REGISTER</BlockButton>
+                            <BlockButton color='#ec0a0b' onClick={this.handleSubmit} fontFamily="Questrial">REGISTER DONATOR*</BlockButton>
+
+                            <h6 style={{marginBottom: '50px', fontSize: '16px', fontWeight: 'lighter'}}>* doctors and donation centers must contact the admins for new accounts. See "Contact" for details.</h6>
+
                         </div>
                     </div>
                 </div>

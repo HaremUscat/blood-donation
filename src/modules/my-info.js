@@ -81,7 +81,7 @@ class MyInfo extends React.Component {
         let field = event.target.name;
         let value = event.target.value;
         let myInfo = this.state;
-        myInfo['profileDto.'+field]=value;
+        myInfo['profileDto.'][field]=value;
         this.setState(myInfo);
     }
 
@@ -89,7 +89,7 @@ class MyInfo extends React.Component {
         let field = event.target.name;
         let value = event.target.value;
         let myInfo = this.state;
-        myInfo['addressDto.'+field]=value;
+        myInfo['addressDto.'][field]=value;
         this.setState(myInfo);
     }
 
