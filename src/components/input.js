@@ -16,6 +16,11 @@ class Input extends React.Component {
     }
   }
 
+  componentWillReceiveProps(newProps){
+      this.setState({placeholder:newProps.placeholder});
+  }
+
+
   render() {
     if (this.state.readOnly==='yes') {
       return (

@@ -11,18 +11,18 @@ class MyInfo extends React.Component {
 
         this.state = {
             profileDto: {
-                firstName: '',
-                lastName: '',
-                dateOfBirth: '',
-                gender: '',
-                cnp: '',
-                bloodGroup: '',
-                rh: '',
-                email: '',
-                phone: '',
-                allergies: '',
-                diseases: '',
-                chronicIllness: ''
+                    firstName: '',
+                    lastName: '',
+                    dateOfBirth: '',
+                    gender: '',
+                    cnp: '',
+                    bloodGroup: '',
+                    rh: '',
+                    email: '',
+                    phone: '',
+                    allergies: '',
+                    diseases: '',
+                    chronicIllness: ''
             },
             addressDto: {
                 homeAddress: '',      //din buletin
@@ -48,29 +48,29 @@ class MyInfo extends React.Component {
     componentWillMount() {
 
         this.prefillFields().then((res) => {
-            this.setState(res, function() {
+            this.setState(res.data, function() {
 
-                if (this.state["profileDto.allergies"] === 'yes') {
+                if (this.state["profileDto"]["allergies"] === 'yes') {
                     this.refs.allergiesYes.checked = true;
                 } else
-                if (this.state["profileDto.allergies"] !== '') {
+                if (this.state["profileDto"]["allergies"] !== '') {
                     this.refs.allergiesNo.checked = true;
                 }
 
-                if (this.state["profileDto.diseases"] === 'yes') {
+                if (this.state["profileDto"]["diseases"] === 'yes') {
                     this.refs.diseasesYes.checked = true;
                 } else
-                if (this.state["profileDto.diseases"] !== '') {
+                if (this.state["profileDto"]["diseases"] !== '') {
                     this.refs.diseasesNo.checked = true;
                 }
 
-                if (this.state["profileDto.chronicIllness"] === 'yes') {
+                if (this.state["profileDto"]["chronicIllness"] === 'yes') {
                     this.refs.chronicYes.checked = true;
                 } else
-                if (this.state["profileDto.chronicIllness"] !== '') {
+                if (this.state["profileDto"]["chronicIllness"] !== '') {
                     this.refs.chronicNo.checked = true;
                 }
-
+                console.log(this.state);
             });
         });
     }
@@ -79,26 +79,30 @@ class MyInfo extends React.Component {
         let field = event.target.name;
         let value = event.target.value;
         let myInfo = this.state;
-        myInfo['profileDto.'+field]=value;
-        this.setState(myInfo);
+        myInfo['profileDto'][field]=value;
+        console.log(myInfo);
+        this.setState(myInfo, function() {
+            console.log(this.state);
+        });
+
     }
 
     handleChangedAddressTextField(event) {
         let field = event.target.name;
         let value = event.target.value;
         let myInfo = this.state;
-        myInfo['addressDto.'+field]=value;
+        myInfo['addressDto'][field]=value;
         this.setState(myInfo);
     }
 
     handleChangedAllergies(event) {
         if (event.target.id==='allergiesYes' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.allergies']='yes';
+            myInfo['profileDto']['allergies']='yes';
             this.setState(myInfo);
         } else {
             let myInfo = this.state;
-            myInfo['profileDto.allergies']='no';
+            myInfo['profileDto']['allergies']='no';
             this.setState(myInfo);
         }
     }
@@ -106,11 +110,11 @@ class MyInfo extends React.Component {
     handleChangedDiseases(event) {
         if (event.target.id==='diseasesYes' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.diseases']='yes';
+            myInfo['profileDto']['diseases']='yes';
             this.setState(myInfo);
         } else {
             let myInfo = this.state;
-            myInfo['profileDto.diseases']='no';
+            myInfo['profileDto']['diseases']='no';
             this.setState(myInfo);
         }
     }
@@ -118,11 +122,11 @@ class MyInfo extends React.Component {
     handleChangedChronic(event) {
         if (event.target.id==='chronicYes' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.chronicIllness']='yes';
+            myInfo['profileDto']['chronicIllness']='yes';
             this.setState(myInfo);
         } else {
             let myInfo = this.state;
-            myInfo['profileDto.chronicIllness']='no';
+            myInfo['profileDto']['chronicIllness']='no';
             this.setState(myInfo);
         }
     }
@@ -162,9 +166,9 @@ class MyInfo extends React.Component {
                         <div className="col-11 col-sm-8 col-md-6 col-lg-5" style={{textAlign: 'center'}}>
                             <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedProfileTextField}>
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px'}}>General Information</h3>
-                                <Input name="firstName" label="First name" type="text" placeholder={this.state.profileDto.firstName}/>
+                                <Input name="firstName" label="First name" type="text" placeholder={this.state['profileDto']['firstName']}/>
                                 <Input name="lastName" label="Last name" type="text" placeholder={this.state.profileDto.lastName}/>
-                                <Input name="dateOfBirth" label="Date of birth (dd-mm-yyyy)" type="text" placeholder={this.state.profileDto.dateOfBirth} ref="dob"/>
+                                <Input name="dateOfBirth" label="Date of birth (dd-mm-yyyy)" type="text" placeholder={this.state.profileDto['dateOfBirth']} ref="dob"/>
                                 <Input name="gender" label="Gender" type="text" placeholder={this.state.profileDto.gender}/>
                                 <Input name="cnp" label="CNP" type="text" placeholder={this.state.profileDto.cnp}/>
                                 <Input name="bloodGroup" label="Blood group" type="text" placeholder={this.state.profileDto.bloodGroup}/>
