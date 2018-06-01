@@ -40,6 +40,8 @@ class MyInfo extends React.Component {
         this.handleChangedAllergies = this.handleChangedAllergies.bind(this);
         this.handleChangedDiseases = this.handleChangedDiseases.bind(this);
         this.handleChangedChronic = this.handleChangedChronic.bind(this);
+        this.handleChangedBloodGroup = this.handleChangedBloodGroup.bind(this);
+        this.handleChangedRh = this.handleChangedRh.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.submitMyInfo = usersApi.submitMyInfo.bind(this);
         this.prefillFields = usersApi.getMyInfo.bind(this);
@@ -136,6 +138,38 @@ class MyInfo extends React.Component {
         }
     }
 
+    handleChangedBloodGroup(event) {
+        if (event.target.id==='groupZero' && event.target.checked) {
+            let myInfo = this.state;
+            myInfo['profileDto.bloodGroup']='0';
+            this.setState(myInfo);
+        } else if (event.target.id==='groupA' && event.target.checked) {
+            let myInfo = this.state;
+            myInfo['profileDto.bloodGroup']='A';
+            this.setState(myInfo);
+        } else if (event.target.id==='groupB' && event.target.checked) {
+            let myInfo = this.state;
+            myInfo['profileDto.bloodGroup']='B';
+            this.setState(myInfo);
+        } else if (event.target.id==='groupAB' && event.target.checked) {
+            let myInfo = this.state;
+            myInfo['profileDto.bloodGroup']='AB';
+            this.setState(myInfo);
+        }
+    }
+
+    handleChangedRh(event) {
+        if (event.target.id==='rhPositive' && event.target.checked) {
+            let myInfo = this.state;
+            myInfo['profileDto.rh']='+';
+            this.setState(myInfo);
+        } else if (event.target.id==='rhNegative' && event.target.checked) {
+            let myInfo = this.state;
+            myInfo['profileDto.rh']='-';
+            this.setState(myInfo);
+        }
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         let ok = true;
@@ -176,11 +210,37 @@ class MyInfo extends React.Component {
                                 <Input name="dateOfBirth" label="Date of birth (dd-mm-yyyy)" type="text" placeholder={this.state.profileDto['dateOfBirth']} ref="dob"/>
                                 <Input name="gender" label="Gender" type="text" placeholder={this.state.profileDto.gender}/>
                                 <Input name="cnp" label="CNP" type="text" placeholder={this.state.profileDto.cnp}/>
-                                <Input name="bloodGroup" label="Blood group" type="text" placeholder={this.state.profileDto.bloodGroup}/>
-                                <Input name="rh" label="Rh" type="text"  placeholder={this.state.profileDto.rh}/>
                                 <Input name="email" label="Email (one address, please)" type="text" placeholder={this.state.profileDto.email}/>
                                 <Input name="phone" label="Phone number" type="text" placeholder={this.state.profileDto.phone}/>
                             </Form>
+
+                            <p style={{fontWeight: 'lighter', fontSize: '18px', textAlign: 'left', paddingTop: '25px', marginBottom: '5px'}}>Blood group</p>
+                            <div className="form-check" style={{textAlign: 'left', marginLeft: '20px', fontWeight: 'lighter'}}>
+                                <input className="form-check-input" type="radio" name="bloodGroupOptions" id="groupZero" value="zero" ref="groupZero" onChange={this.handleChangedBloodGroup}/>
+                                <label className="form-check-label">0(I)</label>
+                            </div>
+                            <div className="form-check" style={{textAlign: 'left', marginLeft: '20px', marginTop: '-7px', fontWeight: 'lighter'}}>
+                                <input className="form-check-input" type="radio" name="bloodGroupOptions" id="groupA" value="A" ref="groupA" onChange={this.handleChangedBloodGroup}/>
+                                <label className="form-check-label">A(II)</label>
+                            </div>
+                            <div className="form-check" style={{textAlign: 'left', marginLeft: '20px', marginTop: '-7px', fontWeight: 'lighter'}}>
+                                <input className="form-check-input" type="radio" name="bloodGroupOptions" id="groupB" value="B" ref="groupB" onChange={this.handleChangedBloodGroup}/>
+                                <label className="form-check-label">B(III)</label>
+                            </div>
+                            <div className="form-check" style={{textAlign: 'left', marginLeft: '20px', marginTop: '-7px', fontWeight: 'lighter'}}>
+                                <input className="form-check-input" type="radio" name="bloodGroupOptions" id="groupAB" value="AB" ref="groupAB" onChange={this.handleChangedBloodGroup}/>
+                                <label className="form-check-label">AB(IV)</label>
+                            </div>
+
+                            <p style={{fontWeight: 'lighter', fontSize: '18px', textAlign: 'left', paddingTop: '25px', marginBottom: '5px'}}>Rh</p>
+                            <div className="form-check" style={{textAlign: 'left', marginLeft: '20px', fontWeight: 'lighter'}}>
+                                <input className="form-check-input" type="radio" name="rhOptions" id="rhPositive" value="positive" ref="rhPositive" onChange={this.handleChangedRh}/>
+                                <label className="form-check-label">Positive (+)</label>
+                            </div>
+                            <div className="form-check" style={{textAlign: 'left', marginLeft: '20px', marginTop: '-7px', fontWeight: 'lighter'}}>
+                                <input className="form-check-input" type="radio" name="rhOptions" id="rhNegative" value="negative" ref="rhNegative" onChange={this.handleChangedRh}/>
+                                <label className="form-check-label">Negative (-)</label>
+                            </div>
 
                             <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedAddressTextField}>
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px', marginTop: '50px'}}>Address</h3>

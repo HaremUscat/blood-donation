@@ -379,6 +379,16 @@ class NextDonation extends React.Component {
                                 <h3>Status: approved for donation.</h3>
                                 <br/>
                                 <h5>You will soon be contacted by a donation center for an appointment.</h5>
+                                <br/>
+                                <div style={{textAlign: 'left', fontSize: '18px', width: '85%', display: 'inline-block'}}>
+                                    Before donating:<br/>
+                                    <ul>
+                                        <li>The morning before blood donation, you may drink a cup of tea or coffee and eat a light breakfast of fruits and vegetables.</li>
+                                        <li>Do not smoke an hour before and after blood donation.</li>
+                                        <li>Do not consume alcohol or fat 48 hours prior to blood donation.</li>
+                                        <li>Arrive at the donation center well slept, and not after a night of working or staying up.</li>
+                                    </ul>
+                                </div>
                             </p>
                         </div>
                     </div>
