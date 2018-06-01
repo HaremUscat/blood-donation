@@ -48,31 +48,36 @@ class MyInfo extends React.Component {
     componentWillMount() {
 
         this.prefillFields().then((res) => {
+            if(!res.data.isError){
             this.setState(res.data, function() {
+                let myInfo = this.state;
 
                 if (this.state["profileDto"]["allergies"] === 'yes') {
                     this.refs.allergiesYes.checked = true;
-                } else
-                if (this.state["profileDto"]["allergies"] !== '') {
+                } else {
                     this.refs.allergiesNo.checked = true;
+                    myInfo['profileDto']["allergies"] = 'no'
                 }
 
                 if (this.state["profileDto"]["diseases"] === 'yes') {
                     this.refs.diseasesYes.checked = true;
                 } else
-                if (this.state["profileDto"]["diseases"] !== '') {
+                {
                     this.refs.diseasesNo.checked = true;
+                    myInfo['profileDto']["diseases"] = 'no'
                 }
 
                 if (this.state["profileDto"]["chronicIllness"] === 'yes') {
                     this.refs.chronicYes.checked = true;
-                } else
-                if (this.state["profileDto"]["chronicIllness"] !== '') {
+                } else {
                     this.refs.chronicNo.checked = true;
+                    myInfo['profileDto']["chronicIllness"] = 'no'
                 }
-                console.log(this.state);
+                this.setState(myInfo,function() {
+                    console.log(this.state);
+                });
             });
-        });
+        }});
     }
 
     handleChangedProfileTextField(event) {
