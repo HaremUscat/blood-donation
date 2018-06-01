@@ -75,6 +75,26 @@ class MyInfo extends React.Component {
                     this.refs.chronicNo.checked = true;
                     myInfo['profileDto']["chronicIllness"] = 'no'
                 }
+                if (this.state["profileDto"]["rh"] === '+') {
+                    this.refs.rhPositive.checked= true;
+                } else {
+                    this.refs.rhNegative.checked = true;
+                    myInfo['profileDto']["rh"] = '-'
+                }
+                if (this.state["profileDto"]["bloodGroup"] === '0') {
+                    this.refs.groupZero.checked= true;
+                }
+
+                if (this.state["profileDto"]["bloodGroup"] === 'A') {
+                    this.refs.groupA.checked= true;
+                }
+
+                if (this.state["profileDto"]["bloodGroup"] === 'B') {
+                    this.refs.groupB.checked= true;
+                }
+                if (this.state["profileDto"]["bloodGroup"] === 'AB') {
+                    this.refs.groupAB.checked= true;
+                }
                 this.setState(myInfo,function() {
                     console.log(this.state);
                 });
@@ -141,19 +161,19 @@ class MyInfo extends React.Component {
     handleChangedBloodGroup(event) {
         if (event.target.id==='groupZero' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.bloodGroup']='0';
+            myInfo['profileDto']['bloodGroup']='0';
             this.setState(myInfo);
         } else if (event.target.id==='groupA' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.bloodGroup']='A';
+            myInfo['profileDto']['bloodGroup']='A';
             this.setState(myInfo);
         } else if (event.target.id==='groupB' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.bloodGroup']='B';
+            myInfo['profileDto']['bloodGroup']='B';
             this.setState(myInfo);
         } else if (event.target.id==='groupAB' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.bloodGroup']='AB';
+            myInfo['profileDto']['bloodGroup']='AB';
             this.setState(myInfo);
         }
     }
@@ -161,11 +181,11 @@ class MyInfo extends React.Component {
     handleChangedRh(event) {
         if (event.target.id==='rhPositive' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.rh']='+';
+            myInfo['profileDto']['rh']='+';
             this.setState(myInfo);
         } else if (event.target.id==='rhNegative' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.rh']='-';
+            myInfo['profileDto']['rh']='-';
             this.setState(myInfo);
         }
     }
