@@ -50,57 +50,86 @@ class MyInfo extends React.Component {
     componentWillMount() {
 
         this.prefillFields().then((res) => {
-            this.setState(res, function() {
+            if(!res.data.isError){
+            this.setState(res.data, function() {
+                let myInfo = this.state;
 
-                if (this.state["profileDto.allergies"] === 'yes') {
+                if (this.state["profileDto"]["allergies"] === 'yes') {
                     this.refs.allergiesYes.checked = true;
-                } else
-                if (this.state["profileDto.allergies"] !== '') {
+                } else {
                     this.refs.allergiesNo.checked = true;
+                    myInfo['profileDto']["allergies"] = 'no'
                 }
 
-                if (this.state["profileDto.diseases"] === 'yes') {
+                if (this.state["profileDto"]["diseases"] === 'yes') {
                     this.refs.diseasesYes.checked = true;
                 } else
-                if (this.state["profileDto.diseases"] !== '') {
+                {
                     this.refs.diseasesNo.checked = true;
+                    myInfo['profileDto']["diseases"] = 'no'
                 }
 
-                if (this.state["profileDto.chronicIllness"] === 'yes') {
+                if (this.state["profileDto"]["chronicIllness"] === 'yes') {
                     this.refs.chronicYes.checked = true;
-                } else
-                if (this.state["profileDto.chronicIllness"] !== '') {
+                } else {
                     this.refs.chronicNo.checked = true;
+                    myInfo['profileDto']["chronicIllness"] = 'no'
+                }
+                if (this.state["profileDto"]["rh"] === '+') {
+                    this.refs.rhPositive.checked= true;
+                } else {
+                    this.refs.rhNegative.checked = true;
+                    myInfo['profileDto']["rh"] = '-'
+                }
+                if (this.state["profileDto"]["bloodGroup"] === '0') {
+                    this.refs.groupZero.checked= true;
                 }
 
+                if (this.state["profileDto"]["bloodGroup"] === 'A') {
+                    this.refs.groupA.checked= true;
+                }
+
+                if (this.state["profileDto"]["bloodGroup"] === 'B') {
+                    this.refs.groupB.checked= true;
+                }
+                if (this.state["profileDto"]["bloodGroup"] === 'AB') {
+                    this.refs.groupAB.checked= true;
+                }
+                this.setState(myInfo,function() {
+                    console.log(this.state);
+                });
             });
-        });
+        }});
     }
 
     handleChangedProfileTextField(event) {
         let field = event.target.name;
         let value = event.target.value;
         let myInfo = this.state;
-        myInfo['profileDto.'][field]=value;
-        this.setState(myInfo);
+        myInfo['profileDto'][field]=value;
+        console.log(myInfo);
+        this.setState(myInfo, function() {
+            console.log(this.state);
+        });
+
     }
 
     handleChangedAddressTextField(event) {
         let field = event.target.name;
         let value = event.target.value;
         let myInfo = this.state;
-        myInfo['addressDto.'][field]=value;
+        myInfo['addressDto'][field]=value;
         this.setState(myInfo);
     }
 
     handleChangedAllergies(event) {
         if (event.target.id==='allergiesYes' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.allergies']='yes';
+            myInfo['profileDto']['allergies']='yes';
             this.setState(myInfo);
         } else {
             let myInfo = this.state;
-            myInfo['profileDto.allergies']='no';
+            myInfo['profileDto']['allergies']='no';
             this.setState(myInfo);
         }
     }
@@ -108,11 +137,11 @@ class MyInfo extends React.Component {
     handleChangedDiseases(event) {
         if (event.target.id==='diseasesYes' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.diseases']='yes';
+            myInfo['profileDto']['diseases']='yes';
             this.setState(myInfo);
         } else {
             let myInfo = this.state;
-            myInfo['profileDto.diseases']='no';
+            myInfo['profileDto']['diseases']='no';
             this.setState(myInfo);
         }
     }
@@ -120,11 +149,11 @@ class MyInfo extends React.Component {
     handleChangedChronic(event) {
         if (event.target.id==='chronicYes' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.chronicIllness']='yes';
+            myInfo['profileDto']['chronicIllness']='yes';
             this.setState(myInfo);
         } else {
             let myInfo = this.state;
-            myInfo['profileDto.chronicIllness']='no';
+            myInfo['profileDto']['chronicIllness']='no';
             this.setState(myInfo);
         }
     }
@@ -132,19 +161,19 @@ class MyInfo extends React.Component {
     handleChangedBloodGroup(event) {
         if (event.target.id==='groupZero' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.bloodGroup']='0';
+            myInfo['profileDto']['bloodGroup']='0';
             this.setState(myInfo);
         } else if (event.target.id==='groupA' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.bloodGroup']='A';
+            myInfo['profileDto']['bloodGroup']='A';
             this.setState(myInfo);
         } else if (event.target.id==='groupB' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.bloodGroup']='B';
+            myInfo['profileDto']['bloodGroup']='B';
             this.setState(myInfo);
         } else if (event.target.id==='groupAB' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.bloodGroup']='AB';
+            myInfo['profileDto']['bloodGroup']='AB';
             this.setState(myInfo);
         }
     }
@@ -152,11 +181,11 @@ class MyInfo extends React.Component {
     handleChangedRh(event) {
         if (event.target.id==='rhPositive' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.rh']='+';
+            myInfo['profileDto']['rh']='+';
             this.setState(myInfo);
         } else if (event.target.id==='rhNegative' && event.target.checked) {
             let myInfo = this.state;
-            myInfo['profileDto.rh']='-';
+            myInfo['profileDto']['rh']='-';
             this.setState(myInfo);
         }
     }
@@ -196,9 +225,9 @@ class MyInfo extends React.Component {
                         <div className="col-11 col-sm-8 col-md-6 col-lg-5" style={{textAlign: 'center'}}>
                             <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedProfileTextField}>
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px'}}>General Information</h3>
-                                <Input name="firstName" label="First name" type="text" placeholder={this.state.profileDto.firstName}/>
+                                <Input name="firstName" label="First name" type="text" placeholder={this.state['profileDto']['firstName']}/>
                                 <Input name="lastName" label="Last name" type="text" placeholder={this.state.profileDto.lastName}/>
-                                <Input name="dateOfBirth" label="Date of birth (dd-mm-yyyy)" type="text" placeholder={this.state.profileDto.dateOfBirth} ref="dob"/>
+                                <Input name="dateOfBirth" label="Date of birth (dd-mm-yyyy)" type="text" placeholder={this.state.profileDto['dateOfBirth']} ref="dob"/>
                                 <Input name="gender" label="Gender" type="text" placeholder={this.state.profileDto.gender}/>
                                 <Input name="cnp" label="CNP" type="text" placeholder={this.state.profileDto.cnp}/>
                                 <Input name="email" label="Email (one address, please)" type="text" placeholder={this.state.profileDto.email}/>
