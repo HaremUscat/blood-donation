@@ -42,6 +42,7 @@ public class InfoController {
     @RequestMapping(value = "/my-info/{username}", method = RequestMethod.GET)
     public InfoResponse getUserInfo(@PathVariable String username){
 
+        System.out.println("A GET request was made on /my-info/"+username);
         Optional<User> userOptional = userService.getUser(username);
         if(userOptional.isPresent()){
             User user = userOptional.get();
@@ -60,6 +61,7 @@ public class InfoController {
             }else{
                 profileDto = profileConverter.convertModelToDto(profile);
             }
+
             return InfoResponse.builder()
                     .status("Success")
                     .message("Data passed")
@@ -80,12 +82,14 @@ public class InfoController {
 
     @RequestMapping(value = "/my-info", method = RequestMethod.POST)
     public InfoResponse createUpdateInfo(@RequestBody final InfoRequest infoRequest){
+        System.out.println("A POST request was made on /my-info" + infoRequest.toString());
+
         Optional<User> userOptional = userService.getUser(infoRequest.getUsername());
         User user = userOptional.get();
         Address address = userOptional.get().getAddress();
         Profile profile = userOptional.get().getProfile();
 
-        if (address!=null|| profile!=null){
+        if (address!=null || profile!=null){
             Address a= addressService.updateAddress(address.getId(), infoRequest.getAddressDto().getHomeAddress(), infoRequest.getAddressDto().getCurrentHomeAddress(), infoRequest.getAddressDto().getCity(), infoRequest.getAddressDto().getCountry(), infoRequest.getAddressDto().getCurrentCity(), infoRequest.getAddressDto().getCurrentCountry());
             Profile p = profileService.updateProfile(profile.getId(), infoRequest.getProfileDto().getFirstName(), infoRequest.getProfileDto().getLastName(), infoRequest.getProfileDto().getDateOfBirth(), infoRequest.getProfileDto().getGender(), infoRequest.getProfileDto().getBloodGroup(),infoRequest.getProfileDto().getCnp(), infoRequest.getProfileDto().getRh(), infoRequest.getProfileDto().getEmail(), infoRequest.getProfileDto().getPhone(), infoRequest.getProfileDto().getAllergies(), infoRequest.getProfileDto().getDiseases(),infoRequest.getProfileDto().getChronicIllness());
             return InfoResponse.builder()

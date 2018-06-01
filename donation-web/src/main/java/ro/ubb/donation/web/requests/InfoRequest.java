@@ -9,6 +9,7 @@ import ro.ubb.donation.web.dto.ProfileDto;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class InfoRequest {
     private AddressDto addressDto;
     private ProfileDto profileDto;

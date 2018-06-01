@@ -62,6 +62,7 @@ public class AddressServiceImpl implements AddressService {
                 .currentCity(currentCity)
                 .currentCountry(currentCountry)
                 .build();
+
         addressRepository.save(address);
 
         log.trace("updateAddress={}", address);

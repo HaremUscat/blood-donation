@@ -23,11 +23,13 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("ro.ubb.donation.core");
 
+        //service-uri
         RoleService roleService = context.getBean(RoleService.class);
         ProfileService profileService = context.getBean(ProfileService.class);
         UserService userService = context.getBean(UserService.class);
         AddressService addressService = context.getBean(AddressService.class);
 
+        //cream RoleTable
         Role donor = roleService.createRole("Donor");
         Role doctor = roleService.createRole("Doctor");
         Role pers = roleService.createRole("Hospital Personnel");
@@ -44,7 +46,7 @@ public class Main {
         User u2 = userService.createUser("user2", "pas2", true, doctor);
         userService.updateUser(u2.getId(), u2.getUsername(), u2.getPassword(), u2.isLogged(), u2.getRole(), addr2, p2);
 
-        addressService.deleteAddress(2);
+        //addressService.deleteAddress(2);
         //profileService.deleteProfile(1);
         //userService.deleteUser(1);
 
