@@ -26,8 +26,9 @@ public class Request {
     @Column(name = "plasma_units", nullable = false)
     private int plasmaUnits;
 
-    @Column(name = "id_donation_center", nullable = false)
-    private int donationCenterId;
+    @ManyToOne
+    @JoinColumn(name = "id_donation_center")
+    private Center center;
 
     @Column(name = "location_hospital", nullable = false)
     private String locationHospital;
@@ -36,7 +37,7 @@ public class Request {
     private String beneficiaryName;
 
     @Column(name = "active_donor", nullable = false)
-    private String activeDonor;
+    private boolean activeDonor;
 
     @Column(name = "urgency_level", nullable = false)
     private String urgencyLevel;
@@ -47,7 +48,7 @@ public class Request {
     @Column(name = "rh", nullable = false)
     private String rh;
 
-    @Column(name = "username", nullable = false)
+    @Column(name = "username")
     private String username;
 
     @Column(name = "status", nullable = false)

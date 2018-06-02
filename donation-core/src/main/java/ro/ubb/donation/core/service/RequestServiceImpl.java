@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ro.ubb.donation.core.model.Center;
 import ro.ubb.donation.core.model.Request;
 import ro.ubb.donation.core.repository.RequestRepository;
 
@@ -31,15 +32,15 @@ public class RequestServiceImpl implements RequestService {
 
     @Override
     @Transactional
-    public Request updateRequest(int requestId, Integer thrombocyteUnits, Integer redCellsunits, Integer plasmaUnits, Integer donationCenterId, String locationHospital, String beneficiaryName, String activeDonor, String urgencyLevel, String bloodGroup, String rh, String username, String status) {
-        log.trace( "updateRequest: requestId={}, thrombocyteUnits={}, redCellsunits={}, plasmaUnits={}, donationCenterId={}, locationHospital={}, beneficiaryName={}, activeDonor={}, urgencyLevel={}, bloodGroup={}, rh={}, username={}, status={}", requestId, thrombocyteUnits, redCellsunits, plasmaUnits, donationCenterId, locationHospital, beneficiaryName, activeDonor, urgencyLevel, bloodGroup, rh, username, status );
+    public Request updateRequest(int requestId, Integer thrombocyteUnits, Integer redCellsunits, Integer plasmaUnits, Center donationCenter, String locationHospital, String beneficiaryName, boolean activeDonor, String urgencyLevel, String bloodGroup, String rh, String username, String status) {
+        log.trace( "updateRequest: requestId={}, thrombocyteUnits={}, redCellsunits={}, plasmaUnits={}, donationCenterId={}, locationHospital={}, beneficiaryName={}, activeDonor={}, urgencyLevel={}, bloodGroup={}, rh={}, username={}, status={}", requestId, thrombocyteUnits, redCellsunits, plasmaUnits, donationCenter, locationHospital, beneficiaryName, activeDonor, urgencyLevel, bloodGroup, rh, username, status );
 
         Optional<Request> request = requestRepository.findById( requestId );
         request.ifPresent( r -> {
             r.setThrombocyteUnits( thrombocyteUnits );
             r.setRedCellsunits( redCellsunits );
             r.setPlasmaUnits( plasmaUnits );
-            r.setDonationCenterId( donationCenterId );
+            r.setCenter( donationCenter );
             r.setLocationHospital( locationHospital );
             r.setBeneficiaryName( beneficiaryName );
             r.setActiveDonor( activeDonor );
@@ -56,14 +57,14 @@ public class RequestServiceImpl implements RequestService {
 
     @Override
     @Transactional
-    public Request createRequest(Integer thrombocyteUnits, Integer redCellsunits, Integer plasmaUnits, Integer donationCenterId, String locationHospital, String beneficiaryName, String activeDonor, String urgencyLevel, String bloodGroup, String rh, String username, String status) {
-        log.trace( "createRequest: thrombocyteUnits={}, redCellsunits={}, plasmaUnits={}, donationCenterId={}, locationHospital={}, beneficiaryName={}, activeDonor={}, urgencyLevel={}, bloodGroup={}, rh={}, username={}, status={}", thrombocyteUnits, redCellsunits, plasmaUnits, donationCenterId, locationHospital, beneficiaryName, activeDonor, urgencyLevel, bloodGroup, rh, username, status );
+    public Request createRequest(Integer thrombocyteUnits, Integer redCellsunits, Integer plasmaUnits, Center donationCenter, String locationHospital, String beneficiaryName, boolean activeDonor, String urgencyLevel, String bloodGroup, String rh, String username, String status) {
+        log.trace( "createRequest: thrombocyteUnits={}, redCellsunits={}, plasmaUnits={}, donationCenterId={}, locationHospital={}, beneficiaryName={}, activeDonor={}, urgencyLevel={}, bloodGroup={}, rh={}, username={}, status={}", thrombocyteUnits, redCellsunits, plasmaUnits, donationCenter, locationHospital, beneficiaryName, activeDonor, urgencyLevel, bloodGroup, rh, username, status );
 
         Request request = Request.builder()
                 .thrombocyteUnits( thrombocyteUnits )
                 .redCellsunits( redCellsunits )
                 .plasmaUnits( plasmaUnits )
-                .donationCenterId( donationCenterId )
+                .center( donationCenter )
                 .locationHospital( locationHospital )
                 .beneficiaryName( beneficiaryName )
                 .activeDonor( activeDonor )

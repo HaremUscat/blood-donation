@@ -1,6 +1,7 @@
 package ro.ubb.donation.web.dto;
 
 import lombok.*;
+import ro.ubb.donation.core.model.Center;
 
 import java.io.Serializable;
 
@@ -13,10 +14,10 @@ public class RequestDto implements Serializable {
     private Integer thrombocyteUnits;
     private Integer redCellsunits;
     private Integer plasmaUnits;
-    private Integer donationCenterId;
+    private Center donationCenter;
     private String locationHospital;
     private String beneficiaryName;
-    private String activeDonor;
+    private boolean activeDonor;
     private String urgencyLevel;
     private String bloodGroup;
     private String rh;
@@ -28,7 +29,7 @@ public class RequestDto implements Serializable {
         return "RequestDto{" +
                 ", thrombocytes_units=" + thrombocyteUnits + '\'' +
                 ", plasma_units=" + plasmaUnits + '\'' +
-                ", id_donation_center=" + donationCenterId + '\'' +
+                ", id_donation_center=" + donationCenter.getId() + '\'' +
                 ", location_hospital=" + locationHospital + '\'' +
                 ", beneficiary=" + beneficiaryName + '\'' +
                 ", active_donor=" + activeDonor + '\'' +
