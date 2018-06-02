@@ -1,0 +1,23 @@
+const fooSentRequests = require("../foo-data/foo-sent-requests.js");
+const axios = require('axios');
+
+function submitRequest(request) {
+    return axios.post('/requests', request)
+        .then((response) => {
+            if (response.data.isError) {
+                alert(response.data.message);       //TODO: get rid of alerts!
+            }
+        })
+        .catch(function(err) {
+            alert(err);
+        });
+}
+
+function getSentRequests() {
+    //return axios.get('/requests/' + this.state.username);
+    return new Promise((resolve, reject) => {
+        resolve({requests: fooSentRequests});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    });
+}
+
+module.exports = {submitRequest, getSentRequests};

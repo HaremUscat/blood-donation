@@ -5,7 +5,9 @@ import Logout from "./logout";
 import Register from "./register";
 import MyInfo from "./my-info";
 import UserDashboard from "./user-dashboard";
+import SentRequests from "./sent-requests";
 import NextDonation from "./next-donation";
+import NewRequest from "./new-request";
 import {
     BrowserRouter,
     Route
@@ -25,6 +27,8 @@ class App extends React.Component {
                     <Route path="/my-info" render={(props) => EnsureLoggedIn(MyInfo, "/my-info", props)}/>
                     <Route path="/user-dashboard" render={(props) => EnsureLoggedIn(UserDashboard, "/user-dashboard", props)}/>
                     <Route path="/next-donation" render={(props) => EnsureLoggedIn(NextDonation, "/next-donation", props)}/>
+                    <Route path="/new-request" render={(props) => EnsureLoggedIn(NewRequest, "/new-request", props)}/>
+                    <Route path="/sent-requests" render={(props) => EnsureLoggedIn(SentRequests, "/sent-requests", props)}/>
                 </div>
             </BrowserRouter>
         );

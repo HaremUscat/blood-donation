@@ -17,6 +17,11 @@ body {
     font-family: 'Questrial', 'sans-serif';
 }
 
+.clean-link, .clean-link:hover, .clean-link:active, .clean-link:focus {
+    color: white;
+    text-decoration: none;
+}
+
 /* --------------------------------------------------------------------------------- */
 
 /* NAVBAR CSS */
@@ -131,6 +136,77 @@ body {
 
 .donation-form-card > h5 > button:hover, .donation-form-card > h5 > button:focus {
     color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* SENT REQUESTS TABLE */
+
+.requests-table {
+    width: 100%;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.requests-table > thead > tr > th > h5 {
+    font-size: 25px;
+}
+
+.requests-table > thead > tr, .requests-table > tbody > tr {
+    border-bottom: 1px solid #e6e6e6;
+    font-family: 'Questrial', 'sans-serif';
+}
+
+.requests-table > thead > tr > th:first-of-type {
+    text-align: left;
+}
+
+.requests-table > thead > tr > th:last-of-type {
+    text-align: right;
+}
+
+.requests-table > tbody > tr > td:last-of-type {
+    text-align: right;
+}
+
+.requests-table > tbody > tr > td {
+    font-size: 18px;
+    padding: 15px 3px;
+}
+
+.requests-table > thead > tr > th {
+    padding: 10px 3px;
+}
+
+/* PAGINATION */
+
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+    .pagination {
+        margin-right: 30px;
+    }
+}
+
+.pagination > li {
+    margin-left: 5px;
+}
+
+.pagination > :not(.active-page) > a {
+    color: black;
+}
+
+.active-page > a {
+    color: #ec0a0b;
+}
+
+.pagination > li > a:hover, .pagination > li > a:focus {
+    color: #ec0a0b;
     text-decoration: none;
     cursor: pointer;
 }

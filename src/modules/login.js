@@ -1,7 +1,7 @@
 import React from "react";
 import Form from '../components/form';
 import Input from '../components/input';
-import BlockButton from '../components/blockButton';
+import BlockButton from '../components/block-button';
 import {Link} from 'react-router-dom';
 const authApi = require('../api/auth-api');
 

@@ -1,5 +1,5 @@
 import React from "react";
-import BlockButton from "../components/blockButton";
+import BlockButton from "../components/block-button";
 import Navbar from "../components/navbar";
 import Form from "../components/form";
 import Input from "../components/input";
@@ -11,18 +11,18 @@ class MyInfo extends React.Component {
 
         this.state = {
             profileDto: {
-                    firstName: '',
-                    lastName: '',
-                    dateOfBirth: '',
-                    gender: '',
-                    cnp: '',
-                    bloodGroup: '',
-                    rh: '',
-                    email: '',
-                    phone: '',
-                    allergies: '',
-                    diseases: '',
-                    chronicIllness: ''
+                firstName: '',
+                lastName: '',
+                dateOfBirth: '',
+                gender: '',
+                cnp: '',
+                bloodGroup: '',
+                rh: '',
+                email: '',
+                phone: '',
+                allergies: '',
+                diseases: '',
+                chronicIllness: ''
             },
             addressDto: {
                 homeAddress: '',      //din buletin
