@@ -65,5 +65,12 @@ public class Donation {
                 .donationBeneficiary("")
                 .build();
     }
+    @Column(name = "appointment_date")
+    @Temporal(TemporalType.DATE)
+    private Date appointment_date;
+
+    @OneToOne
+    @JoinColumn(name="result_id")
+    private Result result;
 
 }
