@@ -7,14 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2c033d4-5ddd-4429-8858-62fe7f9cbc76" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___ro_ubb___donation_web_1_0_SNAPSHOT_war__exploded_.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___ro_ubb___donation_web_1_0_SNAPSHOT_war__exploded_.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/807211c9-d83f-4c81-a5a6-5931d21127e4.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/807211c9-d83f-4c81-a5a6-5931d21127e4.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/donation-web/donation-web_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/donation-web/donation-web_main.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java" />
-    <list default="true" id="a4076a04-cd87-489e-8e55-91f18097784b" name="Default" comment="Merge branch 'backend' of https://github.com/HaremUscat/blood-donation into backend&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/config/JpaConfig.class" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/config/JpaConfig.class" />
+      <change beforePath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Donation.class" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Donation.class" />
+      <change beforePath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java" />
+      <change beforePath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/DashboardController.class" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/DashboardController.class" />
+      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/DashboardResponse$DashboardResponseBuilder.class" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/DashboardResponse$DashboardResponseBuilder.class" />
+      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/DashboardResponse.class" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/DashboardResponse.class" />
+      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/lib/ro.ubb-donation-core-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/lib/ro.ubb-donation-core-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java" />
+      <change beforePath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/DonationConverter.java" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/DonationConverter.java" />
+      <change beforePath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/DonationDto.java" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/DonationDto.java" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/donation-core/.gradle/" />
     <ignored path="$PROJECT_DIR$/donation-core/build/" />
     <ignored path="$PROJECT_DIR$/donation-core/out/" />
@@ -53,16 +65,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="blood_donation: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
-<<<<<<< HEAD
-=======
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="blood_donation@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="blood_donation: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="role: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
     </expand>
     <select />
   </component>
@@ -73,19 +82,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-<<<<<<< HEAD
       <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Request.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="534">
-              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+              <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="donation" pinned="false" current-in-tab="false">
-        <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.donation">
+      <file leaf-file-name="JpaConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="role" pinned="false" current-in-tab="false">
+        <entry file="das://table:/1b79dafe/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.role">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -93,101 +111,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/RequestServiceImpl.java">
+      <file leaf-file-name="CenterServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="34" column="197" lean-forward="false" selection-start-line="34" selection-start-column="197" selection-end-line="34" selection-end-column="197" />
-=======
-      <file leaf-file-name="Donation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1302">
-              <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
+            <state relative-caret-position="120">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="RequestService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/RequestService.java">
+      <file leaf-file-name="DonationServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="18" column="82" lean-forward="false" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
-=======
-      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="32" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
+            <state relative-caret-position="-189">
+              <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="user" pinned="false" current-in-tab="true">
-        <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-=======
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/807211c9-d83f-4c81-a5a6-5931d21127e4/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="RequestDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/RequestDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-              <folding />
-=======
-      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="RequestConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/RequestConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="35" column="53" lean-forward="false" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-=======
       <file leaf-file-name="DonationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="50" column="5" lean-forward="false" selection-start-line="32" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
+            <state relative-caret-position="169">
+              <caret line="58" column="110" lean-forward="false" selection-start-line="58" selection-start-column="110" selection-end-line="58" selection-end-column="110" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="request" pinned="false" current-in-tab="false">
-        <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.request">
+      <file leaf-file-name="donation" pinned="false" current-in-tab="true">
+        <entry file="das://table:/1b79dafe/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.donation">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -195,31 +150,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Donation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
+      <file leaf-file-name="DonationFormPost.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/requests/DonationFormPost.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile" pinned="false" current-in-tab="false">
-        <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.profile">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-=======
-      <file leaf-file-name="DashboardResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java">
+      <file leaf-file-name="DonationDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/DonationDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="72">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DonationConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/DonationConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="54" lean-forward="false" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,7 +190,6 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
   <component name="FindInProjectRecents">
     <findStrings>
       <find>addressDto</find>
@@ -246,20 +201,23 @@
       <replace>address</replace>
     </replaceStrings>
   </component>
-=======
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="frontend" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Gradle\gradle-4.6" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\User\.gradle\wrapper\dists\gradle-4.0-bin\3p92xsbhik5vmig8i90n16yxc\gradle-4.0" />
       </map>
     </option>
     <option name="myGradleVersions">
       <map>
-        <entry key="$PROJECT_DIR$" value="4.6" />
+        <entry key="$PROJECT_DIR$" value="4.0" />
       </map>
     </option>
     <option name="availableProjects">
@@ -709,7 +667,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7628856171199" />
+        <entry key="$PROJECT_DIR$" value="7627576363066" />
         <entry key="$PROJECT_DIR$/build.gradle" value="2209903252" />
         <entry key="$PROJECT_DIR$/donation-core/build.gradle" value="2797381337" />
         <entry key="$PROJECT_DIR$/donation-web/build.gradle" value="3734653421" />
@@ -750,151 +708,6 @@
               <option name="name" value="blood-donation" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="C:/Gradle/gradle-4.6/src/announce" />
-                  <option value="C:/Gradle/gradle-4.6/src/antlr" />
-                  <option value="C:/Gradle/gradle-4.6/src/base-services" />
-                  <option value="C:/Gradle/gradle-4.6/src/base-services-groovy" />
-                  <option value="C:/Gradle/gradle-4.6/src/build-cache" />
-                  <option value="C:/Gradle/gradle-4.6/src/build-cache-http" />
-                  <option value="C:/Gradle/gradle-4.6/src/build-comparison" />
-                  <option value="C:/Gradle/gradle-4.6/src/build-init" />
-                  <option value="C:/Gradle/gradle-4.6/src/build-option" />
-                  <option value="C:/Gradle/gradle-4.6/src/cli" />
-                  <option value="C:/Gradle/gradle-4.6/src/code-quality" />
-                  <option value="C:/Gradle/gradle-4.6/src/composite-builds" />
-                  <option value="C:/Gradle/gradle-4.6/src/core" />
-                  <option value="C:/Gradle/gradle-4.6/src/core-api" />
-                  <option value="C:/Gradle/gradle-4.6/src/dependency-management" />
-                  <option value="C:/Gradle/gradle-4.6/src/diagnostics" />
-                  <option value="C:/Gradle/gradle-4.6/src/ear" />
-                  <option value="C:/Gradle/gradle-4.6/src/ide" />
-                  <option value="C:/Gradle/gradle-4.6/src/ide-native" />
-                  <option value="C:/Gradle/gradle-4.6/src/ide-play" />
-                  <option value="C:/Gradle/gradle-4.6/src/installation-beacon" />
-                  <option value="C:/Gradle/gradle-4.6/src/internal-android-performance-testing" />
-                  <option value="C:/Gradle/gradle-4.6/src/internal-integ-testing" />
-                  <option value="C:/Gradle/gradle-4.6/src/internal-performance-testing" />
-                  <option value="C:/Gradle/gradle-4.6/src/internal-testing" />
-                  <option value="C:/Gradle/gradle-4.6/src/ivy" />
-                  <option value="C:/Gradle/gradle-4.6/src/jacoco" />
-                  <option value="C:/Gradle/gradle-4.6/src/javascript" />
-                  <option value="C:/Gradle/gradle-4.6/src/jvm-services" />
-                  <option value="C:/Gradle/gradle-4.6/src/language-groovy" />
-                  <option value="C:/Gradle/gradle-4.6/src/language-java" />
-                  <option value="C:/Gradle/gradle-4.6/src/language-jvm" />
-                  <option value="C:/Gradle/gradle-4.6/src/language-native" />
-                  <option value="C:/Gradle/gradle-4.6/src/language-scala" />
-                  <option value="C:/Gradle/gradle-4.6/src/launcher" />
-                  <option value="C:/Gradle/gradle-4.6/src/logging" />
-                  <option value="C:/Gradle/gradle-4.6/src/maven" />
-                  <option value="C:/Gradle/gradle-4.6/src/messaging" />
-                  <option value="C:/Gradle/gradle-4.6/src/model-core" />
-                  <option value="C:/Gradle/gradle-4.6/src/model-groovy" />
-                  <option value="C:/Gradle/gradle-4.6/src/native" />
-                  <option value="C:/Gradle/gradle-4.6/src/osgi" />
-                  <option value="C:/Gradle/gradle-4.6/src/persistent-cache" />
-                  <option value="C:/Gradle/gradle-4.6/src/platform-base" />
-                  <option value="C:/Gradle/gradle-4.6/src/platform-jvm" />
-                  <option value="C:/Gradle/gradle-4.6/src/platform-native" />
-                  <option value="C:/Gradle/gradle-4.6/src/platform-play" />
-                  <option value="C:/Gradle/gradle-4.6/src/plugin-development" />
-                  <option value="C:/Gradle/gradle-4.6/src/plugin-use" />
-                  <option value="C:/Gradle/gradle-4.6/src/plugins" />
-                  <option value="C:/Gradle/gradle-4.6/src/process-services" />
-                  <option value="C:/Gradle/gradle-4.6/src/publish" />
-                  <option value="C:/Gradle/gradle-4.6/src/reporting" />
-                  <option value="C:/Gradle/gradle-4.6/src/resources" />
-                  <option value="C:/Gradle/gradle-4.6/src/resources-gcs" />
-                  <option value="C:/Gradle/gradle-4.6/src/resources-http" />
-                  <option value="C:/Gradle/gradle-4.6/src/resources-s3" />
-                  <option value="C:/Gradle/gradle-4.6/src/resources-sftp" />
-                  <option value="C:/Gradle/gradle-4.6/src/scala" />
-                  <option value="C:/Gradle/gradle-4.6/src/signing" />
-                  <option value="C:/Gradle/gradle-4.6/src/test-kit" />
-                  <option value="C:/Gradle/gradle-4.6/src/testing-base" />
-                  <option value="C:/Gradle/gradle-4.6/src/testing-junit-platform" />
-                  <option value="C:/Gradle/gradle-4.6/src/testing-jvm" />
-                  <option value="C:/Gradle/gradle-4.6/src/testing-native" />
-                  <option value="C:/Gradle/gradle-4.6/src/tooling-api" />
-                  <option value="C:/Gradle/gradle-4.6/src/tooling-api-builders" />
-                  <option value="C:/Gradle/gradle-4.6/src/version-control" />
-                  <option value="C:/Gradle/gradle-4.6/src/workers" />
-                  <option value="C:/Gradle/gradle-4.6/src/wrapper" />
-                  <option value="C:/Gradle/gradle-4.6/lib/ant-1.9.9.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/ant-launcher-1.9.9.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-base-services-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-base-services-groovy-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-build-cache-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-build-option-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-cli-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-core-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-core-api-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-docs-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-installation-beacon-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-jvm-services-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-kotlin-dsl-0.15.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-kotlin-dsl-tooling-builders-0.15.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-kotlin-dsl-tooling-models-0.15.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-launcher-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-logging-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-messaging-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-model-core-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-model-groovy-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-native-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-persistent-cache-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-process-services-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-resources-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-runtime-api-info-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-tooling-api-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/gradle-wrapper-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/groovy-all-2.4.12.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-announce-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-antlr-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-build-cache-http-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-build-comparison-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-build-init-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-code-quality-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-composite-builds-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-dependency-management-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-diagnostics-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-ear-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-ide-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-ide-native-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-ide-play-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-ivy-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-jacoco-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-javascript-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-language-groovy-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-language-java-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-language-jvm-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-language-native-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-language-scala-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-maven-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-osgi-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-platform-base-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-platform-jvm-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-platform-native-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-platform-play-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-plugin-development-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-plugin-use-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-plugins-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-publish-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-reporting-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-resources-gcs-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-resources-http-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-resources-s3-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-resources-sftp-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-scala-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-signing-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-test-kit-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-testing-base-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-testing-junit-platform-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-testing-jvm-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-testing-native-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-tooling-api-builders-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-version-control-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/gradle-workers-4.6.jar" />
-                  <option value="C:/Gradle/gradle-4.6/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -909,37 +722,31 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../../abc/laboratory8" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../blabla/laboratory8" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../blabla/laboratory8/server" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../catalog-1-list/catalog-1-list" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../catalog-2-crud/catalog-2-crud" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../catalog-3-grades" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../catalog-rest-template/catalog-rest-template" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../lab 7/sdi-beyond" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../lab 7maria/sdi-beyond" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../lab test" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../lab24/movies-rentals" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$" value="IMPORT" />
-        <entry key="$PROJECT_DIR$/../laboratory8" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../laborator 5/movies-rentals" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../laborator 6/sdi-beyond" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../laboratory8/laboratory8" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../mDiDiProject/movies-rentals" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../movies-rentals" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../mvcIntelliJIdea" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../spring-iss/spring-iss" value="PREVIEW" />
-        <entry key="$USER_HOME$/lab11+12/laboratory8" value="PREVIEW" />
-        <entry key="$USER_HOME$/lab11+12/laboratory8/client" value="PREVIEW" />
-        <entry key="$USER_HOME$/lab11+12/laboratory8/server" value="PREVIEW" />
         <entry key="$USER_HOME$/lab8maria" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="$PROJECT_DIR$/../laboratory8" value="PREVIEW" />
+        <entry key="D:/blabla/laboratory8" value="PREVIEW" />
+        <entry key="D:/blabla/laboratory8/server" value="PREVIEW" />
+        <entry key="D:/catalog-1-list/catalog-1-list" value="PREVIEW" />
+        <entry key="D:/catalog-2-crud/catalog-2-crud" value="PREVIEW" />
+        <entry key="D:/catalog-3-grades" value="PREVIEW" />
+        <entry key="D:/catalog-rest-template/catalog-rest-template" value="PREVIEW" />
+        <entry key="D:/lab 7/sdi-beyond" value="PREVIEW" />
+        <entry key="D:/lab 7maria/sdi-beyond" value="PREVIEW" />
+        <entry key="D:/lab test" value="PREVIEW" />
+        <entry key="D:/lab24/movies-rentals" value="PREVIEW" />
+        <entry key="D:/laborator 5/movies-rentals" value="PREVIEW" />
+        <entry key="D:/laborator 6/sdi-beyond" value="PREVIEW" />
+        <entry key="D:/laboratory8/laboratory8" value="PREVIEW" />
+        <entry key="D:/mDiDiProject/movies-rentals" value="PREVIEW" />
+        <entry key="D:/movies-rentals" value="PREVIEW" />
+        <entry key="D:/spring-iss/spring-iss" value="PREVIEW" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/donation-core/build.gradle" />
@@ -959,7 +766,6 @@
         <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/ProfileDto.java" />
         <option value="$PROJECT_DIR$/donation-web/src/main/resources/local/db.properties" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/Main.java" />
-        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/AddressServiceImpl.java" />
         <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/ProfileConverter.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/DonationRepository.java" />
@@ -967,7 +773,6 @@
         <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/requests/InfoRequest.java" />
         <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationPostResponse.java" />
         <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/DonationDto.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/CenterRepository.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterService.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterServiceImpl.java" />
@@ -981,26 +786,17 @@
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationService.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Address.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Profile.java" />
-        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/DonationConverter.java" />
-        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java" />
-        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/RequestService.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/RequestServiceImpl.java" />
         <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/RequestDto.java" />
         <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/RequestConverter.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Request.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java" />
-=======
-        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java" />
-        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultService.java" />
-        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/ResultRepository.java" />
-        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultServiceImpl.java" />
-        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/ResultController.java" />
         <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java" />
-        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java" />
-        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java" />
-        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
+        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/DonationDto.java" />
+        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/DonationConverter.java" />
+        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java" />
       </list>
     </option>
   </component>
@@ -1012,16 +808,16 @@
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_WARNINGS" value="true" />
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1039,8 +835,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1081,6 +875,39 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1090,6 +917,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -1100,6 +930,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -1110,6 +943,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -1120,6 +956,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -1156,6 +995,39 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1165,6 +1037,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -1175,6 +1050,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="converter" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -1185,6 +1063,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="requests" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -1195,25 +1089,36 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ro" type="462c0819:PsiDirectoryNode" />
+              <item name="ubb" type="462c0819:PsiDirectoryNode" />
+              <item name="donation" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="response" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
               <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
               <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="local" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1221,11 +1126,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="jdk.selected.JAVA_MODULE" value="9" />
+    <property name="SearchEverywhereHistoryKey" value="version control&#9;ACTION&#9;ActivateVersionControlToolWindow" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="DDL Data Source" />
+    <property name="last_opened_file_path" value="D:/MPP/bookstore" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1239,12 +1143,50 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Server">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
-      <module />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ro.ubb.donation.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ro.ubb.donation.web.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="donation-web_main" />
+      <envs />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ro.ubb.donation.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ro.ubb.donation.core.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="donation-core_main" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1315,7 +1257,7 @@
       <listeners />
     </configuration>
     <configuration name="Server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.7" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="9">
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="Gradle : ro.ubb : donation-web-1.0-SNAPSHOT.war (exploded)">
           <settings>
@@ -1324,7 +1266,9 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_blood-donation_4" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_blood-donation_3" />
+        <option name="HTTP_PORT" value="1234" />
+        <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1333,7 +1277,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="59262" />
+        <option name="DEBUG_PORT" value="53014" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -1392,6 +1336,17 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Server" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main (1)" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1401,87 +1356,69 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a4076a04-cd87-489e-8e55-91f18097784b" name="Default" comment="" />
-      <created>1527944060244</created>
+      <changelist id="c2c033d4-5ddd-4429-8858-62fe7f9cbc76" name="Default" comment="" />
+      <created>1525507128715</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1527944060244</updated>
-      <workItem from="1527944074603" duration="10257000" />
-      <workItem from="1527960233834" duration="921000" />
+      <updated>1525507128715</updated>
+      <workItem from="1525507136455" duration="2802000" />
+      <workItem from="1526906684359" duration="894000" />
+      <workItem from="1526915931213" duration="5875000" />
+      <workItem from="1527228147616" duration="75000" />
+      <workItem from="1527373616420" duration="6000" />
+      <workItem from="1527975456795" duration="3775000" />
     </task>
+    <task id="LOCAL-00001" summary="My Info finished: Added Address, Profile, AddressService, AddressServiceImpl, ProfileService, ProfileServiceImpl, InfoController, InfoRequest, AddressConverter, ProfileConverter, AddressDto, ProfileDto, InfoResponse">
+      <created>1526848533044</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1526848533044</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="80735000" />
-=======
-    <option name="totallyTimeSpent" value="11178000" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
+    <option name="totallyTimeSpent" value="87896000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21052632" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5118913" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2729332" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4473386" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5911665" sideWeight="0.49785176" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29860365" sideWeight="0.49490538" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25886145" sideWeight="0.5050946" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="21" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18232045" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48950276" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24328679" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2729332" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="23" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25821066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="24" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="25" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26387316" sideWeight="0.5" order="26" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2781955" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22864583" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.224" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26742858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50285715" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="22" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1490,13 +1427,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="My Info finished: Added Address, Profile, AddressService, AddressServiceImpl, ProfileService, ProfileServiceImpl, InfoController, InfoRequest, AddressConverter, ProfileConverter, AddressDto, ProfileDto, InfoResponse" />
+    <option name="LAST_COMMIT_MESSAGE" value="My Info finished: Added Address, Profile, AddressService, AddressServiceImpl, ProfileService, ProfileServiceImpl, InfoController, InfoRequest, AddressConverter, ProfileConverter, AddressDto, ProfileDto, InfoResponse" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-<<<<<<< HEAD
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java</url>
-          <line>66</line>
+          <line>88</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
@@ -1510,7 +1450,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java</url>
-          <line>58</line>
+          <line>80</line>
           <properties class="ro.ubb.donation.web.controller.DonationController" method="getDonationFormInfo">
             <option name="EMULATED" value="true" />
           </properties>
@@ -1526,91 +1466,18 @@
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="37" />
-=======
-      <option name="time" value="3" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/AddressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="36" column="74" lean-forward="true" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1302">
-          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="32" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#533#534#0" expanded="false" />
-            <element signature="e#603#604#0" expanded="false" />
-            <element signature="e#666#667#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Center.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/AuthenticationResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="8" />
-=======
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/807211c9-d83f-4c81-a5a6-5931d21127e4/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationPostResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="8" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/CentersResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1631,37 +1498,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.center">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.role">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.address">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/requests/DonationFormPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.center" />
+    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.role" />
+    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.address" />
     <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Address.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
@@ -1670,63 +1509,24 @@
             <element signature="e#1433#1434#0" expanded="false" />
             <element signature="e#1481#1482#0" expanded="false" />
           </folding>
-=======
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java">
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ProfileServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/ProfileRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/AddressService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/RoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="24">
           <caret line="51" column="48" lean-forward="true" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
-=======
-        <state relative-caret-position="105">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="79" column="41" lean-forward="false" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
           <folding>
-            <element signature="e#2132#2133#0" expanded="true" />
-            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="e#2132#2133#0" expanded="false" />
+            <element signature="e#2180#2181#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1735,90 +1535,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
           <caret line="843" column="0" lean-forward="false" selection-start-line="843" selection-start-column="0" selection-end-line="843" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/DonationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/ProfileConverter.java">
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/ResultRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/UserService.java">
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="80" column="55" lean-forward="false" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ProfileServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/ResultController.java" />
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardControler.java" />
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/AuthenticationResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/DonationConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1826,39 +1557,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="563" column="0" lean-forward="false" selection-start-line="563" selection-start-column="0" selection-end-line="563" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/InfoResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.0.3.RELEASE/54c93edc086d0125f8890275b00e2c7259985078/spring-core-5.0.3.RELEASE-sources.jar!/org/springframework/util/ReflectionUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="396" column="0" lean-forward="false" selection-start-line="396" selection-start-column="0" selection-end-line="396" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationPostResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.0.3.RELEASE/c18f54308f03fe8f379584806782d2a83a080233/spring-aop-5.0.3.RELEASE-sources.jar!/org/springframework/aop/target/SingletonTargetSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#2096#2097#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1866,27 +1578,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/AddressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.0.3.RELEASE/c18f54308f03fe8f379584806782d2a83a080233/spring-aop-5.0.3.RELEASE-sources.jar!/org/springframework/aop/framework/AdvisedSupport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="482" column="0" lean-forward="false" selection-start-line="482" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
-          <folding>
-            <element signature="e#7524#7525#0" expanded="false" />
-            <element signature="e#7555#7556#0" expanded="false" />
-            <element signature="e#18106#18107#0" expanded="false" />
-            <element signature="e#18135#18136#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1895,21 +1593,7 @@
         <state relative-caret-position="217">
           <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1918,12 +1602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-          <folding>
-            <element signature="e#5995#5996#0" expanded="false" />
-            <element signature="e#6047#6048#0" expanded="false" />
-            <element signature="e#6223#6224#0" expanded="false" />
-            <element signature="e#6277#6278#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1931,38 +1609,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="206" column="0" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationGetResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/CenterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="99" column="62" lean-forward="true" selection-start-line="99" selection-start-column="62" selection-end-line="99" selection-end-column="62" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.3.RELEASE/c9d95dcd7a662dc0609c0673c29d4b4c8cde079c/spring-web-5.0.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1970,7 +1623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1978,74 +1630,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="870" column="0" lean-forward="false" selection-start-line="870" selection-start-column="0" selection-end-line="870" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3998">
-          <caret line="927" column="19" lean-forward="false" selection-start-line="927" selection-start-column="19" selection-end-line="927" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="71" column="61" lean-forward="true" selection-start-line="71" selection-start-column="61" selection-end-line="71" selection-end-column="61" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1097">
-          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#592#593#0" expanded="false" />
-            <element signature="e#644#645#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/../frontend (2)/frontend/src/modules/next-donation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/InfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1364">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-          <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationGetResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2054,7 +1654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2062,42 +1661,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="42" column="64" lean-forward="true" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-525">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/RequestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-168">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/RoleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -2110,32 +1687,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/InfoResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="28" />
-=======
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -2156,7 +1719,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/RequestServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
+        <state relative-caret-position="456">
           <caret line="34" column="197" lean-forward="false" selection-start-line="34" selection-start-column="197" selection-end-line="34" selection-end-column="197" />
           <folding />
         </state>
@@ -2164,7 +1727,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/RequestDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="384">
           <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding />
         </state>
@@ -2178,225 +1741,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.request">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-=======
-    <entry file="das://table:/512c0b46/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.result">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.request" />
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/807211c9-d83f-4c81-a5a6-5931d21127e4">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>807211c9-d83f-4c81-a5a6-5931d21127e4</OriginalElement>
-          <nodes>
-            <node x="0.0" y="758.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.result</node>
-            <node x="614.0" y="487.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.center</node>
-            <node x="351.0" y="487.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.user</node>
-            <node x="0.0" y="0.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.donation</node>
-            <node x="340.0" y="0.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.profile</node>
-            <node x="0.0" y="487.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.address</node>
-            <node x="272.0" y="758.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.role</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.3423618634886241" x="-69.0" y="691.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
+    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.profile" />
+    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.user" />
+    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.donation" />
     <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Request.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+          <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.donation">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-=======
-    <entry file="das://table:/512c0b46/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.donation">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/512c0b46/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/807211c9-d83f-4c81-a5a6-5931d21127e4/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="397">
+          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
           <folding />
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.3.RELEASE/c9d95dcd7a662dc0609c0673c29d4b4c8cde079c/spring-web-5.0.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="das://table:/1b79dafe/51c2c58b-a27f-46d7-a5ea-b87337bc9754/blood_donation.user">
+    <entry file="das://table:/1b79dafe/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.role">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/requests/DonationFormPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/DonationDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/DonationConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="54" lean-forward="false" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="50" column="5" lean-forward="false" selection-start-line="32" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="169">
+          <caret line="58" column="110" lean-forward="false" selection-start-line="58" selection-start-column="110" selection-end-line="58" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1302">
-          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
->>>>>>> ad202f1bc71ac29c598f2fb9a6797c80449a17ff
+    <entry file="das://table:/1b79dafe/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.donation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>Gradle : ro.ubb : donation-web-1.0-SNAPSHOT.war</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>9</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>blood-donation</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>9</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Gradle: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
