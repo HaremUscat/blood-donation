@@ -18,7 +18,8 @@ public class ProfileConverter implements Converter<Profile, ProfileDto> {
                 .cnp(profileDto.getCnp())
                 .phone(profileDto.getPhone())
                 .allergies(profileDto.getAllergies())
-                .diseases(profileDto.getChronicIllness())
+                .diseases(profileDto.getDiseases())
+                .chronicIllness(profileDto.getChronicIllness())
                 .rh(profileDto.getRh())
                 .email(profileDto.getEmail())
                 .build();
@@ -36,7 +37,8 @@ public class ProfileConverter implements Converter<Profile, ProfileDto> {
                 .cnp(profile.getCnp())
                 .phone(profile.getPhone())
                 .allergies(profile.getAllergies())
-                .diseases(profile.getChronicIllness())
+                .diseases(profile.getDiseases())
+                .chronicIllness(profile.getChronicIllness())
                 .rh(profile.getRh())
                 .email(profile.getEmail())
                 .build();

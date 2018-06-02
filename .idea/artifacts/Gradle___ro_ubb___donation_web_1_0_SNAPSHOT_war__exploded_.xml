@@ -21,48 +21,48 @@
             <element id="module-output" name="donation-core_main" />
             <element id="dir-copy" path="$PROJECT_DIR$/donation-core/out/production/resources" />
           </element>
-          <element id="library" level="project" name="Gradle: org.springframework:spring-context-support:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-jpa:2.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-orm:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.apache.commons:commons-dbcp2:2.2.0" />
-          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.10.0" />
-          <element id="library" level="project" name="Gradle: com.zaxxer:HikariCP:2.7.7" />
-          <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:2.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.8.0-alpha2" />
-          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-1.2-api:2.10.0" />
-          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.10.0" />
-          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.16.20" />
-          <element id="library" level="project" name="Gradle: org.hibernate:hibernate-core:5.2.13.Final" />
-          <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:5.1.6" />
-          <element id="library" level="project" name="Gradle: com.github.ben-manes.caffeine:caffeine:2.6.1" />
-          <element id="library" level="project" name="Gradle: javax.xml.bind:jaxb-api:2.3.0" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.apache.commons:commons-pool2:2.5.0" />
-          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
-          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.10.0" />
-          <element id="library" level="project" name="Gradle: org.aspectj:aspectjrt:1.8.12" />
-          <element id="library" level="project" name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
-          <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.3.1.Final" />
-          <element id="library" level="project" name="Gradle: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
-          <element id="library" level="project" name="Gradle: org.javassist:javassist:3.22.0-GA" />
-          <element id="library" level="project" name="Gradle: antlr:antlr:2.7.7" />
-          <element id="library" level="project" name="Gradle: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.0.1.Final" />
-          <element id="library" level="project" name="Gradle: org.jboss:jandex:2.0.3.Final" />
-          <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.3.0" />
-          <element id="library" level="project" name="Gradle: dom4j:dom4j:1.6.1" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.4" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.4" />
-          <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.0.3.RELEASE" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/5.0.3.RELEASE/ded72f3634f4fb5989b2ee145faa72a4430843c5/spring-webmvc-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-support/5.0.3.RELEASE/853800b9fe479931f8ec5aaf7c19e285d5de1402/spring-context-support-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.0.3.RELEASE/a88dbb9ca8957b34f37d5db7415d53b472e956d3/spring-data-jpa-2.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.0.3.RELEASE/a7cb3317167059337d57a6ba92b7a95997322198/spring-context-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/5.0.3.RELEASE/36c02f2975196512783f9a98c7290504c1224689/spring-orm-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/5.0.3.RELEASE/3d9683a2e23a693579ebe762eb7a0a468908603d/spring-jdbc-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-dbcp2/2.2.0/88763be2c54a37dd0b2d5d735d268bd6a202a207/commons-dbcp2-2.2.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.10.0/8e4e0a30736175e31c7f714d95032c1734cfbdea/log4j-slf4j-impl-2.10.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/2.7.7/805b0efcceb574fa230ca4806d2d89a7fcfeed6c/HikariCP-2.7.7.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.0.3.RELEASE/5ad306c5d88a7d8c5b12749e5add8671a1ac1414/spring-data-commons-2.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.8.0-alpha2/34fa1d87256bbdb376ae7f6fa7e479610cd07dce/slf4j-api-1.8.0-alpha2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-1.2-api/2.10.0/62e26af2612d1bd03aba1c7c087447f14033b7ba/log4j-1.2-api-2.10.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.10.0/c90b597163cd28ab6d9687edd53db601b6ea75a1/log4j-core-2.10.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.16.20/ac76d9b956045631d1561a09289cbf472e077c01/lombok-1.16.20.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.4/498bbc3b94f566982c7f7c6d4d303fce365529be/jackson-databind-2.9.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.4/a9a71ec1aa37da47db168fede9a4a5fb5e374320/jackson-core-2.9.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.0.3.RELEASE/25019c46a2fae8c0c4a17979665e0613949ea59f/spring-aop-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/5.0.3.RELEASE/18cb58265c9d10a1bccc9024ee98c43780f6b344/spring-tx-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.3.RELEASE/5266e04bf799e523bfe163f0e5520799c216cbfb/spring-web-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.0.3.RELEASE/c65a623d51721f6037505ce6c11e5d19edfa1c3a/spring-beans-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.0.3.RELEASE/ffc2e3d88a0b6ac6669e764a71cc3b49001eda21/spring-expression-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.0.3.RELEASE/8950eb10c466a77677693dd495d4b6a26de315f4/spring-core-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-pool2/2.5.0/cb7d05e6308ad795decc4a12ede671113c11dd98/commons-pool2-2.5.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.10.0/fec5797a55b786184a537abd39c3fa1449d752d6/log4j-api-2.10.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.13.Final/830492a74b3013ef75135ea4120b2ac23fa7ad9f/hibernate-core-5.2.13.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.6/380ef5226de2c85ff3b38cbfefeea881c5fce09d/mysql-connector-java-5.1.6.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.6.1/fc7a29feda0a3c5aaf1ff55e0df5417025e6d5f4/caffeine-2.6.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.0/99f802e0cb3e953ba3d6e698795c4aeb98d37c48/jaxb-api-2.3.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.0/7c10d545325e3a6e72e06381afe469fd40eb701/jackson-annotations-2.9.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.0.3.RELEASE/855919d50380ed6f0ccee7b8d6789f4febdb6660/spring-jcl-5.0.3.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.12/afaa5bdae313ed3ea119eb26c8848fca21e8b04e/aspectjrt-1.8.12.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/5.0.1.Final/71e1cff3fcb20d3b3af4f3363c3ddb24d33c6879/hibernate-commons-annotations-5.0.1.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.1.Final/c46217ab74b532568c0ed31dc599db3048bd1b67/jboss-logging-3.3.1.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/5e731d961297e5a07290bfaf3db1fbc8bbbf405a/hibernate-jpa-2.1-api-1.0.0.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.22.0-GA/3e83394258ae2089be7219b971ec21a8288528ad/javassist-3.22.0-GA.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/1.0.1.Final/4441f144a2a1f46ed48fcc6b476a4b6295e6d524/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss/jandex/2.0.3.Final/bfc4d6257dbff7a33a357f0de116be6ff951d849/jandex-2.0.3.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.3.0/183407ff982e9375f1a1c4a51ed0a9307c598fc7/classmate-1.3.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar" />
         </element>
       </element>
     </root>

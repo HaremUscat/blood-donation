@@ -34,6 +34,8 @@ public class UserController {
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public Set<UserDto> getUsers() {
+        System.out.println("A GET request was made on /users");
+
         log.trace("getUsers --- method entered");
 
         List<User> users = userService.findAll();
@@ -48,25 +50,28 @@ public class UserController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public AuthenticationResponse loginUser(
             @RequestBody LoginForm loginForm) {
+        System.out.println("A POST request was made on /login");
 
         Optional<User> userOptional = userService.getUser(loginForm.getUsername());
 
         if(userOptional.isPresent()){
             User user = userOptional.get();
-            Optional<String> role = roleService.getRoleDescriptionById(user.getRole().getId());
+            if(user.getPassword().equals(loginForm.getPassword())) {
+                Optional<String> role = roleService.getRoleDescriptionById(user.getRole().getId());
 
-            AuthenticationResponse authenticationResponse = AuthenticationResponse.builder()
-                    .status("Success")
-                    .userDto(null)
-                    .message("User found!")
-                    .role(role.orElse(null))
-                    .isError(false)
-                    .build();
-            return authenticationResponse;
+                AuthenticationResponse authenticationResponse = AuthenticationResponse.builder()
+                        .status("Success")
+                        .userDto(null)
+                        .message("User found!")
+                        .role(role.orElse(null))
+                        .isError(false)
+                        .build();
+                return authenticationResponse;
+            }
         }
         return AuthenticationResponse.builder()
                 .status("error")
-                .message("No registered user with this username")
+                .message("No registered user with this username and password")
                 .role("")
                 .userDto(null)
                 .isError(true)
@@ -76,6 +81,8 @@ public class UserController {
     @RequestMapping(value = "/users/{username}", method = RequestMethod.GET)
     public AuthenticationResponse logAndGetUser(
             @PathVariable String username) {
+
+        System.out.println("A GET request was made on /users/"+username);
 
         Optional<User> user = userService.getUser(username);
 
@@ -106,6 +113,8 @@ public class UserController {
     public AuthenticationResponse logoutUser(
             @RequestBody LoginForm loginForm) {
 
+        System.out.println("A POST request was made on /logout");
+
         Optional<User> user = userService.getUser(loginForm.getUsername());
 
         if(user.isPresent()){
@@ -132,6 +141,8 @@ public class UserController {
     @RequestMapping(value = "/users", method = RequestMethod.POST)
     public AuthenticationResponse createUser(
             @RequestBody final LoginForm loginForm) {
+
+        System.out.println("A POST request was made on /users");
 
         Optional<User> userOptional = userService.getUser(loginForm.getUsername());
 
@@ -162,6 +173,8 @@ public class UserController {
     @RequestMapping(value = "/user", method = RequestMethod.PUT)
     public AuthenticationResponse updateUserState(
         @RequestBody UserDto userDto){
+
+        System.out.println("A PUT request was made on /user");
 
         Optional<User> user = userService.getUser(userDto.getUsername());
 
