@@ -1,3 +1,4 @@
+const fooSentRequests = require("../foo-data/foo-sent-requests.js");
 const axios = require('axios');
 
 function submitRequest(request) {
@@ -12,4 +13,11 @@ function submitRequest(request) {
         });
 }
 
-module.exports = {submitRequest};
+function getSentRequests() {
+    //return axios.get('/requests/' + this.state.username);
+    return new Promise((resolve, reject) => {
+        resolve({requests: fooSentRequests});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    });
+}
+
+module.exports = {submitRequest, getSentRequests};

@@ -1,7 +1,7 @@
 import React from "react";
 import Form from '../components/form';
 import Input from '../components/input';
-import BlockButton from '../components/blockButton';
+import BlockButton from '../components/block-button';
 const usersApi = require('../api/users-api');
 
 /*

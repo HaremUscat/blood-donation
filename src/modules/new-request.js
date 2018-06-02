@@ -1,6 +1,5 @@
 import React from "react";
-import BlockButton from "../components/blockButton";
-import Button from "../components/button";
+import BlockButton from "../components/block-button";
 import Navbar from "../components/navbar";
 import Form from "../components/form";
 import Input from "../components/input";

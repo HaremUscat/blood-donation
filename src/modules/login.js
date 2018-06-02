@@ -1,7 +1,7 @@
 import React from "react";
 import Form from '../components/form';
 import Input from '../components/input';
-import BlockButton from '../components/blockButton';
+import BlockButton from '../components/block-button';
 import {Link} from 'react-router-dom';
 const authApi = require('../api/auth-api');
 
@@ -19,7 +19,7 @@ class Login extends React.Component {
     this.handleChangedPassword = this.handleChangedPassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.login = authApi.login.bind(this);
-    localStorage.setItem("loggedInUser", "userfoo");  //TODO: remove this! for testing purposes only!
+    //localStorage.setItem("loggedInUser", "userfoo");  //TODO: remove this! for testing purposes only!
   }
 
   handleChangedUsername(event) {
