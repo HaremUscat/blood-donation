@@ -16,19 +16,37 @@ class UserDashboard extends React.Component {
     }
 
     componentWillMount() {
-        this.setState(this.prefillFields(), function() {
-            if (this.state.hasNewTestResults) {
-                this.refs.newTestResultsNotification.innerHTML = "You have new blood test results. Check them out <a href='/test-results-history' class='dashboard-link'>here.</a>";
-            } else {
-                this.refs.newTestResultsNotification.innerHTML = "You don't have any new blood test results.";
+        this.prefillFields().then((res)=> {
+            if(!res.data.isError){
+                this.setState(res.data,function(){
+                    console.log(this.state);
+                    if (this.state.hasNewTestResults) {
+                        this.refs.newTestResultsNotification.innerHTML = "You have new blood test results. Check them out <a href='/test-results-history' class='dashboard-link'>here.</a>";
+                    } else {
+                        this.refs.newTestResultsNotification.innerHTML = "You don't have any new blood test results.";
+                    }
+                    if (this.state.illnessDiscovered) {
+                        this.refs.illnessDiscoveredNotification.innerHTML = this.state.illnessInfo + " Please contact your doctor for a check-up.";
+                        this.refs.nextPossibleDonationDate.innerHTML = "Unfortunately, in your condition you cannot donate blood. If there has been a mistake, contact us using the information provided in the Contact page.";
+                    } else {
+                        this.refs.nextPossibleDonationDate.innerHTML = "Next possible donation date: " + this.state.nextPossibleDonationDate;
+                    }
+                })
             }
-            if (this.state.illnessDiscovered) {
-                this.refs.illnessDiscoveredNotification.innerHTML = this.state.illnessInfo + " Please contact your doctor for a check-up.";
-                this.refs.nextPossibleDonationDate.innerHTML = "Unfortunately, in your condition you cannot donate blood. If there has been a mistake, contact us using the information provided in the Contact page.";
-            } else {
-                this.refs.nextPossibleDonationDate.innerHTML = "Next possible donation date: " + this.state.nextPossibleDonationDate;
-            }
-        });
+        })
+        // this.setState(this.prefillFields(), function() {
+        //     if (this.state.hasNewTestResults) {
+        //         this.refs.newTestResultsNotification.innerHTML = "You have new blood test results. Check them out <a href='/test-results-history' class='dashboard-link'>here.</a>";
+        //     } else {
+        //         this.refs.newTestResultsNotification.innerHTML = "You don't have any new blood test results.";
+        //     }
+        //     if (this.state.illnessDiscovered) {
+        //         this.refs.illnessDiscoveredNotification.innerHTML = this.state.illnessInfo + " Please contact your doctor for a check-up.";
+        //         this.refs.nextPossibleDonationDate.innerHTML = "Unfortunately, in your condition you cannot donate blood. If there has been a mistake, contact us using the information provided in the Contact page.";
+        //     } else {
+        //         this.refs.nextPossibleDonationDate.innerHTML = "Next possible donation date: " + this.state.nextPossibleDonationDate;
+        //     }
+        // });
     }
 
     render() {
