@@ -8,28 +8,20 @@ import ro.ubb.donation.core.model.Request;
 import ro.ubb.donation.core.service.RequestService;
 import ro.ubb.donation.web.converter.RequestConverter;
 import ro.ubb.donation.web.dto.RequestDto;
-import ro.ubb.donation.web.requests.BloodRequest;
 import ro.ubb.donation.web.response.RequestResponse;
 
 import java.util.*;
 
 @RestController
 public class RequestController {
-    private static final Logger log = LoggerFactory.getLogger(RequestController.class);
-
     @Autowired
     private RequestService requestService;
 
-    @Autowired
-    private RequestConverter requestConverter;
-
     @RequestMapping(value = "/request/{username}", method = RequestMethod.GET)
     public RequestResponse getRequestsByDoctor(@PathVariable String username){
-        System.out.println("A GET request was made on /request/"+username);
+        List<Request> requests = requestService.getRequestsByDoctor( username );
 
-        List<Request> request = requestService.getRequestsByDoctor( username );
-
-        if (request.size() == 0){
+        if (requests.size() == 0){
             return RequestResponse.builder()
                     .status("failure")
                     .requests( new ArrayList<>( ) )
@@ -39,27 +31,24 @@ public class RequestController {
         }
 
         return RequestResponse.builder()
+                .requests( requests )
+                .isError( false )
                 .status("Success")
-                .message("The user is now logged")
-                .isError(false)
-                .requests( requestService.getRequestsByDoctor( username ) )
+                .message("These are all requests!")
                 .build();
 
     }
 
-    @RequestMapping(value = "/request", method = RequestMethod.GET)
-    public Set<RequestDto> getRequests() {
-        System.out.println("A GET request was made on /request  ");
-
-        log.trace("getRequests --- method entered");
-
+    @RequestMapping(value = "/requests", method = RequestMethod.GET)
+    public RequestResponse getAllRequests() {
         List<Request> requests = requestService.findAll();
 
-        Set<RequestDto> requestDtos = new HashSet<>(requestConverter.convertModelsToDtos(requests));
-
-        log.trace("getRequests: requestDtos={}", requestDtos);
-
-        return requestDtos;
+        return RequestResponse.builder()
+                .requests( requests )
+                .isError( false )
+                .status("Success")
+                .message("These are all requests!")
+                .build();
     }
 
 }

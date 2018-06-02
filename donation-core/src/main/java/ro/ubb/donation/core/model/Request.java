@@ -5,28 +5,29 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "request", uniqueConstraints = {@UniqueConstraint( columnNames = {"username"})})
-@NoArgsConstructor
+@Table(name = "Request")
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Builder
+@EqualsAndHashCode
 public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "thrombocyte_units", nullable = false)
-    private Integer thrombocyteUnits;
+    private int thrombocyteUnits;
 
     @Column(name = "red_cells_units", nullable = false)
-    private Integer redCellsunits;
+    private int redCellsunits;
 
     @Column(name = "plasma_units", nullable = false)
-    private Integer plasmaUnits;
+    private int plasmaUnits;
 
     @Column(name = "id_donation_center", nullable = false)
-    private Integer donationCenterId;
+    private int donationCenterId;
 
     @Column(name = "location_hospital", nullable = false)
     private String locationHospital;
@@ -51,38 +52,4 @@ public class Request {
 
     @Column(name = "status", nullable = false)
     private String status;
-
-    public Request(Integer thrombocyteUnits, Integer redCellsunits, Integer plasmaUnits, Integer donationCenterId,
-                        String locationHospital, String beneficiaryName, String activeDonor, String urgencyLevel,
-                        String bloodGroup, String rh, String username, String status){
-        this.thrombocyteUnits = thrombocyteUnits;
-        this.redCellsunits = redCellsunits;
-        this.plasmaUnits = plasmaUnits;
-        this.donationCenterId = donationCenterId;
-        this.locationHospital = locationHospital;
-        this.beneficiaryName = beneficiaryName;
-        this.activeDonor = activeDonor;
-        this.urgencyLevel = urgencyLevel;
-        this.bloodGroup = bloodGroup;
-        this.rh = rh;
-        this.username = username;
-        this.status = status;
-    }
-
-    @Override
-    public String toString(){
-        return "Request{" +
-                "id=" + id +
-                ", thrombocytes_units=" + thrombocyteUnits +
-                ", plasma_units=" + plasmaUnits +
-                ", id_donation_center=" + donationCenterId +
-                ", location_hospital=" + locationHospital +
-                ", beneficiary=" + beneficiaryName +
-                ", active_donor=" + activeDonor +
-                ", urgency_level=" + urgencyLevel +
-                ", blood_group=" + bloodGroup +
-                ", rh=" + rh +
-                ", username=" + username +
-                ", status=" + status;
-    }
 }
