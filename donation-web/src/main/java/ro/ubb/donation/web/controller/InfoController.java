@@ -44,6 +44,7 @@ public class InfoController {
 
         System.out.println("A GET request was made on /my-info/"+username);
         Optional<User> userOptional = userService.getUser(username);
+        boolean isError = false;
         if(userOptional.isPresent()){
             User user = userOptional.get();
             Address address = user.getAddress();
@@ -53,11 +54,13 @@ public class InfoController {
             ProfileDto profileDto;
             if (address==null){
                 addressDto = null;
+                isError = true;
             }else{
                 addressDto = addressConverter.convertModelToDto(address);
             }
             if(profile == null){
                 profileDto = null;
+                isError = true;
             }else{
                 profileDto = profileConverter.convertModelToDto(profile);
             }
@@ -65,14 +68,14 @@ public class InfoController {
             return InfoResponse.builder()
                     .status("Success")
                     .message("Data passed")
-                    .isError(false)
+                    .isError(isError)
                     .addressDto(addressDto)
                     .profileDto(profileDto)
                     .build();
         }
         return InfoResponse.builder()
                 .status("Error")
-                .message("User does not exist")
+                .message("Empty profile or user doesn't exist!")
                 .isError(true)
                 .addressDto(null)
                 .profileDto(null)

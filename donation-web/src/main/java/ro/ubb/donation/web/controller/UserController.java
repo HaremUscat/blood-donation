@@ -56,20 +56,22 @@ public class UserController {
 
         if(userOptional.isPresent()){
             User user = userOptional.get();
-            Optional<String> role = roleService.getRoleDescriptionById(user.getRole().getId());
+            if(user.getPassword().equals(loginForm.getPassword())) {
+                Optional<String> role = roleService.getRoleDescriptionById(user.getRole().getId());
 
-            AuthenticationResponse authenticationResponse = AuthenticationResponse.builder()
-                    .status("Success")
-                    .userDto(null)
-                    .message("User found!")
-                    .role(role.orElse(null))
-                    .isError(false)
-                    .build();
-            return authenticationResponse;
+                AuthenticationResponse authenticationResponse = AuthenticationResponse.builder()
+                        .status("Success")
+                        .userDto(null)
+                        .message("User found!")
+                        .role(role.orElse(null))
+                        .isError(false)
+                        .build();
+                return authenticationResponse;
+            }
         }
         return AuthenticationResponse.builder()
                 .status("error")
-                .message("No registered user with this username")
+                .message("No registered user with this username and password")
                 .role("")
                 .userDto(null)
                 .isError(true)
