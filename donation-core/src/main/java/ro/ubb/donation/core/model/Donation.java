@@ -59,7 +59,11 @@ public class Donation {
     private String donationBeneficiary;
 
     public static Donation getEmptyDonation(){
-        return Donation.builder().build();
+        return Donation.builder()
+                .rejectionReason("")
+                .status("")
+                .donationBeneficiary("")
+                .build();
     }
 
 }
