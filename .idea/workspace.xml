@@ -1,153 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Gradle : ro.ubb : donation-web-1.0-SNAPSHOT.war (exploded)" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4076a04-cd87-489e-8e55-91f18097784b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Center$CenterBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Center.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Donation$DonationBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Donation.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/repository/CenterRepository.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/repository/DonationRepository.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/service/CenterService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/service/CenterServiceImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/service/DonationService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/service/DonationServiceImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Center.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/CenterRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/DonationRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/CenterController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/DonationController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/converter/DonationConverter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/dto/DonationDto$DonationDtoBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/dto/DonationDto.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/requests/DonationFormPost$DonationFormPostBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/requests/DonationFormPost.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/CentersResponse$CentersResponseBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/CentersResponse.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/DonationGetResponse$DonationGetResponseBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/DonationGetResponse.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/DonationPostResponse$DonationPostResponseBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/response/DonationPostResponse.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/controller/CenterController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/controller/DonationController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/converter/DonationConverter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/dto/DonationDto$DonationDtoBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/dto/DonationDto.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/requests/DonationFormPost$DonationFormPostBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/requests/DonationFormPost.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/response/CentersResponse$CentersResponseBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/response/CentersResponse.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/response/DonationGetResponse$DonationGetResponseBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/response/DonationGetResponse.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/response/DonationPostResponse$DonationPostResponseBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/response/DonationPostResponse.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/CenterController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/DonationConverter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/dto/DonationDto.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/requests/DonationFormPost.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/CentersResponse.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationGetResponse.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationPostResponse.java" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___ro_ubb___donation_web_1_0_SNAPSHOT_war.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___ro_ubb___donation_web_1_0_SNAPSHOT_war__exploded_.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51c2c58b-a27f-46d7-a5ea-b87337bc9754.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51c2c58b-a27f-46d7-a5ea-b87337bc9754/storage_v2/_src_/schema/capp_db.f6HtIA.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51c2c58b-a27f-46d7-a5ea-b87337bc9754/storage_v2/_src_/schema/mydb.Kl8zAA.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51c2c58b-a27f-46d7-a5ea-b87337bc9754/storage_v2/_src_/schema/testdb.kHS3yw.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr_antlr_2_7_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_classmate_1_3_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ben_manes_caffeine_caffeine_2_6_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_zaxxer_HikariCP_2_7_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__dom4j_dom4j_1_6_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_xml_bind_jaxb_api_2_3_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_5_1_6.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_dbcp2_2_2_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_pool2_2_5_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_1_2_api_2_10_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_api_2_10_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_core_2_10_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_slf4j_impl_2_10_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjrt_1_8_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_core_5_2_13_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_javassist_javassist_3_22_0_GA.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_jandex_2_0_3_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_1_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_projectlombok_lombok_1_16_20.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_8_0_alpha2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_simple_1_7_25.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_data_spring_data_commons_2_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_data_spring_data_jpa_2_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_support_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jcl_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jdbc_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_orm_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_tx_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_web_5_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_webmvc_5_0_3_RELEASE.xml" afterPath="" />
+    <list default="true" id="a4076a04-cd87-489e-8e55-91f18097784b" name="Default" comment="Merge branch 'backend' of https://github.com/HaremUscat/blood-donation into backend&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/ResultRepository.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/blood-donation.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/blood-donation_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/blood-donation_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/donation-core.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/donation-core/donation-core_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/donation-core/donation-core_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/donation-web.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/donation-web/donation-web_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/donation-web/donation-web_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/Main.class" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/Main.class" />
       <change beforePath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/config/JpaConfig.class" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/config/JpaConfig.class" />
-      <change beforePath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/service/AddressServiceImpl.class" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/service/AddressServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/Main.java" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/Main.java" />
+      <change beforePath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Donation$DonationBuilder.class" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Donation$DonationBuilder.class" />
+      <change beforePath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Donation.class" afterPath="$PROJECT_DIR$/donation-core/out/production/classes/ro/ubb/donation/core/model/Donation.class" />
       <change beforePath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java" />
-      <change beforePath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/AddressServiceImpl.java" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/AddressServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/local/db.properties" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/local/db.properties" />
-      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/InfoController.class" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/InfoController.class" />
-      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/UserController.class" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/UserController.class" />
-      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/converter/ProfileConverter.class" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/converter/ProfileConverter.class" />
-      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/requests/InfoRequest.class" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/requests/InfoRequest.class" />
+      <change beforePath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java" />
+      <change beforePath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java" afterPath="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java" />
+      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/DonationController.class" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/controller/DonationController.class" />
+      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/classes/ro/ubb/donation/web/requests/test.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/lib/ro.ubb-donation-core-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/WEB-INF/lib/ro.ubb-donation-core-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/donation-web/build/libs/exploded/donation-web-1.0-SNAPSHOT.war/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/controller/InfoController.class" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/controller/InfoController.class" />
-      <change beforePath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/controller/UserController.class" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/controller/UserController.class" />
-      <change beforePath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/converter/ProfileConverter.class" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/converter/ProfileConverter.class" />
-      <change beforePath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/requests/InfoRequest.class" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/requests/InfoRequest.class" />
-      <change beforePath="$PROJECT_DIR$/donation-web/out/production/resources/local/db.properties" afterPath="$PROJECT_DIR$/donation-web/out/production/resources/local/db.properties" />
-      <change beforePath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/InfoController.java" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/InfoController.java" />
-      <change beforePath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/UserController.java" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/ProfileConverter.java" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/converter/ProfileConverter.java" />
-      <change beforePath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/requests/InfoRequest.java" afterPath="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/requests/InfoRequest.java" />
-      <change beforePath="$PROJECT_DIR$/donation-web/src/main/resources/local/db.properties" afterPath="$PROJECT_DIR$/donation-web/src/main/resources/local/db.properties" />
+      <change beforePath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/controller/DonationController.class" afterPath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/controller/DonationController.class" />
+      <change beforePath="$PROJECT_DIR$/donation-web/out/production/classes/ro/ubb/donation/web/requests/test.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -165,10 +43,119 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blood_donation@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blood_donation@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blood_donation@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="blood_donation: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blood_donation@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="blood_donation: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Donation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1302">
+              <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/807211c9-d83f-4c81-a5a6-5931d21127e4/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DonationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="50" column="5" lean-forward="false" selection-start-line="32" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DashboardResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -858,11 +845,33 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java" />
+        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultService.java" />
+        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/ResultRepository.java" />
+        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultServiceImpl.java" />
+        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/ResultController.java" />
+        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java" />
+        <option value="$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java" />
+        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java" />
+        <option value="$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -886,6 +895,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -936,6 +947,16 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -961,6 +982,81 @@
             <path>
               <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
               <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="requests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="donation-web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blood-donation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blood-donation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -973,16 +1069,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1071,6 +1170,78 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="Server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.7" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="9">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : ro.ubb : donation-web-1.0-SNAPSHOT.war (exploded)">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_blood-donation_4" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59262" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : ro.ubb : donation-web-1.0-SNAPSHOT.war (exploded)" />
+        </option>
+      </method>
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1091,48 +1262,52 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527944060244</updated>
-      <workItem from="1527944074603" duration="89000" />
+      <workItem from="1527944074603" duration="10257000" />
+      <workItem from="1527960233834" duration="615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89000" />
+    <option name="totallyTimeSpent" value="10872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22864583" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.224" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110857144" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26742858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16342857" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1142,14 +1317,456 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1302">
+          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/807211c9-d83f-4c81-a5a6-5931d21127e4/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/ProfileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/AddressService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/RoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/repository/ResultRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/CenterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ProfileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/ResultController.java" />
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardControler.java" />
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/AuthenticationResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/InfoResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationPostResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/AddressServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DonationGetResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/CenterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="99" column="62" lean-forward="true" selection-start-line="99" selection-start-column="62" selection-end-line="99" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3998">
+          <caret line="927" column="19" lean-forward="false" selection-start-line="927" selection-start-column="19" selection-end-line="927" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/DonationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/service/ResultServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1097">
+          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#644#645#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/InfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1364">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/config/JpaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/512c0b46/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.result">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/807211c9-d83f-4c81-a5a6-5931d21127e4">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>807211c9-d83f-4c81-a5a6-5931d21127e4</OriginalElement>
+          <nodes>
+            <node x="0.0" y="758.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.result</node>
+            <node x="614.0" y="487.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.center</node>
+            <node x="351.0" y="487.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.user</node>
+            <node x="0.0" y="0.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.donation</node>
+            <node x="340.0" y="0.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.profile</node>
+            <node x="0.0" y="487.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.address</node>
+            <node x="272.0" y="758.0">807211c9-d83f-4c81-a5a6-5931d21127e4.TABLE:blood_donation.role</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.3423618634886241" x="-69.0" y="691.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/512c0b46/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.donation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/512c0b46/807211c9-d83f-4c81-a5a6-5931d21127e4/blood_donation.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/807211c9-d83f-4c81-a5a6-5931d21127e4/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.3.RELEASE/c9d95dcd7a662dc0609c0673c29d4b4c8cde079c/spring-web-5.0.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DonationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="32" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Donation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1302">
+          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-core/src/main/java/ro/ubb/donation/core/model/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/response/DashboardResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donation-web/src/main/java/ro/ubb/donation/web/controller/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Gradle : ro.ubb : donation-web-1.0-SNAPSHOT.war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>blood-donation</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
