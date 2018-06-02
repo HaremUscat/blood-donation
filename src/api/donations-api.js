@@ -16,4 +16,16 @@ function submitDonation(donation) {
         });
 }
 
-module.exports = {submitDonation, getDonationFormInfo};
+function updateDonation(donation){
+    return axios.post('/donation-forms/'+donation["donationDto"]["donation_id"], donation)
+        .then((response) => {
+            if (response.data.isError) {
+                alert(response.data.message);       //TODO: get rid of alerts!
+            }
+        })
+        .catch(function(err) {
+            alert(err);
+        });
+}
+
+module.exports = {submitDonation, getDonationFormInfo, updateDonation};

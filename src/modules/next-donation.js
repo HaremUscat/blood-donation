@@ -10,39 +10,7 @@ class NextDonation extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     status: '',
-        //     rejectionReason: '',
-        //     firstName: '',
-        //     lastName: '',
-        //     dateOfBirth: '',
-        //     gender: '',
-        //     cnp: '',
-        //     bloodGroup: '',
-        //     rh: '',
-        //     email: '',
-        //     phone: '',
-        //     homeAddress: '',      //din buletin
-        //     city: '',             //din buletin
-        //     country: '',          //din buletin
-        //     currentHomeAddress: '',
-        //     currentCity: '',
-        //     currentCountry: '',
-        //     allergies: '',
-        //     diseases: '',
-        //     chronicIllness: '',
-        //     username: localStorage.getItem("loggedInUser"),
-        //     cancerPast5Years: '',
-        //     bloodPressure: '',
-        //     pulse: '',
-        //     weight: '',
-        //     recentTattoos: '',
-        //     pregnantOrMenstruating: '',
-        //     surgeryPast6Months: '',
-        //     donationBeneficiary: '',
-        //
-        //     disabledSubmitButton: true     //ignore this in the back-end
-        // };
+
 
         this.state = {
             profileDto:{
@@ -69,6 +37,7 @@ class NextDonation extends React.Component {
             },
             username: localStorage.getItem("loggedInUser"),
             donationDto:{
+                donation_id:'',
                 status: '',
                 rejectionReason: '',
                 cancerPast5Years: '',
@@ -94,6 +63,7 @@ class NextDonation extends React.Component {
         this.goToNewForm = this.goToNewForm.bind(this);
         this.submitDonation = donationsApi.submitDonation.bind(this);
         this.prefillFields = donationsApi.getDonationFormInfo.bind(this);
+        this.updateDonation = donationsApi.updateDonation.bind(this);
         this.optionals = ["bloodPressure", "pulse", "donationBeneficiary"];
     }
 
@@ -131,6 +101,8 @@ class NextDonation extends React.Component {
                     console.log("this.state = ");
                     console.log(this.state);
                 }
+                console.log("this.state = ");
+                console.log(this.state);
             })
         });
     }
@@ -207,6 +179,7 @@ class NextDonation extends React.Component {
             let toSend = {
                 username: this.state.username,
                 donationDto:{
+                    donation_id:this.state["donationDto"]["donation_id"],
                     status: "PENDING",
                     cancerPast5Years: this.state["donationDto"]["cancerPast5Years"],
                     bloodPressure: this.state["donationDto"]["bloodPressure"],
@@ -231,6 +204,23 @@ class NextDonation extends React.Component {
         let myState = this.state;
         myState["donationDto"]["status"] = 'CLOSED';
         this.setState(myState);
+        let toSend = {
+            username: this.state.username,
+            donationDto:{
+                donation_id:this.state["donationDto"]["donation_id"],
+                status: "CLOSED",
+                cancerPast5Years: this.state["donationDto"]["cancerPast5Years"],
+                bloodPressure: this.state["donationDto"]["bloodPressure"],
+                pulse: this.state["donationDto"]["pulse"],
+                weight: this.state["donationDto"]["weight"],
+                recentTattoos: this.state["donationDto"]["recentTattoos"],
+                pregnantOrMenstruating: this.state["donationDto"]["pregnantOrMenstruating"],
+                surgeryPast6Months: this.state["donationDto"]["surgeryPast6Months"],
+                donationBeneficiary: this.state["donationDto"]["donationBeneficiary"],
+                rejectionReason: this.state["donationDto"]["rejectionReason"]
+            }
+        };
+        this.updateDonation(toSend).then(() => {window.location.reload();});
     }
 
     render() {
