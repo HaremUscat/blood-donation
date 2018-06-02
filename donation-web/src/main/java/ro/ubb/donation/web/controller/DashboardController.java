@@ -32,6 +32,7 @@ public class DashboardController {
 
     @RequestMapping(value = "/dashboard-info/{username}", method = RequestMethod.GET)
     public DashboardResponse getDashboardInfo(@PathVariable String username){
+        DashboardResponse dashboardResponse = DashboardResponse.builder().build();
         Optional<User> userOptional = userService.getUser(username);
         if (userOptional.isPresent()){
             User user = userOptional.get();
@@ -40,24 +41,32 @@ public class DashboardController {
             if (!donations.isEmpty()){
                 Donation donation = donations.get(donations.size()-1);
                 if (donation.getResult()!=null){
-                    hasTestResults = true;
+                    dashboardResponse.setHasNewTestResults(true);
+                    dashboardResponse.setIllnessInfo(donation.getResult().getIllnessInfo());
+                    dashboardResponse.setIllnessDiscovered(donation.getResult().isIllnessDiscovered());
                 }
-                Date appointmentDate = donation.getAppointment_date();
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(appointmentDate);
-                cal.add(Calendar.MONTH, 2);
-                Date resultDate = cal.getTime();
-
-                return DashboardResponse.builder()
-                        .firstName(user.getProfile().getFirstName())
-                        .illnessDiscovered(donation.getResult().isIllnessDiscovered())
-                        .illnessInfo(donation.getResult().getIllnessInfo())
-                        .nextPossibleDonationDate(resultDate.toString())
-                        .hasNewTestResults(hasTestResults)
-                        .status("Success")
-                        .isError(false)
-                        .message("The dashboard info was returned")
-                        .build();
+                else
+                {
+                    dashboardResponse.setHasNewTestResults(false);
+                    dashboardResponse.setIllnessDiscovered(false);
+                    dashboardResponse.setIllnessInfo("");
+                }
+                if(donation.getAppointment_date() != null) {
+                    Date appointmentDate = donation.getAppointment_date();
+                    Calendar cal = Calendar.getInstance();
+                    cal.setTime(appointmentDate);
+                    cal.add(Calendar.MONTH, 2);
+                    Date resultDate = cal.getTime();
+                    dashboardResponse.setNextPossibleDonationDate(resultDate.toString());
+                }
+                else{
+                    dashboardResponse.setNextPossibleDonationDate(new Date().toString());
+                }
+                dashboardResponse.setFirstName(user.getProfile().getFirstName());
+                dashboardResponse.setMessage("The dashboard info was returned");
+                dashboardResponse.setStatus("Success");
+                dashboardResponse.setError(false);
+                return dashboardResponse;
             }
             else {
                 return DashboardResponse.builder()
