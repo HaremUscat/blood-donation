@@ -1,8 +1,10 @@
 package ro.ubb.donation.web.converter;
 
+import org.springframework.stereotype.Component;
 import ro.ubb.donation.core.model.Donation;
 import ro.ubb.donation.web.dto.DonationDto;
 
+@Component
 public class DonationConverter implements Converter<Donation, DonationDto> {
     @Override
     public Donation convertDtoToModel(DonationDto donationDto) {

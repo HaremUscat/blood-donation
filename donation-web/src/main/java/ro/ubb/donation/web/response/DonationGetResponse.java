@@ -2,6 +2,7 @@ package ro.ubb.donation.web.response;
 
 import lombok.*;
 import ro.ubb.donation.web.dto.AddressDto;
+import ro.ubb.donation.web.dto.DonationDto;
 import ro.ubb.donation.web.dto.ProfileDto;
 
 @AllArgsConstructor
@@ -15,4 +16,5 @@ public class DonationGetResponse {
     private String message;
     private ProfileDto profileDto;
     private AddressDto addressDto;
+    private DonationDto donationDto;
 }

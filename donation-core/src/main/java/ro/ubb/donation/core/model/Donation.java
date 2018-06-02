@@ -58,5 +58,8 @@ public class Donation {
     @Column(name ="donation_beneficiary")
     private String donationBeneficiary;
 
+    public static Donation getEmptyDonation(){
+        return Donation.builder().build();
+    }
 
 }

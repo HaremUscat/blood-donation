@@ -10,6 +10,7 @@ import ro.ubb.donation.core.repository.DonationRepository;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class DonationServiceImpl implements DonationService {
@@ -20,6 +21,16 @@ public class DonationServiceImpl implements DonationService {
     @Override
     public Optional<Donation> findDonation(int donationId) {
         return this.donationRepository.findById(donationId);
+    }
+
+    @Override
+    public Optional<Donation> findDonationByUser(User user)
+    {
+        List<Donation> donations = this.donationRepository.findAll().stream().filter(d->d.getUser().getId() == user.getId()).collect(Collectors.toList());
+        if(donations.isEmpty())
+            return Optional.empty();
+        else
+            return Optional.ofNullable(donations.get(0));
     }
 
     @Override
@@ -80,6 +91,7 @@ public class DonationServiceImpl implements DonationService {
     public void deleteDonation(int donationId) {
         Optional<Donation> donation = this.donationRepository.findById(donationId);
         donation.ifPresent(d-> this.donationRepository.delete(d));
-        }
+    }
+
 }
 

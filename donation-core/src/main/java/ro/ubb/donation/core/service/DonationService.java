@@ -11,6 +11,8 @@ public interface DonationService
 {
     Optional<Donation> findDonation(int donationId);
 
+    Optional<Donation> findDonationByUser( User user);
+
     List<Donation> findAll();
 
     Donation updateDonation(int donationId, String status, String rejectionReason, boolean cancerPast5Years,

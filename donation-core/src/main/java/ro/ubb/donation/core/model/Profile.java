@@ -75,4 +75,8 @@ public class Profile {
                 ", chronicIllness='" + chronicIllness + '\'' +
                 '}';
     }
+
+    public static Profile getEmptyProfile(){
+        return Profile.builder().build();
+    }
 }

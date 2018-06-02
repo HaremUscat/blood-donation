@@ -50,4 +50,8 @@ public class Address {
                 ", currentCountry='" + currentCountry + '\'' +
                 '}';
     }
+
+    public static Address getEmptyAddress(){
+        return Address.builder().build();
+    }
 }
