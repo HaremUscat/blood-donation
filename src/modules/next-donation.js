@@ -194,7 +194,7 @@ class NextDonation extends React.Component {
             this.setState({disabledSubmitButton: true});
     }
 
-    handleSubmit(event) {
+    handleSubmit(event) { //TODO check if all fields are inputted.
         event.preventDefault();
         let ok = true;
         for (let field in this.state) {
