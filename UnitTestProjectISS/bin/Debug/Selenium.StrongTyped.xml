@@ -1,0 +1,517 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Selenium.StrongTyped</name>
+    </assembly>
+    <members>
+        <member name="T:Selenium.StrongTyped.Controls.ButtonElement">
+            <summary>
+            Button Element, with all functionality required from a Button control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.ButtonElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Button Element.
+            </summary>
+            <param name="context">Base element to search from to find the Button Element within.</param>
+            <param name="selector">The Selector to use to find the Button Element.</param>
+            <param name="seconds">The number of seconds to wait for the Button Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.ButtonElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Button Element.
+            </summary>
+            <param name="context">Base element to search from to find the Button Element within.</param>
+            <param name="selector">The Selector to use to find the Button Element.</param>
+            <param name="timeSpan">The timespan to wait until the Button Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.ButtonElement.Click">
+            <summary>
+            Click the Button Element.
+            </summary>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.CheckboxElement">
+            <summary>
+            Checkbox Element, with all functionality required from a Checkbox control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CheckboxElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Checkbox Element.
+            </summary>
+            <param name="context">Base element to search from to find the Checkbox Element within.</param>
+            <param name="selector">The Selector to use to find the Checkbox Element.</param>
+            <param name="seconds">The number of seconds to wait for the Checkbox Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CheckboxElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Checkbox Element.
+            </summary>
+            <param name="context">Base element to search from to find the Checkbox Element within.</param>
+            <param name="selector">The Selector to use to find the Checkbox Element.</param>
+            <param name="timeSpan">The timespan to wait until the Checkbox Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CheckboxElement.Click">
+            <summary>
+            Click the Checkbox Element.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.CheckboxElement.Selected">
+            <summary>
+            Gets the state of the Checkbox.
+            </summary>
+            <returns>bool if the Checkbox is checked or not.</returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CustomElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Custom Element.
+            </summary>
+            <param name="context">Base element to search from to find the Custom Element within.</param>
+            <param name="selector">The Selector to use to find the Custom Element.</param>
+            <param name="seconds">The number of seconds to wait for the Custom Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CustomElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Custom Element.
+            </summary>
+            <param name="context">Base element to search from to find the Custom Element within.</param>
+            <param name="selector">The Selector to use to find the Custom Element.</param>
+            <param name="timeSpan">The timespan to wait until the Custom Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CustomElement.Click">
+            <summary>
+            Click the Custom Element.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CustomElement.Clear">
+            <summary>
+            Clear the content of the Custom Element.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.CustomElement.Selected">
+            <summary>
+            Gets the state of the Custom Element.
+            </summary>
+            <returns>bool if the Custom Element is checked or not.</returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CustomElement.SendKeys(System.String)">
+            <summary>
+            Enters the passed in text into the Custom Element.
+            </summary>
+            <param name="text">Value to enter into Custom Element.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.CustomElement.Submit">
+            <summary>
+            Submits the Custom Element to the Web Server.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.CustomElement.Text">
+            <summary>
+            Gets the innertext of the Custom Element.
+            </summary>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.TableCellElement">
+            <summary>
+            Table Cell Element, with all functionality required from a Table Cell control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TableCellElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Table Cell Element.
+            </summary>
+            <param name="context">Base element to search from to find the Table Cell Element within.</param>
+            <param name="selector">The Selector to use to find the Table Cell Element.</param>
+            <param name="seconds">The number of seconds to wait for the Table Cell Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TableCellElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Table Cell Element.
+            </summary>
+            <param name="context">Base element to search from to find the Table Cell Element within.</param>
+            <param name="selector">The Selector to use to find the Table Cell Element.</param>
+            <param name="timeSpan">The timespan to wait until the Table Cell Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TableCellElement.Click">
+            <summary>
+            Click the Cell Element.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.TableCellElement.Text">
+            <summary>
+            The text in the Cell.
+            </summary>
+            <returns>Passed back the text in the table cell.</returns>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.TableRowElement">
+            <summary>
+            Table Row Element, with all functionality required from a Table Row control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TableRowElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Table Row Element.
+            </summary>
+            <param name="context">Base element to search from to find the Table Row Element within.</param>
+            <param name="selector">The Selector to use to find the Table Row Element.</param>
+            <param name="seconds">The number of seconds to wait for the Table Row Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TableRowElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Table Row Element.
+            </summary>
+            <param name="context">Base element to search from to find the Table Row Element within.</param>
+            <param name="selector">The Selector to use to find the Table Row Element.</param>
+            <param name="timeSpan">The timespan to wait until the Table Row Element to be available.</param>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.TableRowElement.Cells">
+            <summary>
+            List containing all the Data Cells in the selected row of the table.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TableRowElement.Click">
+            <summary>
+            Click the Cell Element.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.TableRowElement.Text">
+            <summary>
+            The text in the Cell.
+            </summary>
+            <returns>Passed back the text in the table cell.</returns>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.TableElement">
+            <summary>
+            Table Element, with all functionality required from a Table control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TableElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Table Element.
+            </summary>
+            <param name="context">Base element to search from to find the Table Element within.</param>
+            <param name="selector">The Selector to use to find the Table Element.</param>
+            <param name="seconds">The number of seconds to wait for the Table Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TableElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Table Element.
+            </summary>
+            <param name="context">Base element to search from to find the Table Element within.</param>
+            <param name="selector">The Selector to use to find the Table Element.</param>
+            <param name="timeSpan">The timespan to wait until the Table Element to be available.</param>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.TableElement.HeaderRows">
+            <summary>
+            List containing all the Header Rows in the table.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.TableElement.BodyRows">
+            <summary>
+            List containing all the Data Rows in the table.
+            </summary>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.FindBySearchContext">
+            <summary>
+            Extension Methods for FindElement using ISearchContext as the base to search from on types inherited from HtmlElement and return Element type.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.FindBySearchContext.FindElement``1(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Finds an element within the search context of the original control and returns the type of element supplied.
+            </summary>
+            <typeparam name="T">The type of Element to be passed back.</typeparam>
+            <param name="context">The ISearchContext to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="seconds">The number of seconds to wait</param>
+            <returns></returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.FindBySearchContext.FindElement``1(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Finds an element within the search context of the original control and returns the type of element supplied.
+            </summary>
+            <typeparam name="T">The type of Element to be passed back.</typeparam>
+            <param name="context">The ISearchContext to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="timespan">The timespan for how long to wait.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.FindBySearchContext.FindElements``1(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Finds list of elements within the search context of the original control and returns list of the elements supplied.
+            </summary>
+            <typeparam name="T">The type of Element to be passed back.</typeparam>
+            <param name="context">The ISearchContext to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="seconds">The number of seconds to wait</param>
+            <returns>List of the elements all of the same type that was passed in.</returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.FindBySearchContext.FindElements``1(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Finds list of elements within the search context of the original control and returns list of the elements supplied.
+            </summary>
+            <typeparam name="T">The type of Element to be passed back.</typeparam>
+            <param name="context">The ISearchContext to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="timespan">The timespan for how long to wait.</param>
+            <returns>List of the elements all of the same type that was passed in.</returns>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.FindByElement">
+            <summary>
+            Extension Methods for FindElement using HtmlElement as the base to search from on types inherited from HtmlElement and return Element type.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.FindByElement.FindElement``1(Selenium.StrongTyped.Controls.HtmlElement,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Finds an element within the search context of the original control and returns the type of element supplied.
+            </summary>
+            <typeparam name="T">The type of Element to be passed back.</typeparam>
+            <param name="context">The base HtmlElement to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="seconds">The number of seconds to wait</param>
+            <returns></returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.FindByElement.FindElement``1(Selenium.StrongTyped.Controls.HtmlElement,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Finds an element within the search context of the original control and returns the type of element supplied.
+            </summary>
+            <typeparam name="T">The type of Element to be passed back.</typeparam>
+            <param name="context">The base HtmlElement to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="timespan">The timespan for how long to wait.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.FindByElement.FindElements``1(Selenium.StrongTyped.Controls.HtmlElement,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Finds list of elements within the search context of the original control and returns list of the elements supplied.
+            </summary>
+            <typeparam name="T">The type of Element to be passed back.</typeparam>
+            <param name="context">The base HtmlElement to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="seconds">The number of seconds to wait</param>
+            <returns>List of the elements all of the same type that was passed in.</returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.FindByElement.FindElements``1(Selenium.StrongTyped.Controls.HtmlElement,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Finds list of elements within the search context of the original control and returns list of the elements supplied.
+            </summary>
+            <typeparam name="T">The type of Element to be passed back.</typeparam>
+            <param name="context">The base HtmlElement to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="timespan">The timespan for how long to wait.</param>
+            <returns>List of the elements all of the same type that was passed in.</returns>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.HtmlElement">
+            <summary>
+            Base HtmlElement using the methods from IWebElement to be used by the particular control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.HtmlElement.#ctor(OpenQA.Selenium.IWebElement)">
+            <summary>
+            Stores the element, so can be used to call the methods on the element.  Used for the FindElements method.
+            </summary>
+            <param name="element">The element to store in this class.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.HtmlElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32,System.Boolean)">
+            <summary>
+            Finds the element or list of elements from the context, using the passed in selector.  It waits upto 30 seconds to find the control before exiting.
+            </summary>
+            <param name="context">The base element to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="seconds">The number of seconds to wait.</param>
+            <param name="listElement">If the search element is a list or a single control.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.HtmlElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan,System.Boolean)">
+            <summary>
+            Finds the element or list of elements from the context, using the passed in selector.  It waits for as long as you specify.
+            </summary>
+            <param name="context">The base element to search from.</param>
+            <param name="selector">The by selector to be search for.</param>
+            <param name="timespan">The timespan for how long to wait.</param>
+            <param name="listElement">If the search element is a list or a single control.</param>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.HtmlElement.Enabled">
+            <summary>
+            Gets a value indicating wheather or not this element is enabled.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.HtmlElement.Location">
+            <summary>
+            Gets a point object of the upper-left corner of this element relative to the upper-left corner of the page.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.HtmlElement.Size">
+            <summary>
+            Get the size of the object containing the height and width of the element.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.HtmlElement.GetAttribute(System.String)">
+            <summary>
+            Gets the value of a specified attribute for this element.
+            </summary>
+            <param name="attributeName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.HtmlElement.GetProperty(System.String)">
+            <summary>
+            Gets the value of a JavaScript property of this element.
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.HtmlElement.GetCssValue(System.String)">
+            <summary>
+            Gets the value of a CSS property of this element.
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.HtmlElement.TagName">
+            <summary>
+            Gets the tag name of this element.
+            </summary>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.HtmlElement.Displayed">
+            <summary>
+            Gets a value indicating wheather or not this element is displayed.
+            </summary>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.LabelElement">
+            <summary>
+            Label Element, with all functionality required from a Label control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.LabelElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Label Element.
+            </summary>
+            <param name="context">Base element to search from to find the Label Element within.</param>
+            <param name="selector">The Selector to use to find the Label Element.</param>
+            <param name="seconds">The number of seconds to wait for the Label Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.LabelElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Label Element.
+            </summary>
+            <param name="context">Base element to search from to find the Label Element within.</param>
+            <param name="selector">The Selector to use to find the Label Element.</param>
+            <param name="timeSpan">The timespan to wait until the Label Element to be available.</param>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.LabelElement.Value">
+            <summary>
+            The value in the label.
+            </summary>
+            <returns>Passed back the value in the label element.</returns>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.RadioElement">
+            <summary>
+            Radio Element, with all functionality required from a Radio control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.RadioElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Radio Element.
+            </summary>
+            <param name="context">Base element to search from to find the Radio Element within.</param>
+            <param name="selector">The Selector to use to find the Radio Element.</param>
+            <param name="seconds">The number of seconds to wait for the Radio Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.RadioElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Radio Element.
+            </summary>
+            <param name="context">Base element to search from to find the Radio Element within.</param>
+            <param name="selector">The Selector to use to find the Radio Element.</param>
+            <param name="timeSpan">The timespan to wait until the Radio Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.RadioElement.Select">
+            <summary>
+            Click the Radio Element.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.RadioElement.Selected">
+            <summary>
+            Checks if the Radio Element is selected and returns true/false.
+            </summary>
+            <returns>True / False if Radio item ins selected.</returns>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.TextElement">
+            <summary>
+            Text Element, with all functionality required from a Text control.
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TextElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.Int32)">
+            <summary>
+            Constructor for the Text Element.
+            </summary>
+            <param name="context">Base element to search from to find the Text Element within.</param>
+            <param name="selector">The Selector to use to find the Text Element.</param>
+            <param name="seconds">The number of seconds to wait for the Text Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TextElement.#ctor(OpenQA.Selenium.ISearchContext,OpenQA.Selenium.By,System.TimeSpan)">
+            <summary>
+            Constructor for the Text Element.
+            </summary>
+            <param name="context">Base element to search from to find the Text Element within.</param>
+            <param name="selector">The Selector to use to find the Text Element.</param>
+            <param name="timeSpan">The timespan to wait until the Text Element to be available.</param>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TextElement.SendKeys(System.String)">
+            <summary>
+            Enter the string into the Text box.
+            </summary>
+            <param name="textEntered">Text to be entered.</param>
+        </member>
+        <member name="P:Selenium.StrongTyped.Controls.TextElement.Text">
+            <summary>
+            The text in the text box.
+            </summary>
+            <returns>Passed back the text in the text box.</returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.TextElement.Clear">
+            <summary>
+            Clear the value in the text box.
+            </summary>
+        </member>
+        <member name="T:Selenium.StrongTyped.Controls.ListExtensions">
+            <summary>
+            Extension Methods for use on the List of HtmlElements. 
+            </summary>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.ListExtensions.GetItemWithText``1(System.Collections.Generic.IList{``0},System.String)">
+            <summary>
+            Return the first element that has the Text required.
+            </summary>
+            <typeparam name="T">Control Type that will be returned.</typeparam>
+            <param name="elements">List of all the Elements of the particular type.</param>
+            <param name="searchText">The text to search for.</param>
+            <returns>Returns the first element that has the Text that is passed in.</returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.ListExtensions.GetItemContainsText``1(System.Collections.Generic.IList{``0},System.String)">
+            <summary>
+            Return the first element that has the containing Text required.
+            </summary>
+            <typeparam name="T">Control Type that will be returned.</typeparam>
+            <param name="elements">List of all the Elements of the particular type.</param>
+            <param name="searchText">The text to search for.</param>
+            <returns>Returns the first element that has contains the Text that is passed in.</returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.ListExtensions.GetItemWithValue``1(System.Collections.Generic.IList{``0},System.String)">
+            <summary>
+            Return the first element that has the value required.
+            </summary>
+            <typeparam name="T">Control Type that will be returned.</typeparam>
+            <param name="elements">List of all the Elements of the particular type.</param>
+            <param name="searchValue">The searchValue to search for.</param>
+            <returns>Returns the first element that has the value passed in.</returns>
+        </member>
+        <member name="M:Selenium.StrongTyped.Controls.ListExtensions.GetItemContainsValue``1(System.Collections.Generic.IList{``0},System.String)">
+            <summary>
+            Return the first element that has the containing value required.
+            </summary>
+            <typeparam name="T">Control Type that will be returned.</typeparam>
+            <param name="elements">List of all the Elements of the particular type.</param>
+            <param name="searchValue">The searchText to search for.</param>
+            <returns>Returns the first element that has contains the value passed in.</returns>
+        </member>
+    </members>
+</doc>
