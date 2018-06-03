@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./home";
+import FAQ from "./FAQ";
 import Login from "./login";
 import Logout from "./logout";
 import Register from "./register";
@@ -21,6 +22,7 @@ class App extends React.Component {
             <BrowserRouter>
                 <div>
                     <Route path="/home" render={(props) => EnsureNotLoggedIn(Home, "/home", props)}/>
+                    <Route path="/faq" render={(props) => EnsureNotLoggedIn(FAQ, "/faq", props)}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/logout" render={(props) => EnsureLoggedIn(Logout, "/home", props)}/>
                     <Route path="/register" component={Register}/>

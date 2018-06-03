@@ -77,6 +77,17 @@ body {
 
 /* ----------------------------------------------------------------------------- */
 
+/* FAQ */
+
+.introFaq {
+    background-image: url('/images/intro-background.jpg');
+    font-family: 'Questrial', 'sans-serif';
+    background-size: cover;
+    color: white;
+    min-height: 90vh;
+}
+
+/* ----------------------------------------------------------------------------- */
 /* LOGIN */
 
 .logo {
