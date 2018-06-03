@@ -12,9 +12,9 @@ import java.io.Serializable;
 @Builder
 public class RequestDto implements Serializable {
     private Integer thrombocyteUnits;
-    private Integer redCellsunits;
+    private Integer redCellsUnits;
     private Integer plasmaUnits;
-    private Center donationCenter;
+    private int donationCenterId;
     private String locationHospital;
     private String beneficiaryName;
     private boolean activeDonor;
@@ -29,7 +29,7 @@ public class RequestDto implements Serializable {
         return "RequestDto{" +
                 ", thrombocytes_units=" + thrombocyteUnits + '\'' +
                 ", plasma_units=" + plasmaUnits + '\'' +
-                ", id_donation_center=" + donationCenter.getId() + '\'' +
+                ", id_donation_center=" + donationCenterId + '\'' +
                 ", location_hospital=" + locationHospital + '\'' +
                 ", beneficiary=" + beneficiaryName + '\'' +
                 ", active_donor=" + activeDonor + '\'' +

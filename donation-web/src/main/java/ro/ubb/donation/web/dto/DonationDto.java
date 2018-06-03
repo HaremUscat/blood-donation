@@ -12,6 +12,7 @@ import java.util.Date;
 @Builder
 @ToString
 public class DonationDto implements Serializable {
+    private int donation_id;
     private String status;
     private String rejectionReason;
     private boolean cancerPast5Years;

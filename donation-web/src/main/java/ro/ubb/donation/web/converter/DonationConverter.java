@@ -9,6 +9,7 @@ public class DonationConverter implements Converter<Donation, DonationDto> {
     @Override
     public Donation convertDtoToModel(DonationDto donationDto) {
         return Donation.builder()
+                .donation_id(donationDto.getDonation_id())
                 .status(donationDto.getStatus())
                 .donationBeneficiary(donationDto.getDonationBeneficiary())
                 .weight(donationDto.getWeight())
@@ -25,6 +26,7 @@ public class DonationConverter implements Converter<Donation, DonationDto> {
     @Override
     public DonationDto convertModelToDto(Donation donation) {
         return DonationDto.builder()
+                .donation_id(donation.getDonation_id())
                 .status(donation.getStatus())
                 .donationBeneficiary(donation.getDonationBeneficiary())
                 .weight(donation.getWeight())

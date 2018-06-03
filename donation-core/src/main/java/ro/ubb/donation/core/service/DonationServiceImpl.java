@@ -26,7 +26,7 @@ public class DonationServiceImpl implements DonationService {
     @Override
     public Optional<Donation> findDonationByUser(User user)
     {
-        List<Donation> donations = this.donationRepository.findAll().stream().filter(d->d.getUser().getId() == user.getId()).collect(Collectors.toList());
+        List<Donation> donations = this.donationRepository.findAll().stream().filter(d->d.getUser().getId() == user.getId() && !d.getStatus().equals("CLOSED")).collect(Collectors.toList());
         if(donations.isEmpty())
             return Optional.empty();
         else

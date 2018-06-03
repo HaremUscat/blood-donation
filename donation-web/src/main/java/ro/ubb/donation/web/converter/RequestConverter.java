@@ -10,9 +10,8 @@ public class RequestConverter extends AbstractConverter<Request, RequestDto> imp
     public Request convertDtoToModel(RequestDto requestDto) {
         return Request.builder()
                 .thrombocyteUnits( requestDto.getThrombocyteUnits() )
-                .redCellsunits( requestDto.getRedCellsunits() )
+                .redCellsUnits( requestDto.getRedCellsUnits() )
                 .plasmaUnits( requestDto.getPlasmaUnits() )
-                .center( requestDto.getDonationCenter() )
                 .locationHospital( requestDto.getLocationHospital() )
                 .beneficiaryName( requestDto.getBeneficiaryName() )
                 .activeDonor( requestDto.isActiveDonor() )
@@ -28,9 +27,9 @@ public class RequestConverter extends AbstractConverter<Request, RequestDto> imp
     public RequestDto convertModelToDto(Request request) {
         return RequestDto.builder()
                 .thrombocyteUnits( request.getThrombocyteUnits() )
-                .redCellsunits( request.getRedCellsunits() )
+                .redCellsUnits( request.getRedCellsUnits() )
                 .plasmaUnits( request.getPlasmaUnits() )
-                .donationCenter( request.getCenter() )
+                .donationCenterId( request.getCenter().getId() )
                 .locationHospital( request.getLocationHospital() )
                 .beneficiaryName( request.getBeneficiaryName() )
                 .activeDonor( request.isActiveDonor())

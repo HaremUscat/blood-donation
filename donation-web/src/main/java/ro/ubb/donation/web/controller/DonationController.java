@@ -55,6 +55,28 @@ public class DonationController {
         return DonationPostResponse.builder().isError(true).message("The user with this username doesn't exist!").status("Error").build();
     }
 
+    @RequestMapping(value = "/donation-forms/{donationId}", method = RequestMethod.POST)
+    public DonationGetResponse updateDonation(@RequestBody DonationFormPost donationFormPost,@PathVariable int donationId){
+        Optional<User> userOptional = this.userService.getUser(donationFormPost.getUsername());
+        User user;
+        if(userOptional.isPresent()) {
+            user = userOptional.get();
+            DonationDto donation = donationFormPost.getDonationDto();
+
+            this.donationService.updateDonation(donationId,donation.getStatus(),donation.getRejectionReason(),donation.isCancerPast5Years()
+                    ,donation.isRecentTattoos(),donation.isPregnantOrMenstruating(),donation.isSurgeryPast6Months(),donation.getPulse(),donation.getBloodPressure(),
+                    donation.getWeight(),donation.getDonationBeneficiary());
+
+            return this.getDonationFormInfo(donationFormPost.getUsername());
+        }
+        return DonationGetResponse.builder()
+                .status("Error")
+                .message("The user doesn't exist")
+                .addressDto(this.addressConverter.convertModelToDto(Address.getEmptyAddress()))
+                .profileDto(this.profileConverter.convertModelToDto(Profile.getEmptyProfile()))
+                .donationDto(this.donationConverter.convertModelToDto(Donation.getEmptyDonation())).build();
+    }
+
     @RequestMapping(value = "/donation-forms/{username}", method = RequestMethod.GET)
     public DonationGetResponse getDonationFormInfo(
             @PathVariable String username){
