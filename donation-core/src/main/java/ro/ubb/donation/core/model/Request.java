@@ -21,7 +21,7 @@ public class Request {
     private int thrombocyteUnits;
 
     @Column(name = "red_cells_units", nullable = false)
-    private int redCellsunits;
+    private int redCellsUnits;
 
     @Column(name = "plasma_units", nullable = false)
     private int plasmaUnits;

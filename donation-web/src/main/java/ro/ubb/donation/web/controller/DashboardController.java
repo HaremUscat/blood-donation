@@ -31,54 +31,51 @@ public class DashboardController {
     private UserService userService;
 
     @RequestMapping(value = "/dashboard-info/{username}", method = RequestMethod.GET)
-    public DashboardResponse getDashboardInfo(@PathVariable String username){
+    public DashboardResponse getDashboardInfo(@PathVariable String username) {
         DashboardResponse dashboardResponse = DashboardResponse.builder().build();
         Optional<User> userOptional = userService.getUser(username);
-        if (userOptional.isPresent()){
+        if (userOptional.isPresent()) {
             User user = userOptional.get();
+            if (user.getProfile() != null)
+                dashboardResponse.setFirstName(user.getProfile().getFirstName());
+            else
+                dashboardResponse.setFirstName("User");
             boolean hasTestResults = false;
-            List<Donation> donations = donationService.findAll().stream().filter(d->d.getUser().getId()==user.getId()).collect(Collectors.toList());
-            if (!donations.isEmpty()){
-                Donation donation = donations.get(donations.size()-1);
-                if (donation.getResult()!=null){
+            List<Donation> donations = donationService.findAll().stream().filter(d -> d.getUser().getId() == user.getId()).collect(Collectors.toList());
+            if (!donations.isEmpty()) {
+                Donation donation = donations.get(donations.size() - 1);
+                if (donation.getResult() != null) {
                     dashboardResponse.setHasNewTestResults(true);
                     dashboardResponse.setIllnessInfo(donation.getResult().getIllnessInfo());
                     dashboardResponse.setIllnessDiscovered(donation.getResult().isIllnessDiscovered());
-                }
-                else
-                {
+                } else {
                     dashboardResponse.setHasNewTestResults(false);
                     dashboardResponse.setIllnessDiscovered(false);
                     dashboardResponse.setIllnessInfo("");
                 }
-                if(donation.getAppointment_date() != null) {
+                if (donation.getAppointment_date() != null) {
                     Date appointmentDate = donation.getAppointment_date();
                     Calendar cal = Calendar.getInstance();
                     cal.setTime(appointmentDate);
                     cal.add(Calendar.MONTH, 2);
                     Date resultDate = cal.getTime();
                     dashboardResponse.setNextPossibleDonationDate(resultDate.toString());
-                }
-                else{
+                } else {
                     dashboardResponse.setNextPossibleDonationDate(new Date().toString());
                 }
-                dashboardResponse.setFirstName(user.getProfile().getFirstName());
                 dashboardResponse.setMessage("The dashboard info was returned");
                 dashboardResponse.setStatus("Success");
                 dashboardResponse.setError(false);
                 return dashboardResponse;
-            }
-            else {
-                return DashboardResponse.builder()
-                        .firstName(user.getProfile().getFirstName())
-                        .illnessDiscovered(false)
-                        .illnessInfo("")
-                        .nextPossibleDonationDate(new Date().toString())
-                        .hasNewTestResults(hasTestResults)
-                        .status("Success")
-                        .isError(false)
-                        .message("This user does not have another donation")
-                        .build();
+            } else {
+                dashboardResponse.setIllnessInfo("");
+                dashboardResponse.setIllnessDiscovered(false);
+                dashboardResponse.setHasNewTestResults(false);
+                dashboardResponse.setStatus("Success");
+                dashboardResponse.setError(false);
+                dashboardResponse.setNextPossibleDonationDate(new Date().toString());
+                dashboardResponse.setMessage("The user doesn't have a profile yet!");
+                return dashboardResponse;
             }
         }
         return DashboardResponse.builder()
@@ -92,5 +89,4 @@ public class DashboardController {
                 .message("This user does not exist")
                 .build();
     }
-
 }

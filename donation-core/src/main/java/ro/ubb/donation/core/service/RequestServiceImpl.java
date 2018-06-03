@@ -38,7 +38,7 @@ public class RequestServiceImpl implements RequestService {
         Optional<Request> request = requestRepository.findById( requestId );
         request.ifPresent( r -> {
             r.setThrombocyteUnits( thrombocyteUnits );
-            r.setRedCellsunits( redCellsunits );
+            r.setRedCellsUnits( redCellsunits );
             r.setPlasmaUnits( plasmaUnits );
             r.setCenter( donationCenter );
             r.setLocationHospital( locationHospital );
@@ -62,7 +62,7 @@ public class RequestServiceImpl implements RequestService {
 
         Request request = Request.builder()
                 .thrombocyteUnits( thrombocyteUnits )
-                .redCellsunits( redCellsunits )
+                .redCellsUnits( redCellsunits )
                 .plasmaUnits( plasmaUnits )
                 .center( donationCenter )
                 .locationHospital( locationHospital )
