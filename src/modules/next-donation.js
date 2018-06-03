@@ -10,38 +10,47 @@ class NextDonation extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            status: '',
-            rejectionReason: '',
-            firstName: '',
-            lastName: '',
-            dateOfBirth: '',
-            gender: '',
-            cnp: '',
-            bloodGroup: '',
-            rh: '',
-            email: '',
-            phone: '',
-            homeAddress: '',      //din buletin
-            city: '',             //din buletin
-            country: '',          //din buletin
-            currentHomeAddress: '',
-            currentCity: '',
-            currentCountry: '',
-            allergies: '',
-            diseases: '',
-            chronicIllness: '',
-            username: localStorage.getItem("loggedInUser"),
-            cancerPast5Years: '',
-            bloodPressure: '',
-            pulse: '',
-            weight: '',
-            recentTattoos: '',
-            pregnantOrMenstruating: '',
-            surgeryPast6Months: '',
-            donationBeneficiary: '',
 
-            disabledSubmitButton: true     //ignore this in the back-end
+
+        this.state = {
+            profileDto:{
+                firstName: '',
+                lastName: '',
+                dateOfBirth: '',
+                gender: '',
+                cnp: '',
+                bloodGroup: '',
+                rh: '',
+                email: '',
+                phone: '',
+                allergies: 'no',
+                diseases: 'no',
+                chronicIllness: 'no'
+            },
+            addressDto:{
+                homeAddress: '',  //din buletin
+                city: '',             //din buletin
+                country: '',          //din buletin
+                currentHomeAddress: '',
+                currentCity: '',
+                currentCountry: ''
+            },
+            username: localStorage.getItem("loggedInUser"),
+            donationDto:{
+                donation_id:'',
+                status: '',
+                rejectionReason: '',
+                cancerPast5Years: '',
+                bloodPressure: '',
+                pulse: '',
+                weight: '',
+                recentTattoos: '',
+                pregnantOrMenstruating: '',
+                surgeryPast6Months: '',
+                donationBeneficiary: ''
+            },
+
+            disabledSubmitButton: true   //ignore this in the back-end
         };
 
         this.handleChangedTextField = this.handleChangedTextField.bind(this);
@@ -54,33 +63,47 @@ class NextDonation extends React.Component {
         this.goToNewForm = this.goToNewForm.bind(this);
         this.submitDonation = donationsApi.submitDonation.bind(this);
         this.prefillFields = donationsApi.getDonationFormInfo.bind(this);
+        this.updateDonation = donationsApi.updateDonation.bind(this);
         this.optionals = ["bloodPressure", "pulse", "donationBeneficiary"];
     }
 
     componentWillMount() {
-        this.setState(this.prefillFields(), function() {
+        this.prefillFields().then((res)=>{
+            console.log("res = ");
+            console.log(res);
+            this.setState(res.data, function(){
+                let myInfo = this.state;
+                if(this.state["donationDto"]["status"] === '' || this.state["donationDto"]["status"] === 'CLOSED') {
+                    if (this.state["profileDto"]["allergies"] === 'yes') {
+                        this.refs.allergiesYes.checked = true;
+                    } else {
+                        this.refs.allergiesNo.checked = true;
+                        myInfo['profileDto']["allergies"] = 'no'
+                    }
 
-            if (this.state["allergies"] === 'yes') {
-                this.refs.allergiesYes.checked = true;
-            } else
-            if (this.state["allergies"] !== '') {
-                this.refs.allergiesNo.checked = true;
-            }
+                    if (this.state["profileDto"]["diseases"] === 'yes') {
+                        this.refs.diseasesYes.checked = true;
+                    } else {
+                        this.refs.diseasesNo.checked = true;
+                        myInfo['profileDto']["diseases"] = 'no'
+                    }
 
-            if (this.state["diseases"] === 'yes') {
-                this.refs.diseasesYes.checked = true;
-            } else
-            if (this.state["diseases"] !== '') {
-                this.refs.diseasesNo.checked = true;
-            }
-
-            if (this.state["chronicIllness"] === 'yes') {
-                this.refs.chronicYes.checked = true;
-            } else
-            if (this.state["chronicIllness"] !== '') {
-                this.refs.chronicNo.checked = true;
-            }
-
+                    if (this.state["profileDto"]["chronicIllness"] === 'yes') {
+                        this.refs.chronicYes.checked = true;
+                    } else {
+                        this.refs.chronicNo.checked = true;
+                        myInfo['profileDto']["chronicIllness"] = 'no'
+                    }
+                    this.setState({username: localStorage.getItem("loggedInUser")});
+                    console.log("Added username = ");
+                    console.log(this.state);
+                    this.setState({disabledSubmitButton: true});
+                    console.log("this.state = ");
+                    console.log(this.state);
+                }
+                console.log("this.state = ");
+                console.log(this.state);
+            })
         });
     }
 
@@ -88,39 +111,51 @@ class NextDonation extends React.Component {
         let field = event.target.name;
         let value = event.target.value;
         let myInfo = this.state;
-        myInfo[field]=value;
+        myInfo["donationDto"][field]=value;
         this.setState(myInfo);
     }
 
     handleChangedCancer(event) {
+        let myInfo = this.state;
         if (event.target.id==='cancerYes' && event.target.checked) {
-            this.setState({cancerPast5Years: 'yes'});
+            myInfo["donationDto"]["cancerPast5Years"] = true;
+            this.setState(myInfo);
         } else {
-            this.setState({cancerPast5Years: 'no'});
+            myInfo["donationDto"]["cancerPast5Years"] = false;
+            this.setState(myInfo);
         }
     }
 
     handleChangedTattoos(event) {
+        let myInfo = this.state;
         if (event.target.id==='tattoosYes' && event.target.checked) {
-            this.setState({recentTattoos: 'yes'});
+            myInfo["donationDto"]["recentTattoos"] = true;
+            this.setState(myInfo);
         } else {
-            this.setState({recentTattoos: 'no'});
+            myInfo["donationDto"]["recentTattoos"] = false;
+            this.setState(myInfo);
         }
     }
 
     handleChangedSurgeries(event) {
+        let myInfo = this.state;
         if (event.target.id==='surgeriesYes' && event.target.checked) {
-            this.setState({surgeryPast6Months: 'yes'});
+            myInfo["donationDto"]["surgeryPast6Months"] = true;
+            this.setState(myInfo);
         } else {
-            this.setState({surgeryPast6Months: 'no'});
+            myInfo["donationDto"]["recentTattoos"] = false;
+            this.setState(myInfo);
         }
     }
 
     handleChangedPregnant(event) {
+        let myInfo = this.state;
         if (event.target.id==='pregnantYes' && event.target.checked) {
-            this.setState({pregnantOrMenstruating: 'yes'});
+            myInfo["donationDto"]["pregnantOrMenstruating"] = true;
+            this.setState(myInfo);
         } else {
-            this.setState({pregnantOrMenstruating: 'no'});
+            myInfo["donationDto"]["recentTattoos"] = false;
+            this.setState(myInfo);
         }
     }
 
@@ -131,7 +166,7 @@ class NextDonation extends React.Component {
             this.setState({disabledSubmitButton: true});
     }
 
-    handleSubmit(event) {
+    handleSubmit(event) { //TODO check if all fields are inputted.
         event.preventDefault();
         let ok = true;
         for (let field in this.state) {
@@ -139,32 +174,57 @@ class NextDonation extends React.Component {
                 ok = false;
             }
         }
-        if (ok) {
+        //if (ok) {
+        if(true){
             let toSend = {
                 username: this.state.username,
-                status: "PENDING",
-                cancerPast5Years: this.state.cancerPast5Years,
-                bloodPressure: this.state.bloodPressure,
-                pulse: this.state.pulse,
-                weight: this.state.weight,
-                recentTattoos: this.state.recentTattoos,
-                pregnantOrMenstruating: this.state.pregnantOrMenstruating,
-                surgeryPast6Months: this.state.surgeryPast6Months,
-                donationBeneficiary: this.state.donationBeneficiary
+                donationDto:{
+                    donation_id:this.state["donationDto"]["donation_id"],
+                    status: "PENDING",
+                    cancerPast5Years: this.state["donationDto"]["cancerPast5Years"],
+                    bloodPressure: this.state["donationDto"]["bloodPressure"],
+                    pulse: this.state["donationDto"]["pulse"],
+                    weight: this.state["donationDto"]["weight"],
+                    recentTattoos: this.state["donationDto"]["recentTattoos"],
+                    pregnantOrMenstruating: this.state["donationDto"]["pregnantOrMenstruating"],
+                    surgeryPast6Months: this.state["donationDto"]["surgeryPast6Months"],
+                    donationBeneficiary: this.state["donationDto"]["donationBeneficiary"]
+                }
             };
             this.submitDonation(toSend);
-            this.setState({status: 'PENDING'});
+            let myState = this.state;
+            myState["donationDto"]["status"] = 'PENDING';
+            this.setState(myState);
         } else {
             alert("Please fill in all the mandatory fields!");     //TODO: remove all alerts!
         }
     }
 
     goToNewForm() {
-        this.setState({status: 'CLOSED'});
+        let myState = this.state;
+        myState["donationDto"]["status"] = 'CLOSED';
+        this.setState(myState);
+        let toSend = {
+            username: this.state.username,
+            donationDto:{
+                donation_id:this.state["donationDto"]["donation_id"],
+                status: "CLOSED",
+                cancerPast5Years: this.state["donationDto"]["cancerPast5Years"],
+                bloodPressure: this.state["donationDto"]["bloodPressure"],
+                pulse: this.state["donationDto"]["pulse"],
+                weight: this.state["donationDto"]["weight"],
+                recentTattoos: this.state["donationDto"]["recentTattoos"],
+                pregnantOrMenstruating: this.state["donationDto"]["pregnantOrMenstruating"],
+                surgeryPast6Months: this.state["donationDto"]["surgeryPast6Months"],
+                donationBeneficiary: this.state["donationDto"]["donationBeneficiary"],
+                rejectionReason: this.state["donationDto"]["rejectionReason"]
+            }
+        };
+        this.updateDonation(toSend).then(() => {window.location.reload();});
     }
 
     render() {
-        if (this.state.status === 'CLOSED' || this.state.status === '') {
+        if (this.state["donationDto"]["status"] === 'CLOSED' || this.state["donationDto"]["status"] === ''){
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
@@ -179,7 +239,7 @@ class NextDonation extends React.Component {
                             <div className="col-11" style={{textAlign: 'center'}}>
                                 <h1 className="questrial-font" style={{marginBottom: '90px', marginTop: '100px', fontSize: '40px'}}>Donation Form</h1>
                             </div>
-                            <div className="col-11 col-sm-8 col-md-6 col-lg-5" style={{textAlign: 'center'}}>
+                            <div className="col-11 col-sm-8 col-md-6 col-lg-7" style={{textAlign: 'center'}}>
                                 {/* My Info Accordion */}
                                 <div id="accordion">
 
@@ -195,15 +255,15 @@ class NextDonation extends React.Component {
                                         <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div className="card-body">
                                                 <Form>
-                                                    <Input name="firstName" label="First name" type="text" placeholder={this.state.firstName} readOnly="yes"/>
-                                                    <Input name="lastName" label="Last name" type="text" placeholder={this.state.lastName} readOnly="yes"/>
-                                                    <Input name="dateOfBirth" label="Date of birth" type="text" placeholder={this.state.dateOfBirth} readOnly="yes"/>
-                                                    <Input name="gender" label="Gender" type="text" placeholder={this.state.gender} readOnly="yes"/>
-                                                    <Input name="cnp" label="CNP" type="text" placeholder={this.state.cnp} readOnly="yes"/>
-                                                    <Input name="bloodGroup" label="Blood group" type="text" placeholder={this.state.bloodGroup} readOnly="yes"/>
-                                                    <Input name="rh" label="Rh" type="text"  placeholder={this.state.rh} readOnly="yes"/>
-                                                    <Input name="email" label="Email (one address, please)" type="text" placeholder={this.state.email} readOnly="yes"/>
-                                                    <Input name="phone" label="Phone number" type="text" placeholder={this.state.phone} readOnly="yes"/>
+                                                    <Input name="firstName" label="First name" type="text" placeholder={this.state["profileDto"]["firstName"]} readOnly="yes"/>
+                                                    <Input name="lastName" label="Last name" type="text" placeholder={this.state["profileDto"]["lastName"]} readOnly="yes"/>
+                                                    <Input name="dateOfBirth" label="Date of birth" type="text" placeholder={this.state["profileDto"]["dateOfBirth"]} readOnly="yes"/>
+                                                    <Input name="gender" label="Gender" type="text" placeholder={this.state["profileDto"]["gender"]} readOnly="yes"/>
+                                                    <Input name="cnp" label="CNP" type="text" placeholder={this.state["profileDto"]["cnp"]} readOnly="yes"/>
+                                                    <Input name="bloodGroup" label="Blood group" type="text" placeholder={this.state["profileDto"]["bloodGroup"]} readOnly="yes"/>
+                                                    <Input name="rh" label="Rh" type="text"  placeholder={this.state["profileDto"]["rh"]} readOnly="yes"/>
+                                                    <Input name="email" label="Email (one address, please)" type="text" placeholder={this.state["profileDto"]["email"]} readOnly="yes"/>
+                                                    <Input name="phone" label="Phone number" type="text" placeholder={this.state["profileDto"]["phone"]} readOnly="yes"/>
                                                     <br/>
                                                 </Form>
                                             </div>
@@ -222,12 +282,12 @@ class NextDonation extends React.Component {
                                         <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                             <div className="card-body">
                                                 <Form>
-                                                    <Input name="homeAddress" label="Permanent home address (from your ID)" type="text" placeholder={this.state.homeAddress} readOnly="yes"/>
-                                                    <Input name="city" label="City (from your ID)" type="text" placeholder={this.state.city} readOnly="yes"/>
-                                                    <Input name="country" label="Country (from your ID)" type="text" placeholder={this.state.country} readOnly="yes"/>
-                                                    <Input name="currentHomeAddress" label="Current address" type="text" placeholder={this.state.currentHomeAddress} readOnly="yes"/>
-                                                    <Input name="currentCity" label="Current city" type="text" placeholder={this.state.currentCity} readOnly="yes"/>
-                                                    <Input name="currentCountry" label="Current country" type="text" placeholder={this.state.currentCountry} readOnly="yes"/>
+                                                    <Input name="homeAddress" label="Permanent home address (from your ID)" type="text" placeholder={this.state["addressDto"]["homeAddress"]} readOnly="yes"/>
+                                                    <Input name="city" label="City (from your ID)" type="text" placeholder={this.state["addressDto"]["city"]} readOnly="yes"/>
+                                                    <Input name="country" label="Country (from your ID)" type="text" placeholder={this.state["addressDto"]["country"]} readOnly="yes"/>
+                                                    <Input name="currentHomeAddress" label="Current address" type="text" placeholder={this.state["addressDto"]["currentHomeAddress"]} readOnly="yes"/>
+                                                    <Input name="currentCity" label="Current city" type="text" placeholder={this.state["addressDto"]["currentCity"]} readOnly="yes"/>
+                                                    <Input name="currentCountry" label="Current country" type="text" placeholder={this.state["addressDto"]["currentCountry"]} readOnly="yes"/>
                                                     <br/>
                                                 </Form>
                                             </div>
@@ -329,10 +389,10 @@ class NextDonation extends React.Component {
                                 </div>
 
                                 <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedTextField}>
-                                    <Input name="bloodPressure" label="Systolic blood pressure (optional)" type="text" placeholder={this.state.bloodPressure}/>
-                                    <Input name="pulse" label="Pulse (optional)" type="text" placeholder={this.state.pulse}/>
-                                    <Input name="weight" label="Weight (in kg)" type="text" placeholder={this.state.weight}/>
-                                    <Input name="donationBeneficiary" label="Are you donating for someone? If so, specify their name here." type="text" placeholder={this.state.donationBeneficiary}/>
+                                    <Input name="bloodPressure" label="Systolic blood pressure (optional)" type="text"/>
+                                    <Input name="pulse" label="Pulse (optional)" type="text"/>
+                                    <Input name="weight" label="Weight (in kg)" type="text"/>
+                                    <Input name="donationBeneficiary" label="Are you donating for someone? If so, specify their name here." type="text"/>
                                 </Form>
 
                                 <div style={{marginTop: '90px', marginBottom: '100px'}}>
@@ -345,7 +405,8 @@ class NextDonation extends React.Component {
                     </div>
                 </div>
             );
-        } else if(this.state.status === 'PENDING') {
+
+        } else if(this.state["donationDto"]["status"] === 'PENDING') {
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
@@ -362,7 +423,7 @@ class NextDonation extends React.Component {
                     </div>
                 </div>
             );
-        } else if(this.state.status === 'APPROVED') {
+        } else if(this.state["donationDto"]["status"] === 'APPROVED') {
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
@@ -393,7 +454,7 @@ class NextDonation extends React.Component {
                     </div>
                 </div>
             );
-        } else if (this.state.status === 'REJECTED') {
+        } else if (this.state["donationDto"]["status"] === 'REJECTED') {
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
@@ -408,9 +469,9 @@ class NextDonation extends React.Component {
                             <p style={{textAlign: 'center'}}>
                                 <h3>Status: rejected.</h3>
                                 <br/>
-                                <h5>Reason for rejection: {this.state.rejectionReason}</h5>
+                                <h5>Reason for rejection: {this.state["donationDto"]["rejectionReason"]}</h5>
                                 <br/>
-                                <Button color="#ec0a0b" width="280px" fontFamily="Questrial, sans-serif" onClick={this.goToNewForm}>Submit new donation form</Button>
+                                <Button color="#ec0a0b" width="280px" fontFamily="Questrial, sans-serif" onClick={this.goToNewForm}>SUBMIT NEW DONATION FORM</Button>
                             </p>
                         </div>
                     </div>

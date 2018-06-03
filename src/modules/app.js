@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./home";
+import FAQ from "./FAQ";
 import Login from "./login";
 import Logout from "./logout";
 import Register from "./register";
@@ -16,6 +17,7 @@ import {
 } from "react-router-dom";
 import {EnsureLoggedIn} from '../middleware/check-auth.js';
 import {EnsureNotLoggedIn} from '../middleware/check-auth.js';
+import contact from "./contact";
 
 class App extends React.Component {
     render() {
@@ -23,6 +25,8 @@ class App extends React.Component {
             <BrowserRouter>
                 <div>
                     <Route path="/home" render={(props) => EnsureNotLoggedIn(Home, "/home", props)}/>
+                    <Route path="/faq" render={(props) => EnsureNotLoggedIn(FAQ, "/faq", props)}/>
+                    <Route path="/contact" render={(props) => EnsureNotLoggedIn(contact, "/contact", props)}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/logout" render={(props) => EnsureLoggedIn(Logout, "/home", props)}/>
                     <Route path="/register" component={Register}/>

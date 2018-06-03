@@ -12,7 +12,8 @@ class Input extends React.Component {
         type: props.type,
         placeholder: props.placeholder,
         readOnly: props.readOnly,
-        onChange: props.onChange
+        onChange: props.onChange,
+        value: props.placeholder
     }
   }
 

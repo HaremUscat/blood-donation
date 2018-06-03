@@ -16,19 +16,31 @@ class UserDashboard extends React.Component {
     }
 
     componentWillMount() {
-        this.setState(this.prefillFields(), function() {
-            if (this.state.hasNewTestResults) {
-                this.refs.newTestResultsNotification.innerHTML = "You have new blood test results. Check them out <a href='/test-results-history' class='dashboard-link'>here.</a>";
-            } else {
-                this.refs.newTestResultsNotification.innerHTML = "You don't have any new blood test results.";
+        this.prefillFields().then((res)=> {
+            if(!res.data.isError){
+                this.setState(res.data,function(){
+                    console.log(this.state);
+                    if(this.state.firstName ==="User") {
+                        this.refs.welcomeMessage.innerHTML = "Welcome to BloodyFast!";
+                        this.refs.newUser.innerHTML = "Please fill in your personal information <a href='/my-info' class='dashboard-link'>here.</a>";
+                    }
+                    else {
+                        this.refs.welcomeMessage.innerHTML = "Welcome," + this.state.firstName + "!";
+                        if (this.state.hasNewTestResults) {
+                            this.refs.newTestResultsNotification.innerHTML = "You have new blood test results. Check them out <a href='/test-results-history' class='dashboard-link'>here.</a>";
+                        } else {
+                            this.refs.newTestResultsNotification.innerHTML = "You don't have any new blood test results.";
+                        }
+                        if (this.state.illnessDiscovered) {
+                            this.refs.illnessDiscoveredNotification.innerHTML = this.state.illnessInfo + " Please contact your doctor for a check-up.";
+                            this.refs.nextPossibleDonationDate.innerHTML = "Unfortunately, in your condition you cannot donate blood. If there has been a mistake, contact us using the information provided in the Contact page.";
+                        } else {
+                            this.refs.nextPossibleDonationDate.innerHTML = "Next possible donation date: " + this.state.nextPossibleDonationDate;
+                        }
+                    }
+                })
             }
-            if (this.state.illnessDiscovered) {
-                this.refs.illnessDiscoveredNotification.innerHTML = this.state.illnessInfo + " Please contact your doctor for a check-up.";
-                this.refs.nextPossibleDonationDate.innerHTML = "Unfortunately, in your condition you cannot donate blood. If there has been a mistake, contact us using the information provided in the Contact page.";
-            } else {
-                this.refs.nextPossibleDonationDate.innerHTML = "Next possible donation date: " + this.state.nextPossibleDonationDate;
-            }
-        });
+        })
     }
 
     render() {
@@ -46,7 +58,8 @@ class UserDashboard extends React.Component {
                     <div className="container">
                         <div className="row align-items-center justify-content-center" style={{minHeight: '90vh', color: '#560001'}}>
                             <div className="col-11 col-sm-10 col-md-10" style={{textAlign: 'right'}}>
-                                <h1 className="questrial-font" style={{marginBottom: '20px', fontWeight: 'lighter', fontSize: '48px'}}>Welcome, {this.state.firstName}!</h1>
+                                <h1 ref="welcomeMessage" className="questrial-font" style={{marginBottom: '20px', fontWeight: 'lighter', fontSize: '48px'}}/>
+                                <p ref="newUser" style={{marginBottom: '10px', fontWeight: 'lighter', fontSize: '25px'}}/>
                                 <p ref="newTestResultsNotification" style={{marginBottom: '10px', fontWeight: 'lighter', fontSize: '25px'}}/>
                                 <p ref="illnessDiscoveredNotification" style={{marginBottom: '10px', fontSize: '25px'}}/>
                                 <p ref="nextPossibleDonationDate" style={{marginBottom: '10px', fontWeight: 'lighter', fontSize: '25px'}}/>

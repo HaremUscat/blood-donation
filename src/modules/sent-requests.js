@@ -22,9 +22,9 @@ class SentRequests extends React.Component {
     }
 
     componentWillMount() {
-        this.loadRequests().then((data) => {
-            let requests = data.requests.default;       //TODO: change this to the next line of code, this one is for testing purposes
-            //let requests = data.requests;
+        this.loadRequests().then((res) => {
+            //let requests = data.requests.default;       //TODO: change this to the next line of code, this one is for testing purposes
+            let requests = res.data.requests;
             this.setState({loadedRequests: requests, selectedRequests: requests.slice(0, this.noRequestsPerPage)});
         });
     }

@@ -77,6 +77,44 @@ body {
 
 /* ----------------------------------------------------------------------------- */
 
+/* FAQ */
+
+.introFaq {
+    position: relative;
+    z-index: 1;
+    min-height: 88vh;
+}
+
+.introFaq::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/images/faq.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.faqs h3 {
+    font-family: 'Questrial', 'sans-serif';
+}
+
+.faqs p {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+/* ----------------------------------------------------------------------------- */
 /* LOGIN */
 
 .logo {

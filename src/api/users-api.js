@@ -50,8 +50,8 @@ function getMyInfo() {
 function getDashboardInfo() {
     //TODO: remove these two test cases
     //return {"firstName": "John", "hasNewTestResults": true, "illnessDiscovered": true, "illnessInfo": "We are sorry to inform you that you might suffer from hepatitis.", "nextPossibleDonationDate": ''};
-    return {"firstName": "Hannah", "hasNewTestResults": false, "illnessDiscovered": false, "illnessInfo": "", "nextPossibleDonationDate": '03.06.2018'};
-    //return axios.get('/dashboard-info/'+localStorage.getItem("loggedInUser"));
+    //return {"firstName": "Hannah", "hasNewTestResults": false, "illnessDiscovered": false, "illnessInfo": "", "nextPossibleDonationDate": '03.06.2018'};
+    return axios.get('/dashboard-info/'+localStorage.getItem("loggedInUser"));
 }
 
 module.exports = {register, submitMyInfo, getMyInfo, getDashboardInfo};
