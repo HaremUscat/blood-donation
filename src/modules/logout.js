@@ -19,7 +19,7 @@ class Logout extends React.Component {
                     this.props.history.push('/home');
                 }, 700)});
         }
-        //localStorage.removeItem("loggedInUser");  //TODO: remove this! for testing purposes only!
+        localStorage.removeItem("loggedInUser");  //TODO: remove this! for testing purposes only!
     }
 
     render() {

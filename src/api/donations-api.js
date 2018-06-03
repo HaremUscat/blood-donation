@@ -1,3 +1,4 @@
+const fooReceivedForms = require( "../foo-data/foo-received-forms" );
 const axios = require('axios');
 
 function getDonationFormInfo() {
@@ -28,4 +29,25 @@ function updateDonation(donation){
         });
 }
 
-module.exports = {submitDonation, getDonationFormInfo, updateDonation};
+function getReceivedForms() {
+    //return axios.get('/received-forms/' + this.state.username);
+    return new Promise((resolve, reject) => {
+        resolve({forms: fooReceivedForms});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    });
+}
+
+function saveAppointment(donationFormID, _appointmentDate) {
+    //return axios.put('/donation-forms', {donationId: donationFormID, appointmentDate: _appointmentDate});
+    return new Promise((resolve, reject) => {
+        resolve({hey: 'yeah'});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    });
+}
+
+function saveRejection(donationFormID, _rejectionReason) {
+    //return axios.put('/donation-forms', {donationId: donationFormID, rejectionReason: _rejectionReason});
+    return new Promise((resolve, reject) => {
+        resolve({hey: 'yeah'});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    });
+}
+
+module.exports = {submitDonation, getDonationFormInfo, updateDonation, getReceivedForms, saveAppointment, saveRejection};

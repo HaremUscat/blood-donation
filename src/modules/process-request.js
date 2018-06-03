@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Box from "../components/box";
 import Button from "../components/button";
+const requestsApi = require("../api/requests-api");
 
 class ProcessRequest extends React.Component {
     constructor(props) {
@@ -20,11 +21,21 @@ class ProcessRequest extends React.Component {
                 plasmaUnits: ''
             }
         };
+
+        this.markAsProcessed = this.markAsProcessed.bind(this);
     }
 
     componentWillMount() {
         const item = localStorage.getItem("requestBeingProcessed");
         this.setState({request: JSON.parse(item)});
+    }
+
+    markAsProcessed() {
+        requestsApi.markRequestAsProcessed(this.state.request.id)
+            .then(() => {
+                this.props.history.push("/received/requests");
+            });
+        localStorage.removeItem("requestBeingProcessed");
     }
 
     render() {
@@ -69,9 +80,9 @@ class ProcessRequest extends React.Component {
                 <div className="container">
                     <div className="row align-items-center" style={{minHeight: '40vh', paddingTop: '40px', paddingBottom: '40px'}}>
                         <Box image='/images/blood_bags.jpg' title='Step 1. Diminish the Stock'>
-                            Open "Stock" in a new tab and remove the blood container(-s).
+                            Open <a href="/our-stock" target="_blank">"Stock" in a new tab</a> and remove the blood container(-s).
                             <br/>
-                            Not enough blood? Find the closest compatible donor on the "Find donor" page and process this request at a later time.
+                            Not enough blood? Find the closest compatible donor on the <a href="/find-donor">"Find donor" page</a> and process this request at a later time.
                         </Box>
 
                         <Box image='/images/send_blood.jpg' title='Step 2. Send the Blood'>

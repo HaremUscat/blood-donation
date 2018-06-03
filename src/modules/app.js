@@ -9,6 +9,7 @@ import UserDashboard from "./user-dashboard";
 import SentRequests from "./sent-requests";
 import ProcessRequest from "./process-request";
 import ReceivedRequests from "./received-requests";
+import ReceivedDonationForms from "./received-donation-forms";
 import NextDonation from "./next-donation";
 import NewRequest from "./new-request";
 import {
@@ -37,6 +38,7 @@ class App extends React.Component {
                     <Route path="/sent-requests" render={(props) => EnsureLoggedIn(SentRequests, "/sent-requests", props)}/>
                     <Route path="/received-requests" render={(props) => EnsureLoggedIn(ReceivedRequests, "/received-requests", props)}/>
                     <Route path="/process-request" render={(props) => EnsureLoggedIn(ProcessRequest, "/process-request", props)}/>
+                    <Route path="/received-donation-forms" render={(props) => EnsureLoggedIn(ReceivedDonationForms, "/received-donation-forms", props)}/>
                 </div>
             </BrowserRouter>
         );

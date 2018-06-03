@@ -28,4 +28,8 @@ function getReceivedRequests() {
     });
 }
 
-module.exports = {submitRequest, getSentRequests, getReceivedRequests};
+function markRequestAsProcessed(_requestID) {
+    return axios.put('/requests', {requestID: _requestID, status: 'PROCESSED'});
+}
+
+module.exports = {submitRequest, getSentRequests, getReceivedRequests, markRequestAsProcessed};
