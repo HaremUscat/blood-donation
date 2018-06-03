@@ -210,3 +210,39 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* ------------------------------------------------------------------------------- */
+
+/* PROCESS REQUEST PAGE */
+
+.filler-paragraph-for-box2 {
+    height: 85px;
+}
+
+.filler-paragraph-for-box3 {
+    height: 16px;
+}
+
+@media (max-width: 980px) {
+    .filler-paragraph-for-box2 {
+        height: 135px;
+    }
+
+    .filler-paragraph-for-box3 {
+        height: 76px;
+    }
+}
+
+@media (max-width: 765px) {
+    .filler-paragraph-for-box2 {
+        height: 0px;
+    }
+
+    .filler-paragraph-for-box3 {
+        height: 0px;
+    }
+}
+
+.rounded-borders {
+    border-radius: 5%;
+}

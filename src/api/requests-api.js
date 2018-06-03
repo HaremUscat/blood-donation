@@ -1,4 +1,5 @@
-const fooSentRequests = require("../foo-data/foo-sent-requests.js");
+const fooSentRequests = require("../foo-data/foo-sent-requests");
+const fooReceivedRequests = require("../foo-data/foo-received-requests");
 const axios = require('axios');
 
 function submitRequest(request) {
@@ -20,4 +21,11 @@ function getSentRequests() {
     });
 }
 
-module.exports = {submitRequest, getSentRequests};
+function getReceivedRequests() {
+    //return axios.get('/received-requests/' + this.state.username);
+    return new Promise((resolve, reject) => {
+        resolve({requests: fooReceivedRequests});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    });
+}
+
+module.exports = {submitRequest, getSentRequests, getReceivedRequests};
