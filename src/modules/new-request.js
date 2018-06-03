@@ -156,7 +156,7 @@ class NewRequest extends React.Component {
                                 <br/>
                                 <h5>Would you like to submit another request?</h5>
                                 <br/>
-                                <Button color="#ec0a0b" width="280px" fontFamily="Questrial, sans-serif" onClick={() => this.reloadPage()}>Submit new request</Button>
+                                <Button color="#ec0a0b" width="280px" fontFamily="Questrial, sans-serif" onClick={() => this.reloadPage()}>SUBMIT NEW REQUEST</Button>
                             </p>
                         </div>
                     </div>

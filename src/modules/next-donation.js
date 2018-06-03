@@ -471,7 +471,7 @@ class NextDonation extends React.Component {
                                 <br/>
                                 <h5>Reason for rejection: {this.state["donationDto"]["rejectionReason"]}</h5>
                                 <br/>
-                                <Button color="#ec0a0b" width="280px" fontFamily="Questrial, sans-serif" onClick={this.goToNewForm}>Submit new donation form</Button>
+                                <Button color="#ec0a0b" width="280px" fontFamily="Questrial, sans-serif" onClick={this.goToNewForm}>SUBMIT NEW DONATION FORM</Button>
                             </p>
                         </div>
                     </div>
