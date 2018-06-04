@@ -79,6 +79,7 @@ namespace SeleniumBingTests
             driver.FindElement(By.XPath("//*[@id='root']/div/div/div/div/button")).Click();
         }
 
+        // test the edit information section
         [TestMethod]
         [TestCategory("Chrome")]
         public void EditMyInformationTest()
@@ -135,6 +136,47 @@ namespace SeleniumBingTests
             driver.FindElement(By.XPath("//*[@id='rhPositive']")).Click();
 
             driver.FindElement(By.XPath("//*[@id='root']/div/div/div/div/div[2]/div[13]/button")).Click();
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void NextDonationInformationTest()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".nav-link")));
+            IWebElement LoginButton = driver.FindElement(By.XPath("//*[@id='navbarSupportedContent']/div/ul/ul/li[1]/a"));
+            LoginButton.Click();
+
+            IWebElement UserNameTextBox = driver.FindElement(By.XPath("//*[@id='root']/div/div/div/div/form/div[1]/input"));
+            UserNameTextBox.Clear();
+            UserNameTextBox.SendKeys("TESTARELOL2");
+
+            IWebElement PasswordTextBox = driver.FindElement(By.XPath("//*[@id='root']/div/div/div/div/form/div[2]/input"));
+            PasswordTextBox.Clear();
+            PasswordTextBox.SendKeys("pass");
+            driver.FindElement(By.XPath("//*[@id='root']/div/div/div/div/button")).Click();
+
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='navbarSupportedContent']/div/ul/li[2]/a")));
+            driver.FindElement(By.XPath("//*[@id='navbarSupportedContent']/div/ul/li[2]/a")).Click();
+
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='headingOne']/h5/button")));
+
+            driver.FindElement(By.XPath("//*[@id='headingOne']/h5/button")).Click();
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='collapseOne']/div/form/div[1]/input")));
+
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='collapseOne']/div/form/div[1]/input")));
+
+            String str = driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[1]/input")).GetAttribute("placeholder");
+            Assert.AreEqual<String>(str, "Test");
+            Assert.AreEqual<String>(driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[2]/input")).GetAttribute("placeholder"), "Test");
+            Assert.AreEqual<String>(driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[3]/input")).GetAttribute("placeholder"), "24-04-1998");
+            Assert.AreEqual<String>(driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[4]/input")).GetAttribute("placeholder"), "F");
+            Assert.AreEqual<String>(driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[5]/input")).GetAttribute("placeholder"), "2980424000000");
+            Assert.AreEqual<String>(driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[6]/input")).GetAttribute("placeholder"), "B");
+            Assert.AreEqual<String>(driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[7]/input")).GetAttribute("placeholder"), "+");
+            Assert.AreEqual<String>(driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[8]/input")).GetAttribute("placeholder"), "test@test.test");
+            Assert.AreEqual<String>(driver.FindElement(By.XPath("//*[@id='collapseOne']/div/form/div[9]/input")).GetAttribute("placeholder"), "0732323232");
         }
 
         public TestContext TestContext
