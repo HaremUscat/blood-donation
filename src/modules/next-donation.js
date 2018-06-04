@@ -10,8 +10,6 @@ class NextDonation extends React.Component {
     constructor(props) {
         super(props);
 
-
-
         this.state = {
             profileDto:{
                 firstName: '',
@@ -253,7 +251,7 @@ class NextDonation extends React.Component {
                                             </h5>
                                         </div>
                                         <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                            <div className="card-body">
+                                            <div className="card-body" style={{padding: '15px'}}>
                                                 <Form>
                                                     <Input name="firstName" label="First name" type="text" placeholder={this.state["profileDto"]["firstName"]} readOnly="yes"/>
                                                     <Input name="lastName" label="Last name" type="text" placeholder={this.state["profileDto"]["lastName"]} readOnly="yes"/>
@@ -280,7 +278,7 @@ class NextDonation extends React.Component {
                                             </h5>
                                         </div>
                                         <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                            <div className="card-body">
+                                            <div className="card-body" style={{padding: '15px'}}>
                                                 <Form>
                                                     <Input name="homeAddress" label="Permanent home address (from your ID)" type="text" placeholder={this.state["addressDto"]["homeAddress"]} readOnly="yes"/>
                                                     <Input name="city" label="City (from your ID)" type="text" placeholder={this.state["addressDto"]["city"]} readOnly="yes"/>
@@ -304,7 +302,7 @@ class NextDonation extends React.Component {
                                             </h5>
                                         </div>
                                         <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div className="card-body">
+                                            <div className="card-body" style={{padding: '15px'}}>
                                                 <p style={{fontWeight: 'lighter', fontSize: '18px', textAlign: 'left', paddingTop: '5px', marginBottom: '5px'}}>Do you suffer from severe allergies?</p>
                                                 <div className="form-check" style={{textAlign: 'left', marginLeft: '20px'}}>
                                                     <input className="form-check-input" type="radio" name="allergiesRadioOptions" id="allergiesYes" value="yes" ref="allergiesYes" disabled/>

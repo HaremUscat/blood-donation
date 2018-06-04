@@ -80,11 +80,38 @@ body {
 /* FAQ */
 
 .introFaq {
-    background-image: url('/images/intro-background.jpg');
-    font-family: 'Questrial', 'sans-serif';
+    position: relative;
+    z-index: 1;
+    min-height: 88vh;
+}
+
+.introFaq::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/images/faq.jpg');
     background-size: cover;
-    color: white;
-    min-height: 90vh;
+    background-position: center;
+    opacity: 0.8;
+
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.faqs h3 {
+    font-family: 'Questrial', 'sans-serif';
+}
+
+.faqs p {
+    font-size: 20px;
+    font-weight: lighter;
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -155,39 +182,39 @@ body {
 
 /* SENT REQUESTS TABLE */
 
-.requests-table {
+.requests-table, .forms-table {
     width: 100%;
     text-align: left;
     font-weight: lighter;
 }
 
-.requests-table > thead > tr > th > h5 {
+.requests-table > thead > tr > th > h5, .forms-table > thead > tr > th > h5 {
     font-size: 25px;
 }
 
-.requests-table > thead > tr, .requests-table > tbody > tr {
+.requests-table > thead > tr, .requests-table > tbody > tr, .forms-table > thead > tr, .forms-table > tbody > tr {
     border-bottom: 1px solid #e6e6e6;
     font-family: 'Questrial', 'sans-serif';
 }
 
-.requests-table > thead > tr > th:first-of-type {
+.requests-table > thead > tr > th:first-of-type, .forms-table > thead > tr > th:first-of-type {
     text-align: left;
 }
 
-.requests-table > thead > tr > th:last-of-type {
+.requests-table > thead > tr > th:last-of-type, .forms-table > thead > tr > th:last-of-type {
     text-align: right;
 }
 
-.requests-table > tbody > tr > td:last-of-type {
+.requests-table > tbody > tr > td:last-of-type, .forms-table > tbody > tr > td:last-of-type {
     text-align: right;
 }
 
-.requests-table > tbody > tr > td {
+.requests-table > tbody > tr > td, .forms-table > tbody > tr > td {
     font-size: 18px;
     padding: 15px 3px;
 }
 
-.requests-table > thead > tr > th {
+.requests-table > thead > tr > th, .forms-table > thead > tr > th {
     padding: 10px 3px;
 }
 
@@ -220,4 +247,54 @@ body {
     color: #ec0a0b;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* PROCESS REQUEST PAGE */
+
+.filler-paragraph-for-box2 {
+    height: 85px;
+}
+
+.filler-paragraph-for-box3 {
+    height: 16px;
+}
+
+@media (max-width: 980px) {
+    .filler-paragraph-for-box2 {
+        height: 135px;
+    }
+
+    .filler-paragraph-for-box3 {
+        height: 76px;
+    }
+}
+
+@media (max-width: 765px) {
+    .filler-paragraph-for-box2 {
+        height: 0px;
+    }
+
+    .filler-paragraph-for-box3 {
+        height: 0px;
+    }
+}
+
+.rounded-borders {
+    border-radius: 5%;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* RECEIVED DONATION FORMS */
+
+.donor-info-box {
+    text-align: justify;
+}
+
+@media (max-width: 770px) {
+    .donor-info-box {
+        text-align: center;
+    }
 }
