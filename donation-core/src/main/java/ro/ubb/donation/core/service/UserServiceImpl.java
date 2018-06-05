@@ -5,10 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ro.ubb.donation.core.model.Address;
-import ro.ubb.donation.core.model.Profile;
-import ro.ubb.donation.core.model.Role;
-import ro.ubb.donation.core.model.User;
+import ro.ubb.donation.core.model.*;
 import ro.ubb.donation.core.repository.RoleRepository;
 import ro.ubb.donation.core.repository.UserRepository;
 
@@ -54,7 +51,7 @@ public class UserServiceImpl implements UserService {
 
         user.ifPresent(u -> {
             u.setUsername(username);
-            u.setPassword(password);
+            u.setPassword(AuthManager.encrypt( password ) );
             u.setLogged(logged);
             u.setRole(role);
             u.setAddress(address);
@@ -74,7 +71,7 @@ public class UserServiceImpl implements UserService {
 
         User user = User.builder()
                 .username(username)
-                .password(password)
+                .password(AuthManager.encrypt( password ))
                 .logged(logged)
                 .role(role)
                 .build();

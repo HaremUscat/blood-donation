@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import ro.ubb.donation.core.model.AuthManager;
 import ro.ubb.donation.core.model.Role;
 import ro.ubb.donation.core.model.User;
 import ro.ubb.donation.core.service.RoleService;
@@ -56,7 +57,7 @@ public class UserController {
 
         if(userOptional.isPresent()){
             User user = userOptional.get();
-            if(user.getPassword().equals(loginForm.getPassword())) {
+            if(user.getPassword().equals(AuthManager.encrypt( loginForm.getPassword() ) )) {
                 Optional<String> role = roleService.getRoleDescriptionById(user.getRole().getId());
 
                 AuthenticationResponse authenticationResponse = AuthenticationResponse.builder()
