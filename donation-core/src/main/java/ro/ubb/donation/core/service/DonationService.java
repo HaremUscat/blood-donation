@@ -15,9 +15,13 @@ public interface DonationService
 
     List<Donation> findAll();
 
+    List<Donation> findAllByStatus(String status);
+
     Donation updateDonation(int donationId, String status, String rejectionReason, boolean cancerPast5Years,
                             boolean recentTattos, boolean pregnantOrMenstruating, boolean surgeryPast6Months,
                             int pulse, int bloodPresure, float weight, String donationBeneficiary );
+
+    Donation updateDonationStatus(int donationId, String status, String rejectionReason,String apointmentDate);
 
     Donation createDonation(User user, String status, boolean cancerPast5Years,
                             boolean recentTattos, boolean pregnantOrMenstruating, boolean surgeryPast6Months,

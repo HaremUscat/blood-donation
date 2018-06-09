@@ -58,6 +58,7 @@ public class UserController {
         if(userOptional.isPresent()){
             User user = userOptional.get();
             if(user.getPassword().equals(AuthManager.encrypt( loginForm.getPassword() ) )) {
+            //if(user.getPassword().equals(loginForm.getPassword())) {
                 Optional<String> role = roleService.getRoleDescriptionById(user.getRole().getId());
 
                 AuthenticationResponse authenticationResponse = AuthenticationResponse.builder()

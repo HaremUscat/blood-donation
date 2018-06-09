@@ -51,7 +51,7 @@ public class UserServiceImpl implements UserService {
 
         user.ifPresent(u -> {
             u.setUsername(username);
-            u.setPassword(AuthManager.encrypt( password ) );
+            u.setPassword(password);
             u.setLogged(logged);
             u.setRole(role);
             u.setAddress(address);

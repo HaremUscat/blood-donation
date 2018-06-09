@@ -10,6 +10,7 @@ import ro.ubb.donation.core.service.CenterService;
 import ro.ubb.donation.core.service.RequestService;
 import ro.ubb.donation.web.converter.RequestConverter;
 import ro.ubb.donation.web.dto.RequestDto;
+import ro.ubb.donation.web.requests.UpdateRequest;
 import ro.ubb.donation.web.response.RequestResponse;
 
 import java.util.*;
@@ -56,8 +57,21 @@ public class RequestController {
                 .build();
     }
 
+    @RequestMapping(value = "/received-requests/{username}", method = RequestMethod.GET)
+    public RequestResponse getAllRequestsForCenter(@PathVariable String username) {
+
+        List<Request> requests = requestService.findAllByCenterId(1);
+
+        return RequestResponse.builder()
+                .requests( requests )
+                .isError( false )
+                .status("Success")
+                .message("These are all requests!")
+                .build();
+    }
+
     @RequestMapping(value = "/requests", method = RequestMethod.POST)
-    public RequestResponse createNewResponse(@RequestBody RequestDto requestDto){
+    public RequestResponse createNewRequest(@RequestBody RequestDto requestDto){
         RequestResponse requestResponse = RequestResponse.builder().build();
         Optional<Center> center = this.centerService.findCenter(requestDto.getDonationCenterId());
         if(center.isPresent()){
@@ -78,4 +92,19 @@ public class RequestController {
         return requestResponse;
     }
 
+
+    @RequestMapping(value = "/requests", method = RequestMethod.PUT)
+    public RequestResponse updateRequest(@RequestBody UpdateRequest updateRequest){
+        RequestResponse requestResponse = RequestResponse.builder().build();
+        Optional<Request> request = this.requestService.findRequest(updateRequest.getRequestID());
+        if(request.isPresent()){
+            Request r = request.get();
+            this.requestService.updateRequest(updateRequest.getRequestID(),r.getThrombocyteUnits(),r.getRedCellsUnits(),
+                    r.getPlasmaUnits(),r.getCenter(),r.getLocationHospital(),r.getBeneficiaryName(),r.isActiveDonor(),
+                    r.getUrgencyLevel(),r.getBloodGroup(),r.getRh(),r.getUsername(),updateRequest.getStatus());
+            return RequestResponse.builder().status("success").isError(false).message("Request updated!").build();
+        }
+        else
+            return RequestResponse.builder().status("error").isError(true).message("The request with that id doesn't exist").build();
+    }
 }

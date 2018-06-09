@@ -31,6 +31,11 @@ public class RequestServiceImpl implements RequestService {
     }
 
     @Override
+    public List<Request> findAllByCenterId(int centerId){
+        return requestRepository.findAll().stream().filter(r->(r.getCenter().getId() == centerId && r.getStatus().equals("PENDING"))).collect(Collectors.toList());
+    }
+
+    @Override
     @Transactional
     public Request updateRequest(int requestId, Integer thrombocyteUnits, Integer redCellsunits, Integer plasmaUnits, Center donationCenter, String locationHospital, String beneficiaryName, boolean activeDonor, String urgencyLevel, String bloodGroup, String rh, String username, String status) {
         log.trace( "updateRequest: requestId={}, thrombocyteUnits={}, redCellsunits={}, plasmaUnits={}, donationCenterId={}, locationHospital={}, beneficiaryName={}, activeDonor={}, urgencyLevel={}, bloodGroup={}, rh={}, username={}, status={}", requestId, thrombocyteUnits, redCellsunits, plasmaUnits, donationCenter, locationHospital, beneficiaryName, activeDonor, urgencyLevel, bloodGroup, rh, username, status );
