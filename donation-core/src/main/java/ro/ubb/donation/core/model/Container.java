@@ -26,10 +26,10 @@ public class Container {
     @JoinColumn(name = "center_id")
     private Center centerId;
 
-    @Column(name = "blood_group", nullable = false)
+    @Column(name = "blood_group")
     private String bloodGroup;
 
-    @Column(name = "rh", nullable = false)
+    @Column(name = "rh")
     private String rh;
 
     @Column(name = "component_type", nullable = false)

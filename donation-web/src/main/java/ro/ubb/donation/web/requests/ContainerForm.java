@@ -10,5 +10,5 @@ import ro.ubb.donation.web.dto.ContainerDto;
 @AllArgsConstructor
 public class ContainerForm {
     private ContainerDto containerDto;
-    private int numberOfContainers;
+    private int howManyToRemove;
 }

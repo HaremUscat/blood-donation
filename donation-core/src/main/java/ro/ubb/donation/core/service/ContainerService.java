@@ -19,4 +19,10 @@ public interface ContainerService {
     void deleteContainer(int containerId);
 
     List<Container> getContainersByCenterId(int centerId);
+
+    long getNrContainersUsable(String componentType, String bloodType, String rh, int centerId);
+    long getNrContainersUsable(String componentType, int centerId);
+
+    long getNrContainersExpired(String componentType, String bloodType, String rh, int centerId);
+    long getNrContainersExpired(String componentType, int centerId);
 }

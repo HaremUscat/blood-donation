@@ -1046,7 +1046,6 @@
     <column id="259" parent="235" name="blood_group">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="260" parent="235" name="component_type">
@@ -1063,7 +1062,6 @@
     <column id="262" parent="235" name="rh">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="263" parent="235" name="center_id">

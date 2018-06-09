@@ -56,7 +56,7 @@ public class DonationServiceImpl implements DonationService {
             d.setRejectionReason(rejectionReason);
             if(!appointmentDate.equals(""))
                 try{
-                    DateFormat format = new SimpleDateFormat("dd-mm-yyyy", Locale.ENGLISH);
+                    DateFormat format = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
                     Date date = format.parse(appointmentDate);
                     d.setAppointment_date(date);
                 }catch (Exception ex){

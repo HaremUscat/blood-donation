@@ -91,4 +91,36 @@ public class ContainerServiceImpl implements ContainerService {
     public List<Container> getContainersByCenterId(int centerId) {
         return this.findAll().stream().filter( c -> c.getCenterId().getId() == centerId ).collect(Collectors.toList());
     }
+
+    @Override
+    public long getNrContainersUsable(String componentType, String bloodType, String rh, int centerId) {
+        List<Container> containers = this.containerRepository.findAll().stream().filter(c->(c.getCenterId().getId()==centerId && c.getComponentType().equals(componentType)))
+                .filter(c->(c.getBloodGroup().equals(bloodType) && c.getRh().equals(rh))).collect(Collectors.toList());
+        long result = containers.stream().filter(c->c.getExpirationDate().after(new Date())).count();
+        return result;
+    }
+
+    @Override
+    public long getNrContainersUsable(String componentType, int centerId) {
+        List<Container> containers = this.containerRepository.findAll().stream().filter(c->(c.getCenterId().getId()==centerId && c.getComponentType().equals(componentType)))
+               .collect(Collectors.toList());
+        long result = containers.stream().filter(c->c.getExpirationDate().after(new Date())).count();
+        return result;
+    }
+
+    @Override
+    public long getNrContainersExpired(String componentType, String bloodType, String rh, int centerId) {
+        List<Container> containers = this.containerRepository.findAll().stream().filter(c->(c.getCenterId().getId()==centerId && c.getComponentType().equals(componentType)))
+                .filter(c->(c.getBloodGroup().equals(bloodType) && c.getRh().equals(rh))).collect(Collectors.toList());
+        long result = containers.stream().filter(c->c.getExpirationDate().before(new Date())).count();
+        return result;
+    }
+
+    @Override
+    public long getNrContainersExpired(String componentType, int centerId) {
+        List<Container> containers = this.containerRepository.findAll().stream().filter(c->(c.getCenterId().getId()==centerId && c.getComponentType().equals(componentType)))
+                .collect(Collectors.toList());
+        long result = containers.stream().filter(c->c.getExpirationDate().before(new Date())).count();
+        return result;
+    }
 }
