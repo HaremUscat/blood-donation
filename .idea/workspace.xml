@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c3c831a-c183-4b77-b960-fd790517c614" name="Default" comment="Made &quot;EnsureLoggedIn&quot; functional and changed the design of &quot;Register&quot; a bit.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/test-results-history.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/test-results-history.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/stock-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/stock-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/our-blood-stock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/our-blood-stock.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,15 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="received-donations-table-body.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/received-donations-table-body.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="68" column="42" lean-forward="true" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test-results-history.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modules/test-results-history.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,8 +38,8 @@
       <file leaf-file-name="next-donation.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modules/next-donation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="232" column="24" lean-forward="true" selection-start-line="227" selection-start-column="20" selection-end-line="232" selection-end-column="24" />
+            <state relative-caret-position="394">
+              <caret line="220" column="74" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="74" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -56,58 +47,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-or-buttons.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/user-or-buttons.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test-results-table-body.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/test-results-table-body.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="donations-api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/donations-api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
+            <state relative-caret-position="1144">
+              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sent-requests-table-body.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/sent-requests-table-body.js">
+      <file leaf-file-name="test-results-table-body.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/test-results-table-body.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="382">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="received-requests-table-body.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/received-requests-table-body.js">
+      <file leaf-file-name="our-blood-stock.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/modules/our-blood-stock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="646">
+              <caret line="538" column="22" lean-forward="true" selection-start-line="538" selection-start-column="22" selection-end-line="538" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process-request.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modules/process-request.js">
+      <file leaf-file-name="received-donation-forms.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/modules/received-donation-forms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="218">
+              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-dashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/modules/user-dashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="34" column="98" lean-forward="true" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stock-api.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/stock-api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imageless-box.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/imageless-box.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -134,7 +133,22 @@
       <find>reques</find>
       <find>redirect</find>
       <find>idDonationCenter</find>
+      <find>APositive</find>
+      <find>ABNegative</find>
+      <find>BNegative</find>
+      <find>BPositive</find>
+      <find>thrombocyte</find>
+      <find>remo</find>
     </findStrings>
+    <replaceStrings>
+      <replace>apositive</replace>
+      <replace>anegative</replace>
+      <replace>abpositive</replace>
+      <replace>abnegative</replace>
+      <replace>bnegative</replace>
+      <replace>bpositive</replace>
+      <replace>thrombocyteExpired</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Ada\Documents\UBB Cluj\Year 2\Semester 2\Software Engineering - contains git repository\Software Engineering\src\modules</dir>
       <dir>C:\Users\Ada\Documents\UBB Cluj\Year 2\Semester 2\Software Engineering - contains git repository\Software Engineering</dir>
@@ -146,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/api/inputs-api.js" />
-        <option value="$PROJECT_DIR$/src/modules/submit-to-database.js" />
         <option value="$PROJECT_DIR$/src/components/navbar.js" />
         <option value="$PROJECT_DIR$/src/components/form.js" />
         <option value="$PROJECT_DIR$/src/components/button.js" />
@@ -197,6 +209,8 @@
         <option value="$PROJECT_DIR$/src/components/sent-requests-table-body.js" />
         <option value="$PROJECT_DIR$/src/components/received-donations-table-body.js" />
         <option value="$PROJECT_DIR$/src/modules/test-results-history.js" />
+        <option value="$PROJECT_DIR$/src/api/stock-api.js" />
+        <option value="$PROJECT_DIR$/src/modules/our-blood-stock.js" />
       </list>
     </option>
   </component>
@@ -283,11 +297,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="TODO&#9;ACTION&#9;ActivateTODOToolWindow" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -312,6 +326,17 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Client" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -361,7 +386,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149637000" />
+    <option name="totallyTimeSpent" value="158276000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -379,15 +404,16 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1870456" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32918552" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32918552" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23931624" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.56267804" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.56125355" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.502849" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.14814815" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19566368" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -407,20 +433,20 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1660497" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32918552" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.4638009" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32918552" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32918552" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
@@ -450,9 +476,6 @@
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/user-dashboard.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/block-button.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -488,9 +511,6 @@
           <caret line="11" column="83" selection-start-line="11" selection-start-column="83" selection-end-line="11" selection-end-column="83" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/font-awesome/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/button.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -578,9 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/dates.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -606,13 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/user-dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="34" column="98" lean-forward="true" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
         </state>
       </provider>
     </entry>
@@ -651,13 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="58" column="41" lean-forward="true" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/received-donation-forms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="82" column="54" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -703,13 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/donations-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/received-requests-table-body.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -738,13 +734,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/next-donation.js">
+    <entry file="file://$PROJECT_DIR$/src/api/results-api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="232" column="24" lean-forward="true" selection-start-line="227" selection-start-column="20" selection-end-line="232" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/test-results-table-body.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/imageless-box.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/user-dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="34" column="98" lean-forward="true" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
         </state>
       </provider>
     </entry>
@@ -755,17 +765,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/results-api.js">
+    <entry file="file://$PROJECT_DIR$/src/modules/received-donation-forms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="218">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/test-results-table-body.js">
+    <entry file="file://$PROJECT_DIR$/src/api/donations-api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        <state relative-caret-position="1144">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/next-donation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="220" column="74" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/stock-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/our-blood-stock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="538" column="22" lean-forward="true" selection-start-line="538" selection-start-column="22" selection-end-line="538" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

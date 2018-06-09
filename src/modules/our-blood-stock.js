@@ -17,20 +17,20 @@ class OurStock extends React.Component {
             zeroNegativeUsable: 0,
             zeroNegativeExpired: 0,
 
-            APositiveUsable: 0,
-            APositiveExpired: 0,
-            ANegativeUsable: 0,
-            ANegativeExpired: 0,
+            apositiveUsable: 0,
+            apositiveExpired: 0,
+            anegativeUsable: 0,
+            anegativeExpired: 0,
 
-            BPositiveUsable: 0,
-            BPositiveExpired: 0,
-            BNegativeUsable: 0,
-            BNegativeExpired: 0,
+            bpositiveUsable: 0,
+            bpositiveExpired: 0,
+            bnegativeUsable: 0,
+            bnegativeExpired: 0,
 
-            ABPositiveUsable: 0,
-            ABPositiveExpired: 0,
-            ABNegativeUsable: 0,
-            ABNegativeExpired: 0,
+            abpositiveUsable: 0,
+            abpositiveExpired: 0,
+            abnegativeUsable: 0,
+            abnegativeExpired: 0,
 
             thrombocyteUsable: 0,
             thrombocyteExpired: 0,
@@ -42,6 +42,7 @@ class OurStock extends React.Component {
         this.loadStockInfo = stockApi.getStockOfCenter.bind(this);
         this.diminishStocks = stockApi.diminishStock.bind(this);
         this.addToStock = this.addToStock.bind(this);
+        this.removeExpired = stockApi.removeAllExpired.bind(this);
         this.replenishStock = stockApi.replenishStock.bind(this);
         this.removeAllExpired = this.removeAllExpired.bind(this);
         this.handleChangedBloodGroup = this.handleChangedBloodGroup.bind(this);
@@ -54,32 +55,33 @@ class OurStock extends React.Component {
     componentWillMount() {
         this.loadStockInfo(localStorage.loggedInCenterId)
             .then((stock) => {
+                console.log(stock);
                 this.setState({
-                    zeroPositiveUsable: stock.zeroPositiveUsable,
-                    zeroPositiveExpired: stock.zeroPositiveExpired,
-                    zeroNegativeUsable: stock.zeroNegativeUsable,
-                    zeroNegativeExpired: stock.zeroNegativeExpired,
+                    zeroPositiveUsable: stock.data.zeroPositiveUsable,
+                    zeroPositiveExpired: stock.data.zeroPositiveExpired,
+                    zeroNegativeUsable: stock.data.zeroNegativeUsable,
+                    zeroNegativeExpired: stock.data.zeroNegativeExpired,
 
-                    APositiveUsable: stock.APositiveUsable,
-                    APositiveExpired: stock.APositiveExpired,
-                    ANegativeUsable: stock.ANegativeUsable,
-                    ANegativeExpired: stock.ANegativeExpired,
+                    apositiveUsable: stock.data.apositiveUsable,
+                    apositiveExpired: stock.data.apositiveExpired,
+                    anegativeUsable: stock.data.anegativeUsable,
+                    anegativeExpired: stock.data.anegativeExpired,
 
-                    BPositiveUsable: stock.BPositiveUsable,
-                    BPositiveExpired: stock.BPositiveExpired,
-                    BNegativeUsable: stock.BNegativeUsable,
-                    BNegativeExpired: stock.BNegativeExpired,
+                    bpositiveUsable: stock.data.bpositiveUsable,
+                    bpositiveExpired: stock.data.bpositiveExpired,
+                    bnegativeUsable: stock.data.bnegativeUsable,
+                    bnegativeExpired: stock.data.bnegativeExpired,
 
-                    ABPositiveUsable: stock.ABPositiveUsable,
-                    ABPositiveExpired: stock.ABPositiveExpired,
-                    ABNegativeUsable: stock.ABNegativeUsable,
-                    ABNegativeExpired: stock.ABNegativeExpired,
+                    abpositiveUsable: stock.data.abpositiveUsable,
+                    abpositiveExpired: stock.data.abpositiveExpired,
+                    abnegativeUsable: stock.data.abnegativeUsable,
+                    abnegativeExpired: stock.data.abnegativeExpired,
 
-                    thrombocyteUsable: stock.thrombocyteUsable,
-                    thrombocyteExpired: stock.thrombocyteExpired,
+                    thrombocyteUsable: stock.data.thrombocyteUsable,
+                    thrombocyteExpired: stock.data.thrombocyteExpired,
 
-                    plasmaUsable: stock.plasmaUsable,
-                    plasmaExpired: stock.plasmaExpired,
+                    plasmaUsable: stock.data.plasmaUsable,
+                    plasmaExpired: stock.data.plasmaExpired,
 
                     bloodGroup: '',
                     rh: '',
@@ -88,11 +90,13 @@ class OurStock extends React.Component {
 
                     containerExpiryDate: ''
                 });
+                console.log("state=");
+                console.log(this.state);
             });
     }
 
     removeAllExpired() {
-        //TODO
+        this.removeExpired().then(() => {window.location.reload();});
     }
 
     handleChangedBloodGroup(event) {
@@ -154,23 +158,28 @@ class OurStock extends React.Component {
     removeFromStock(event) { //TODO check if all fields are inputted.
         event.preventDefault();
         let toSend = {
-            bloodGroup: this.state.bloodGroup,
-            rh: this.state.rh,
-            componentType: this.state.componentType,
+            containerDto:
+                {
+                bloodGroup: this.state.bloodGroup,
+                rh: this.state.rh,
+                componentType: this.state.componentType
+            },
             howManyToRemove: this.state.howManyToRemove
         };
-        this.diminishStocks(toSend);
+        this.diminishStocks(toSend).then(() => {window.location.reload();});
     }
 
     addToStock(event) { //TODO check if all fields are inputted.
         event.preventDefault();
         let toSend = {
-            bloodGroup: this.state.bloodGroup,
-            rh: this.state.rh,
-            componentType: this.state.componentType,
-            containerExpiryDate: this.state.containerExpiryDate
+            containerDto:{
+                bloodGroup: this.state.bloodGroup,
+                rh: this.state.rh,
+                componentType: this.state.componentType,
+                expirationDate: this.state.containerExpiryDate
+            },
         };
-        this.replenishStock(toSend);
+        this.replenishStock(toSend).then(() => {window.location.reload();});
     }
 
     render() {
@@ -216,19 +225,19 @@ class OurStock extends React.Component {
                                         <span style={{color: '#ec0a0b'}}>{this.state.zeroPositiveExpired} expired</span>
                                     </td>
                                     <td>
-                                        {this.state.APositiveUsable} usable
+                                        {this.state.apositiveUsable} usable
                                         <br/>
-                                        <span style={{color: '#ec0a0b'}}>{this.state.APositiveExpired} expired</span>
+                                        <span style={{color: '#ec0a0b'}}>{this.state.apositiveExpired} expired</span>
                                     </td>
                                     <td>
-                                        {this.state.BPositiveUsable} usable
+                                        {this.state.bpositiveUsable} usable
                                         <br/>
-                                        <span style={{color: '#ec0a0b'}}>{this.state.BPositiveExpired} expired</span>
+                                        <span style={{color: '#ec0a0b'}}>{this.state.bpositiveExpired} expired</span>
                                     </td>
                                     <td>
-                                        {this.state.ABPositiveUsable} usable
+                                        {this.state.abpositiveUsable} usable
                                         <br/>
-                                        <span style={{color: '#ec0a0b'}}>{this.state.ABPositiveExpired} expired</span>
+                                        <span style={{color: '#ec0a0b'}}>{this.state.abpositiveExpired} expired</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -239,19 +248,19 @@ class OurStock extends React.Component {
                                         <span style={{color: '#ec0a0b'}}>{this.state.zeroNegativeExpired} expired</span>
                                     </td>
                                     <td>
-                                        {this.state.ANegativeUsable} usable
+                                        {this.state.anegativeUsable} usable
                                         <br/>
-                                        <span style={{color: '#ec0a0b'}}>{this.state.ANegativeExpired} expired</span>
+                                        <span style={{color: '#ec0a0b'}}>{this.state.anegativeExpired} expired</span>
                                     </td>
                                     <td>
-                                        {this.state.BNegativeUsable} usable
+                                        {this.state.bnegativeUsable} usable
                                         <br/>
-                                        <span style={{color: '#ec0a0b'}}>{this.state.BNegativeExpired} expired</span>
+                                        <span style={{color: '#ec0a0b'}}>{this.state.bnegativeExpired} expired</span>
                                     </td>
                                     <td>
-                                        {this.state.ABNegativeUsable} usable
+                                        {this.state.abnegativeUsable} usable
                                         <br/>
-                                        <span style={{color: '#ec0a0b'}}>{this.state.ABNegativeExpired} expired</span>
+                                        <span style={{color: '#ec0a0b'}}>{this.state.abnegativeExpired} expired</span>
                                     </td>
                                 </tr>
                             </tbody>

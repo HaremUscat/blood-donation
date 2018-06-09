@@ -1,13 +1,11 @@
 const axios = require('axios');
 
 function getStockOfCenter() {
-    return new Promise((resolve, reject) => {
-        resolve({sth: 5});
-    })
+    return axios.get('/containers/1');
 }
 
 function diminishStock(info) {
-    return axios.post('/diminish-stock/'+localStorage.getItem("loggedInCenterId"), info)
+    return axios.post('/diminish-stock/1', info)
         .then((response) => {
             if (response.data.isError) {
                 alert(response.data.message);       //TODO: get rid of alerts!
@@ -19,7 +17,7 @@ function diminishStock(info) {
 }
 
 function replenishStock(info) {
-    return axios.post('/replenish-stock/'+localStorage.getItem("loggedInCenterId"), info)
+    return axios.post('/replenish-stock/1', info)
         .then((response) => {
             if (response.data.isError) {
                 alert(response.data.message);       //TODO: get rid of alerts!
@@ -30,4 +28,7 @@ function replenishStock(info) {
         });
 }
 
-module.exports = {getStockOfCenter, diminishStock, replenishStock};
+function removeAllExpired(){
+    return axios.delete('/containers/1');
+}
+module.exports = {getStockOfCenter, diminishStock, replenishStock, removeAllExpired};
