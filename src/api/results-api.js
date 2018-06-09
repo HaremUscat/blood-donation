@@ -1,0 +1,10 @@
+const fooTestResults = require("../foo-data/foo-test-results");
+
+function getResults() {
+    //return axios.get('/results/' + this.state.username);
+    return new Promise((resolve, reject) => {
+        resolve({results: fooTestResults});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    });
+}
+
+module.exports = {getResults};

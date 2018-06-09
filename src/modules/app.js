@@ -12,6 +12,7 @@ import ReceivedRequests from "./received-requests";
 import ReceivedDonationForms from "./received-donation-forms";
 import NextDonation from "./next-donation";
 import NewRequest from "./new-request";
+import TestResultsHistory from './test-results-history';
 import {
     BrowserRouter,
     Route
@@ -39,6 +40,7 @@ class App extends React.Component {
                     <Route path="/received-requests" render={(props) => EnsureLoggedIn(ReceivedRequests, "/received-requests", props)}/>
                     <Route path="/process-request" render={(props) => EnsureLoggedIn(ProcessRequest, "/process-request", props)}/>
                     <Route path="/received-donation-forms" render={(props) => EnsureLoggedIn(ReceivedDonationForms, "/received-donation-forms", props)}/>
+                    <Route path="/test-results-history" render={(props) => EnsureLoggedIn(TestResultsHistory, "/test-results-history", props)}/>
                 </div>
             </BrowserRouter>
         );

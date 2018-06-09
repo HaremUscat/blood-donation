@@ -5,6 +5,7 @@ function printStandardDate(date) {
     let month;
     switch(date.getMonth())
     {
+        //TODO: check sa fie OK corespondenta asta!
         case 0:
             month = '01';
             break;
