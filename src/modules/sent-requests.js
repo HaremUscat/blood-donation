@@ -25,7 +25,9 @@ class SentRequests extends React.Component {
         this.loadForms().then((res) => {
             //let requests = data.requests.default;       //TODO: change this to the next line of code, this one is for testing purposes
             let requests = res.data.requests;
+            console.log(res);
             this.setState({loadedRequests: requests, selectedRequests: requests.slice(0, this.noFormsPerPage)});
+            console.log(this.state);
         });
     }
 
@@ -36,11 +38,11 @@ class SentRequests extends React.Component {
     handlePageClick(data) {
         let selectedPage = data.selected;
         let offset = selectedPage * this.noFormsPerPage;
-        this.setState({selectedRequests: this.state.loadedForms.slice(offset, offset + this.noFormsPerPage)});
+        this.setState({selectedRequests: this.state.loadedRequest.slice(offset, offset + this.noFormsPerPage)});
     };
 
     render() {
-        if (this.state.loadedForms.length === 0) {
+        if (this.state.loadedRequests.length === 0) {
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
@@ -90,7 +92,7 @@ class SentRequests extends React.Component {
                                             <th><h5>Status</h5></th>
                                         </tr>
                                         </thead>
-                                        <SentRequestsTableBody ref="rows" rows={this.state.selectedForms}/>
+                                        <SentRequestsTableBody ref="rows" rows={this.state.selectedRequests}/>
                                     </table>
                                 </div>
                             </div>
@@ -102,7 +104,7 @@ class SentRequests extends React.Component {
                                                nextLabel={<i className="fa fa-angle-right" aria-hidden="true"/>}
                                                breakLabel={'...'}
                                                breakClassName={"break-me"}
-                                               pageCount={Math.ceil(this.state.loadedForms.length / this.noFormsPerPage)}
+                                               pageCount={Math.ceil(this.state.loadedRequests.length / this.noFormsPerPage)}
                                                onPageChange={this.handlePageClick}
                                                containerClassName={"pagination"}
                                                subContainerClassName={"pages pagination"}

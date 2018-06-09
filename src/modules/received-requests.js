@@ -35,11 +35,11 @@ class ReceivedRequests extends React.Component {
     handlePageClick(data) {
         let selectedPage = data.selected;
         let offset = selectedPage * this.noFormsPerPage;
-        this.setState({selectedRequests: this.state.loadedForms.slice(offset, offset + this.noFormsPerPage)});
+        this.setState({selectedRequests: this.state.selectedRequests.slice(offset, offset + this.noFormsPerPage)});
     };
 
     render() {
-        if (this.state.loadedForms.length === 0) {
+        if (this.state.selectedRequests.length === 0) {
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
@@ -90,7 +90,7 @@ class ReceivedRequests extends React.Component {
                                             <th/>
                                         </tr>
                                         </thead>
-                                        <ReceivedRequestsTableBody ref="rows" rows={this.state.selectedForms} history={this.props.history}/>
+                                        <ReceivedRequestsTableBody ref="rows" rows={this.state.selectedRequests} history={this.props.history}/>
                                     </table>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@ class ReceivedRequests extends React.Component {
                                                nextLabel={<i className="fa fa-angle-right" aria-hidden="true"/>}
                                                breakLabel={'...'}
                                                breakClassName={"break-me"}
-                                               pageCount={Math.ceil(this.state.loadedForms.length / this.noFormsPerPage)}
+                                               pageCount={Math.ceil(this.state.selectedRequests.length / this.noFormsPerPage)}
                                                onPageChange={this.handlePageClick}
                                                containerClassName={"pagination"}
                                                subContainerClassName={"pages pagination"}
