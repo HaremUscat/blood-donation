@@ -65,7 +65,7 @@ class ReceivedDonationsTableBody extends React.Component {
                                         <h6 style={{fontWeight: 'lighter'}}>Blood group: {form.profileDto.bloodType}</h6>
                                         <h6 style={{fontWeight: 'lighter'}}>Rh: {form.profileDto.rh}</h6>
                                         <h6 style={{fontWeight: 'lighter'}}>Gender: {form.profileDto.gender}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>DOB: {printStandardDate(form.profileDto.birthDate)}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>DOB: {form.profileDto.dateOfBirth}</h6>
                                     </div>
                                 </DonorBox>
 

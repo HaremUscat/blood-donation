@@ -44,7 +44,7 @@ function saveAppointment(donationFormID, _appointmentDate) {
 }
 
 function saveRejection(donationFormID, _rejectionReason) {
-    return axios.put('/donation-forms/reject', {donationId: donationFormID, rejectionReason: _rejectionReason});
+    return axios.put('/donation-forms/reject', {donation_id: donationFormID, rejectionReason: _rejectionReason});
     // return new Promise((resolve, reject) => {
     //     resolve({hey: 'yeah'});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
     // });
