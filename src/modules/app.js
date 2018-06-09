@@ -7,6 +7,7 @@ import Register from "./register";
 import MyInfo from "./my-info";
 import UserDashboard from "./user-dashboard";
 import SentRequests from "./sent-requests";
+import UploadTestResults from "./upload-test-results";
 import OurStock from './our-blood-stock';
 import ProcessRequest from "./process-request";
 import ReceivedRequests from "./received-requests";
@@ -43,6 +44,7 @@ class App extends React.Component {
                     <Route path="/received-donation-forms" render={(props) => EnsureCorrectUserLoggedIn(ReceivedDonationForms, "/received-donation-forms", props)}/>
                     <Route path="/test-results-history" render={(props) => EnsureCorrectUserLoggedIn(TestResultsHistory, "/test-results-history", props)}/>
                     <Route path="/our-blood-stock" render={(props) => EnsureCorrectUserLoggedIn(OurStock, "/our-blood-stock", props)}/>
+                    <Route path="/upload-test-results" render={(props) => EnsureCorrectUserLoggedIn(UploadTestResults, "/upload-test-results", props)}/>
                 </div>
             </BrowserRouter>
         );

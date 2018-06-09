@@ -318,3 +318,20 @@ body {
     font-family: 'Questrial', 'sans-serif';
     font-size: large;
 }
+
+/* --------------------------------------------------------------------- */
+
+/* UPLOAD PDF PART */
+
+#drop-files-div {
+    height: 300px;
+    width: 100%;
+    border-radius: 5%;
+    color: #560001;
+    font-family: Questrial, sans-serif;
+    font-size: large;
+}
+
+#drop-files-div:hover {
+    cursor: pointer;
+}
