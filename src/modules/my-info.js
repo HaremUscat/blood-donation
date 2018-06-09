@@ -222,7 +222,7 @@ class MyInfo extends React.Component {
                         <div className="col-11" style={{textAlign: 'center'}}>
                             <h1 className="questrial-font" style={{marginBottom: '90px', marginTop: '100px', fontSize: '40px'}}>Edit Personal Information</h1>
                         </div>
-                        <div className="col-11 col-sm-8 col-md-6 col-lg-5" style={{textAlign: 'center'}}>
+                        <div className="col-11 col-sm-8 col-md-9 col-lg-7" style={{textAlign: 'center'}}>
                             <Form handleSubmit={this.handleSubmit} onChange={this.handleChangedProfileTextField}>
                                 <h3 className="questrial-font" style={{fontWeight: '100', marginBottom: '20px'}}>General Information</h3>
                                 <Input name="firstName" label="First name" type="text" placeholder={this.state['profileDto']['firstName']}/>

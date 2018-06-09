@@ -180,7 +180,7 @@ class NewRequest extends React.Component {
                                     style={{marginBottom: '90px', marginTop: '100px', fontSize: '40px'}}>New Request
                                     Form</h1>
                             </div>
-                            <div className="col-11 col-sm-8 col-md-6 col-lg-5" style={{textAlign: 'center'}}>
+                            <div className="col-11 col-sm-8 col-md-9 col-lg-7" style={{textAlign: 'center'}}>
 
                                 {/* Blood Group */}
                                 <p style={{

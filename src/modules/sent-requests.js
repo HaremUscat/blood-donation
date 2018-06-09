@@ -16,16 +16,16 @@ class SentRequests extends React.Component {
             selectedRequests: []
         };
 
-        this.noFormsPerPage = 10;
-        this.loadForms = requestsApi.getSentRequests.bind(this);
+        this.noRequestsPerPage = 10;
+        this.loadRequests = requestsApi.getSentRequests.bind(this);
         this.handlePageClick = this.handlePageClick.bind(this);
     }
 
     componentWillMount() {
-        this.loadForms().then((res) => {
-            //let requests = data.requests.default;       //TODO: change this to the next line of code, this one is for testing purposes
+        this.loadRequests().then((res) => {
+            //let requests = res.requests.default;       //TODO: change this to the next line of code, this one is for testing purposes
             let requests = res.data.requests;
-            this.setState({loadedRequests: requests, selectedRequests: requests.slice(0, this.noFormsPerPage)});
+            this.setState({loadedRequests: requests, selectedRequests: requests.slice(0, this.noRequestsPerPage)});
         });
     }
 
@@ -35,12 +35,12 @@ class SentRequests extends React.Component {
 
     handlePageClick(data) {
         let selectedPage = data.selected;
-        let offset = selectedPage * this.noFormsPerPage;
-        this.setState({selectedRequests: this.state.loadedForms.slice(offset, offset + this.noFormsPerPage)});
+        let offset = selectedPage * this.noRequestsPerPage;
+        this.setState({selectedRequests: this.state.loadedRequests.slice(offset, offset + this.noRequestsPerPage)});
     };
 
     render() {
-        if (this.state.loadedForms.length === 0) {
+        if (this.state.loadedRequests.length === 0) {
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
@@ -90,7 +90,7 @@ class SentRequests extends React.Component {
                                             <th><h5>Status</h5></th>
                                         </tr>
                                         </thead>
-                                        <SentRequestsTableBody ref="rows" rows={this.state.selectedForms}/>
+                                        <SentRequestsTableBody ref="rows" rows={this.state.selectedRequests}/>
                                     </table>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@ class SentRequests extends React.Component {
                                                nextLabel={<i className="fa fa-angle-right" aria-hidden="true"/>}
                                                breakLabel={'...'}
                                                breakClassName={"break-me"}
-                                               pageCount={Math.ceil(this.state.loadedForms.length / this.noFormsPerPage)}
+                                               pageCount={Math.ceil(this.state.loadedRequests.length / this.noRequestsPerPage)}
                                                onPageChange={this.handlePageClick}
                                                containerClassName={"pagination"}
                                                subContainerClassName={"pages pagination"}

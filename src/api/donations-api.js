@@ -30,10 +30,10 @@ function updateDonation(donation){
 }
 
 function getReceivedForms() {
-    //return axios.get('/received-forms/' + this.state.username);
-    return new Promise((resolve, reject) => {
-        resolve({forms: fooReceivedForms});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
-    });
+    return axios.get('/received-forms/' + this.state.username);
+    // return new Promise((resolve, reject) => {
+    //     resolve({forms: fooReceivedForms});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    // });
 }
 
 function saveAppointment(donationFormID, _appointmentDate) {

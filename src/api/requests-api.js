@@ -22,10 +22,10 @@ function getSentRequests() {
 }
 
 function getReceivedRequests() {
-    //return axios.get('/received-requests/' + this.state.username);
-    return new Promise((resolve, reject) => {
-        resolve({requests: fooReceivedRequests});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
-    });
+    return axios.get('/received-requests/' + this.state.username);
+    // return new Promise((resolve, reject) => {
+    //     resolve({requests: fooReceivedRequests});                           //TODO: remove these 3 lines, sample data for front-end testing purposes
+    // });
 }
 
 function markRequestAsProcessed(_requestID) {
