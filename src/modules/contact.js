@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar";
 
-class contact extends React.Component {
+class Contact extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -29,4 +29,4 @@ class contact extends React.Component {
     }
 }
 
-export default contact;
+export default Contact;

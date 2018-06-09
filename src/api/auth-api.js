@@ -1,18 +1,13 @@
 const axios = require('axios');
 
-function redirectToPrevious(p) {
-    if (p) {
-        localStorage.removeItem("prevComponentPath");
-        this.props.history.push(p);
-    } else {
-        let currentRole = localStorage.getItem("loggedInUserRole");
-        if (currentRole.toLowerCase() === "donor")
-            this.props.history.push('/user-dashboard');
-        else if (currentRole.toLowerCase() === "doctor")
-            this.props.history.push('/sent-requests');
-        else
-            this.props.history.push('/received-requests');
-    }
+function redirectToFirstPage() {
+    let currentRole = localStorage.getItem("loggedInUserRole");
+    if (currentRole.toLowerCase() === "donor")
+        this.props.history.push('/user-dashboard');
+    else if (currentRole.toLowerCase() === "doctor")
+        this.props.history.push('/sent-requests');
+    else
+        this.props.history.push('/received-requests');
 }
 
 function login() {
@@ -27,8 +22,7 @@ function login() {
                         localStorage.setItem("loggedInCenterId", result.data.rows[0].centerId);       //TODO: check if it works
 
                         // redirect to the previous component (which redirected me to the login page), if it exists:
-                        let p = localStorage.prevComponentPath;
-                        redirectToPrevious.bind(this)(p);
+                        redirectToFirstPage.bind(this)();
                     })
                     .catch(err => { alert(err); });
             } else {

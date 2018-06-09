@@ -20,6 +20,7 @@ class Logout extends React.Component {
                 }, 700)});
         }
         //localStorage.removeItem("loggedInUser");  //TODO: remove this! for testing purposes only!
+        //localStorage.removeItem("loggedInUserRole");  //TODO: remove this! for testing purposes only!
     }
 
     render() {
