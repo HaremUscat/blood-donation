@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c3c831a-c183-4b77-b960-fd790517c614" name="Default" comment="Made &quot;EnsureLoggedIn&quot; functional and changed the design of &quot;Register&quot; a bit.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/api/stock-api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/imageless-box.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/modules/our-blood-stock.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.css" afterPath="$PROJECT_DIR$/public/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/auth-api.js" afterPath="$PROJECT_DIR$/src/api/auth-api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/users-api.js" afterPath="$PROJECT_DIR$/src/api/users-api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/app.js" afterPath="$PROJECT_DIR$/src/modules/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/login.js" afterPath="$PROJECT_DIR$/src/modules/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/donations-api.js" afterPath="$PROJECT_DIR$/src/api/donations-api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/received-donations-table-body.js" afterPath="$PROJECT_DIR$/src/components/received-donations-table-body.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/sent-requests-table-body.js" afterPath="$PROJECT_DIR$/src/components/sent-requests-table-body.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/process-request.js" afterPath="$PROJECT_DIR$/src/modules/process-request.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/received-donation-forms.js" afterPath="$PROJECT_DIR$/src/modules/received-donation-forms.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/received-requests.js" afterPath="$PROJECT_DIR$/src/modules/received-requests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/test-results-history.js" afterPath="$PROJECT_DIR$/src/modules/test-results-history.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/user-dashboard.js" afterPath="$PROJECT_DIR$/src/modules/user-dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/sent-requests.js" afterPath="$PROJECT_DIR$/src/modules/sent-requests.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,28 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/modules/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modules/logout.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -193,12 +167,6 @@
               <item name="Software Engineering" type="b2602c69:ProjectViewProjectNode" />
               <item name="Software Engineering" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Software Engineering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Software Engineering" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -271,7 +239,7 @@
       <workItem from="1528127960029" duration="845000" />
       <workItem from="1528287349435" duration="564000" />
       <workItem from="1528453767743" duration="619000" />
-      <workItem from="1528534258259" duration="26460000" />
+      <workItem from="1528534258259" duration="27434000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed minor bug in app.js.">
       <created>1525636466143</created>
@@ -291,7 +259,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149778000" />
+    <option name="totallyTimeSpent" value="150752000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -304,7 +272,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19566368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -313,7 +280,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38687783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38687783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -723,7 +690,7 @@
         <state relative-caret-position="5589">
           <caret line="283" column="16" lean-forward="false" selection-start-line="283" selection-start-column="16" selection-end-line="283" selection-end-column="16" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
             <element signature="e#7493#11144#0" expanded="false" />
             <element signature="e#11208#12171#0" expanded="false" />
             <element signature="e#12277#19394#0" expanded="false" />
@@ -732,18 +699,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/logout.js">
+    <entry file="file://$PROJECT_DIR$/src/modules/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="284">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/login.js">
+    <entry file="file://$PROJECT_DIR$/src/modules/logout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="594">
+          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding />
         </state>
       </provider>

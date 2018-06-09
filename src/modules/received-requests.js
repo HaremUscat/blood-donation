@@ -15,16 +15,17 @@ class ReceivedRequests extends React.Component {
             selectedRequests: []
         };
 
-        this.noRequestsPerPage = 10;
-        this.loadRequests = requestsApi.getReceivedRequests.bind(this);
+        this.noFormsPerPage = 10;
+        this.loadForms = requestsApi.getReceivedRequests.bind(this);
         this.handlePageClick = this.handlePageClick.bind(this);
     }
 
     componentWillMount() {
-        this.loadRequests().then((data) => {
+        this.loadForms().then((res) => {
+            console.log(res);
             //let requests = data.requests.default;       //TODO: change this to the next line of code, this one is for testing purposes
-            let requests = data.requests;
-            this.setState({loadedRequests: requests, selectedRequests: requests.slice(0, this.noRequestsPerPage)});
+            let requests = res.data.requests;
+            this.setState({loadedRequests: requests, selectedRequests: requests.slice(0, this.noFormsPerPage)});
         });
     }
 
@@ -34,12 +35,12 @@ class ReceivedRequests extends React.Component {
 
     handlePageClick(data) {
         let selectedPage = data.selected;
-        let offset = selectedPage * this.noRequestsPerPage;
-        this.setState({selectedRequests: this.state.loadedRequests.slice(offset, offset + this.noRequestsPerPage)});
+        let offset = selectedPage * this.noFormsPerPage;
+        this.setState({selectedRequests: this.state.selectedRequests.slice(offset, offset + this.noFormsPerPage)});
     };
 
     render() {
-        if (this.state.loadedRequests.length === 0) {
+        if (this.state.selectedRequests.length === 0) {
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
@@ -102,7 +103,7 @@ class ReceivedRequests extends React.Component {
                                                nextLabel={<i className="fa fa-angle-right" aria-hidden="true"/>}
                                                breakLabel={'...'}
                                                breakClassName={"break-me"}
-                                               pageCount={Math.ceil(this.state.loadedRequests.length / this.noRequestsPerPage)}
+                                               pageCount={Math.ceil(this.state.selectedRequests.length / this.noFormsPerPage)}
                                                onPageChange={this.handlePageClick}
                                                containerClassName={"pagination"}
                                                subContainerClassName={"pages pagination"}

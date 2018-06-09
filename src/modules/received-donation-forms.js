@@ -21,9 +21,10 @@ class ReceivedDonationForms extends React.Component {
     }
 
     componentWillMount() {
-        this.loadForms().then((data) => {
+        this.loadForms().then((res) => {
+            console.log(res);
             //let forms = data.forms.default;       //TODO: change this to the next line of code, this one is for testing purposes
-            let forms = data.forms;
+            let forms = res.data.forms;
             this.setState({loadedForms: forms, selectedForms: forms.slice(0, this.noFormsPerPage)});
         });
     }
