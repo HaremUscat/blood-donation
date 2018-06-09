@@ -12,11 +12,17 @@ import ro.ubb.donation.web.converter.AddressConverter;
 import ro.ubb.donation.web.converter.DonationConverter;
 import ro.ubb.donation.web.converter.ProfileConverter;
 import ro.ubb.donation.web.dto.DonationDto;
+import ro.ubb.donation.web.dto.DonationFormDto;
 import ro.ubb.donation.web.requests.DonationFormPost;
+import ro.ubb.donation.web.requests.DonationFormRequest;
+import ro.ubb.donation.web.response.DonationFormsResponse;
 import ro.ubb.donation.web.response.DonationGetResponse;
 import ro.ubb.donation.web.response.DonationPostResponse;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 public class DonationController {
@@ -108,5 +114,55 @@ public class DonationController {
                     .addressDto(this.addressConverter.convertModelToDto(Address.getEmptyAddress()))
                     .profileDto(this.profileConverter.convertModelToDto(Profile.getEmptyProfile()))
                     .donationDto(this.donationConverter.convertModelToDto(Donation.getEmptyDonation())).build();
+    }
+
+
+    @RequestMapping(value = "/received-forms", method = RequestMethod.GET)
+    public DonationFormsResponse getAllDonationForms() {
+
+        List<Donation> donationForms = donationService.findAllByStatus("PENDING");
+        List<DonationFormDto> forms = new ArrayList<>();
+        User user;
+        Profile profile;
+        DonationFormDto donationFormDto;
+        for(Donation d: donationForms){
+            user = d.getUser();
+            profile = user.getProfile();
+            donationFormDto = DonationFormDto.builder()
+                    .donationDto(donationConverter.convertModelToDto(d))
+                    .profileDto(profileConverter.convertModelToDto(profile))
+                    .build();
+            forms.add(donationFormDto);
+        }
+
+
+        return DonationFormsResponse.builder()
+                .forms( forms )
+                .isError( false )
+                .status("Success")
+                .message("These are all requests!")
+                .build();
+    }
+
+    @RequestMapping(value = "/donation-forms/approve", method = RequestMethod.PUT)
+    public DonationPostResponse updateDonationApprove(@RequestBody DonationFormRequest donationFormRequest){
+        try{
+            donationService.updateDonationStatus(donationFormRequest.getDonation_id(),"APPROVED","",donationFormRequest.getAppointmentDate());
+        }
+        catch (Exception ex){
+            return DonationPostResponse.builder().status("Error").message("Error parsing date").isError(true).build();
+        }
+        return DonationPostResponse.builder().status("Success").message("The Donation was successfully updated").isError(false).build();
+    }
+
+    @RequestMapping(value = "/donation-forms/reject", method = RequestMethod.PUT)
+    public DonationPostResponse updateDonationReject(@RequestBody DonationFormRequest donationFormRequest){
+        try{
+            donationService.updateDonationStatus(donationFormRequest.getDonation_id(),"REJECTED",donationFormRequest.getRejectionReason(),"");
+        }
+        catch (Exception ex){
+            return DonationPostResponse.builder().status("Error").message("Error parsing date").isError(true).build();
+        }
+        return DonationPostResponse.builder().status("Success").message("The Donation was successfully updated").isError(false).build();
     }
 }

@@ -16,6 +16,11 @@ public class ResultServiceImpl implements ResultService {
     private ResultRepository resultRepository;
 
     @Override
+    public List<Result> findAll() {
+        return resultRepository.findAll();
+    }
+
+    @Override
     public Optional<Result> findResult(int id) {
         return resultRepository.findById(id);
     }
@@ -55,6 +60,7 @@ public class ResultServiceImpl implements ResultService {
     }
 
     @Override
+    @Transactional
     public Result deleteResult(int resultId) {
         Optional<Result> resultOptional = this.resultRepository.findById(resultId);
         if (resultOptional.isPresent()){

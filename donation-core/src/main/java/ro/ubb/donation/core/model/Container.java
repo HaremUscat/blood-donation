@@ -34,4 +34,16 @@ public class Container {
 
     @Column(name = "component_type", nullable = false)
     private String componentType;
+
+    @Override
+    public String toString() {
+        return "Container{" +
+                "id=" + id +
+                ", expirationDate='" + expirationDate.getYear() + "-" + expirationDate.getMonth() + "-" + expirationDate.getDay() + '\'' +
+                ", centerId='" + centerId.toString() + '\'' +
+                ", blood_group=" + bloodGroup +
+                ", rh=" + rh +
+                ", componentType=" + componentType +
+                '}';
+    }
 }

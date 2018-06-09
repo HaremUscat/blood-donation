@@ -10,6 +10,8 @@ public interface RequestService {
     Optional<Request> findRequest(int requestId);
     
     List<Request> findAll();
+
+    List<Request> findAllByCenterId(int centerid);
     
     Request updateRequest(int requestId, Integer thrombocyteUnits, Integer redCellsunits, Integer plasmaUnits, Center donationCenter,
                           String locationHospital, String beneficiaryName, boolean activeDonor, String urgencyLevel,

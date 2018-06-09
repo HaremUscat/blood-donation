@@ -17,4 +17,6 @@ public interface ContainerService {
     Container createContainer(Date expirationDate, Center centerId, String bloodGroup, String rh, String componentType);
 
     void deleteContainer(int containerId);
+
+    List<Container> getContainersByCenterId(int centerId);
 }
