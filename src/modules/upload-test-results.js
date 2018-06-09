@@ -75,7 +75,7 @@ class UploadTestResults extends React.Component {
                             >
                                 <div className="row align-items-center justify-content-center" id="drop-files-div">
                                     <div className="col-sm-11 col-md-8">
-                                        <p style={{textAlign: 'center'}}>Drop your files or click here to upload</p>
+                                        <p style={{textAlign: 'center'}}>Drop your file or click here to upload</p>
                                     </div>
                                 </div>
                             </Dropzone>
