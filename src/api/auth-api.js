@@ -18,8 +18,8 @@ function login() {
                     .then((result) => {
                         // setting up the local storage with useful information about the user:
                         localStorage.setItem("loggedInUser", this.state.username);
-                        localStorage.setItem("loggedInUserRole", result.data.rows[0].role);
-                        localStorage.setItem("loggedInCenterId", result.data.rows[0].centerId);       //TODO: check if it works
+                        localStorage.setItem("loggedInUserRole", result.data.role);
+                        //localStorage.setItem("loggedInCenterId", result.data.rows[0].centerId);       //TODO: check if it works
 
                         // redirect to the previous component (which redirected me to the login page), if it exists:
                         redirectToFirstPage.bind(this)();

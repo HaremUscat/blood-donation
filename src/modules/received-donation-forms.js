@@ -21,9 +21,10 @@ class ReceivedDonationForms extends React.Component {
     }
 
     componentWillMount() {
-        this.loadForms().then((data) => {
+        this.loadForms().then((res) => {
+            console.log(res);
             //let forms = data.forms.default;       //TODO: change this to the next line of code, this one is for testing purposes
-            let forms = data.forms;
+            let forms = res.data.forms;
             this.setState({loadedForms: forms, selectedForms: forms.slice(0, this.noFormsPerPage)});
         });
     }
@@ -44,7 +45,7 @@ class ReceivedDonationForms extends React.Component {
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
                         {text: "REQUESTS", reference: "/received-requests", extraClasses: ''},
-                        {text: "DONORS", reference: "/process-donation-forms", extraClasses: 'active-navbar-link'},
+                        {text: "DONORS", reference: "/received-donation-forms", extraClasses: 'active-navbar-link'},
                         {text: "STOCK", reference: "/our-blood-stock", extraClasses: ''},
                         {text: "CITY STOCKS", reference: "/city-blood-stocks", extraClasses: ''},
                         {text: "FIND DONOR", reference: "/find-donor", extraClasses: ''},
@@ -66,7 +67,7 @@ class ReceivedDonationForms extends React.Component {
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
                         {text: "REQUESTS", reference: "/received-requests", extraClasses: ''},
-                        {text: "DONORS", reference: "/process-donation-forms", extraClasses: 'active-navbar-link'},
+                        {text: "DONORS", reference: "/received-donation-forms", extraClasses: 'active-navbar-link'},
                         {text: "STOCK", reference: "/our-blood-stock", extraClasses: ''},
                         {text: "CITY STOCKS", reference: "/city-blood-stocks", extraClasses: ''},
                         {text: "FIND DONOR", reference: "/find-donor", extraClasses: ''},

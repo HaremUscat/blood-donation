@@ -26,14 +26,14 @@ class ReceivedDonationsTableBody extends React.Component {
     }
 
     saveAppointment(form, event) {
-        donationsApi.saveAppointment(form.donationId, this.state.appointmentDate)
+        donationsApi.saveAppointment(form.donationDto.donation_id, this.state.appointmentDate)
             .then(() => {
                 window.location.reload();
             });
     }
 
     saveRejection(form, event) {
-        donationsApi.saveRejection(form.donationId, this.state.rejectionReason)
+        donationsApi.saveRejection(form.donationDto.donation_id, this.state.rejectionReason)
             .then(() => {
                 window.location.reload();
             });
@@ -51,36 +51,36 @@ class ReceivedDonationsTableBody extends React.Component {
         return (
             <tbody>
             {this.state.rows.map((form, index) =>
-                <tr key={form.donationId}>
+                <tr key={form.donationDto.donation_id}>
                     <td>
                         <div className="container">
                             <div className="row align-items-center" style={{minHeight: '40vh', paddingTop: '40px', paddingBottom: '40px'}}>
                                 <DonorBox title="Donor Personal Info">
                                     <div className="donor-info-box">
-                                        <h5 style={{color: '#ec0a0b'}}>Form ID: {form.donationId}</h5>
-                                        <h5 style={{color: '#ec0a0b'}}>Name: {form.firstName} {form.lastName}</h5>
-                                        <h5 style={{fontWeight: 'lighter', fontSize: '20px'}}>CNP: {form.cnp}</h5>
-                                        <h5 style={{fontWeight: 'lighter', fontSize: '20px'}}>Phone: {form.phone}</h5>
-                                        <h5 style={{fontWeight: 'lighter', fontSize: '20px'}}>Email: {form.email}</h5>
-                                        <h6 style={{fontWeight: 'lighter'}}>Blood group: {form.bloodType}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Rh: {form.rh}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Gender: {form.gender}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>DOB: {printStandardDate(form.birthDate)}</h6>
+                                        <h5 style={{color: '#ec0a0b'}}>Form ID: {form.donationDto.donation_id}</h5>
+                                        <h5 style={{color: '#ec0a0b'}}>Name: {form.profileDto.firstName} {form.profileDto.lastName}</h5>
+                                        <h5 style={{fontWeight: 'lighter', fontSize: '20px'}}>CNP: {form.profileDto.cnp}</h5>
+                                        <h5 style={{fontWeight: 'lighter', fontSize: '20px'}}>Phone: {form.profileDto.phone}</h5>
+                                        <h5 style={{fontWeight: 'lighter', fontSize: '20px'}}>Email: {form.profileDto.email}</h5>
+                                        <h6 style={{fontWeight: 'lighter'}}>Blood group: {form.profileDto.bloodType}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Rh: {form.profileDto.rh}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Gender: {form.profileDto.gender}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>DOB: {printStandardDate(form.profileDto.birthDate)}</h6>
                                     </div>
                                 </DonorBox>
 
                                 <DonorBox title="Donor Health">
                                     <div style={{fontWeight: 'lighter', textAlign: 'center'}}>
-                                        <h6 style={{fontWeight: 'lighter'}}>Blood pressure: {form.bloodPressure}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Pulse: {form.pulse}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Weight: {form.weight}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Allergies: {form.allergies}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Chronic illness: {form.chronicIllness}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Disqualifying diseases: {form.diseases}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Cancer in the past 5 years: {printBool(form.cancerPast5Years)}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Pregnant or menstruating: {printBool(form.pregnantOrMenstruating)}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Recent tattoos: {printBool(form.recentTattoos)}</h6>
-                                        <h6 style={{fontWeight: 'lighter'}}>Surgery in the past 6 months: {printBool(form.surgeryPast6Months)}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Blood pressure: {form.donationDto.bloodPressure}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Pulse: {form.donationDto.pulse}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Weight: {form.donationDto.weight}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Allergies: {form.profileDto.allergies}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Chronic illness: {form.profileDto.chronicIllness}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Disqualifying diseases: {form.profileDto.diseases}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Cancer in the past 5 years: {printBool(form.donationDto.cancerPast5Years)}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Pregnant or menstruating: {printBool(form.donationDto.pregnantOrMenstruating)}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Recent tattoos: {printBool(form.donationDto.recentTattoos)}</h6>
+                                        <h6 style={{fontWeight: 'lighter'}}>Surgery in the past 6 months: {printBool(form.donationDto.surgeryPast6Months)}</h6>
                                     </div>
                                 </DonorBox>
 

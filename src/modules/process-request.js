@@ -33,7 +33,7 @@ class ProcessRequest extends React.Component {
     markAsProcessed() {
         requestsApi.markRequestAsProcessed(this.state.request.id)
             .then(() => {
-                this.props.history.push("/received/requests");
+                this.props.history.push("/received-requests");
             });
         localStorage.removeItem("requestBeingProcessed");
     }
