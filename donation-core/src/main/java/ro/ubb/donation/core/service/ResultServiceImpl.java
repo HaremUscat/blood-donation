@@ -55,6 +55,7 @@ public class ResultServiceImpl implements ResultService {
     }
 
     @Override
+    @Transactional
     public Result deleteResult(int resultId) {
         Optional<Result> resultOptional = this.resultRepository.findById(resultId);
         if (resultOptional.isPresent()){
