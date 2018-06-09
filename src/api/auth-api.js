@@ -5,7 +5,13 @@ function redirectToPrevious(p) {
         localStorage.removeItem("prevComponentPath");
         this.props.history.push(p);
     } else {
-        this.props.history.push('/user-dashboard');
+        let currentRole = localStorage.getItem("loggedInUserRole");
+        if (currentRole.toLowerCase() === "donor")
+            this.props.history.push('/user-dashboard');
+        else if (currentRole.toLowerCase() === "doctor")
+            this.props.history.push('/sent-requests');
+        else
+            this.props.history.push('/received-requests');
     }
 }
 
@@ -17,7 +23,8 @@ function login() {
                     .then((result) => {
                         // setting up the local storage with useful information about the user:
                         localStorage.setItem("loggedInUser", this.state.username);
-                        //localStorage.setItem("loggedInUserEmail", result.data.rows[0].email);
+                        localStorage.setItem("loggedInUserRole", result.data.rows[0].role);
+                        localStorage.setItem("loggedInCenterId", result.data.rows[0].centerId);       //TODO: check if it works
 
                         // redirect to the previous component (which redirected me to the login page), if it exists:
                         let p = localStorage.prevComponentPath;
@@ -35,7 +42,8 @@ function logout() {
     return axios.post('/logout', { username: localStorage.loggedInUser })
         .then(() => {
             localStorage.removeItem("loggedInUser");
-            //localStorage.removeItem("loggedInUserEmail");
+            localStorage.removeItem("loggedInUserRole");
+            localStorage.removeItem("loggedInCenterId");
             this.setState({ success: true });
         })
         .catch(function(err) {

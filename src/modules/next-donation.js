@@ -237,7 +237,7 @@ class NextDonation extends React.Component {
                             <div className="col-11" style={{textAlign: 'center'}}>
                                 <h1 className="questrial-font" style={{marginBottom: '90px', marginTop: '100px', fontSize: '40px'}}>Donation Form</h1>
                             </div>
-                            <div className="col-11 col-sm-8 col-md-6 col-lg-7" style={{textAlign: 'center'}}>
+                            <div className="col-11 col-sm-8 col-md-9 col-lg-7" style={{textAlign: 'center'}}>
                                 {/* My Info Accordion */}
                                 <div id="accordion">
 
