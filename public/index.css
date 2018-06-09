@@ -298,3 +298,23 @@ body {
         text-align: center;
     }
 }
+
+/* ------------------------------------------------------------------- */
+
+/* STOCK PAGE */
+
+.stock-table > thead > tr > th, .stock-table > tbody > tr > th {
+    vertical-align: middle;
+    text-align: center;
+    background-color: #ec0a0b;
+    color: white;
+    font-weight: lighter;
+    font-size: large;
+}
+
+.stock-table > tbody > tr > td{
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Questrial', 'sans-serif';
+    font-size: large;
+}

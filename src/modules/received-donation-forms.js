@@ -44,7 +44,7 @@ class ReceivedDonationForms extends React.Component {
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
                         {text: "REQUESTS", reference: "/received-requests", extraClasses: ''},
-                        {text: "DONORS", reference: "/process-donation-forms", extraClasses: 'active-navbar-link'},
+                        {text: "DONORS", reference: "/received-donation-forms", extraClasses: 'active-navbar-link'},
                         {text: "STOCK", reference: "/our-blood-stock", extraClasses: ''},
                         {text: "CITY STOCKS", reference: "/city-blood-stocks", extraClasses: ''},
                         {text: "FIND DONOR", reference: "/find-donor", extraClasses: ''},
@@ -66,7 +66,7 @@ class ReceivedDonationForms extends React.Component {
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
                         {text: "REQUESTS", reference: "/received-requests", extraClasses: ''},
-                        {text: "DONORS", reference: "/process-donation-forms", extraClasses: 'active-navbar-link'},
+                        {text: "DONORS", reference: "/received-donation-forms", extraClasses: 'active-navbar-link'},
                         {text: "STOCK", reference: "/our-blood-stock", extraClasses: ''},
                         {text: "CITY STOCKS", reference: "/city-blood-stocks", extraClasses: ''},
                         {text: "FIND DONOR", reference: "/find-donor", extraClasses: ''},

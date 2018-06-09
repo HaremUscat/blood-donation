@@ -11,6 +11,8 @@ function register() {
                                 .then((result) => {
                                     // setting up the local storage with useful information about the user:
                                     localStorage.setItem("loggedInUser", this.state.username);
+                                    localStorage.setItem("loggedInUserRole", result.data.role);
+                                    localStorage.setItem("loggedInCenterId", result.data.centerId);
                                     //localStorage.setItem("loggedInUserEmail", result.data.rows[0].email);
 
                                     this.props.history.push('/user-dashboard');
