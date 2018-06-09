@@ -51,8 +51,14 @@ public class ContainerController {
     @RequestMapping(value = "/containers", method = RequestMethod.DELETE)
     public ContainerResponse removeFirstNContainersByCenter(@RequestBody ContainerForm containerForm){
         try{
-            List<Container> containers = containerService.findAll();
-            containers = containers.stream().filter( c -> c.getComponentType().equals( containerForm.getContainerDto().getComponentType() ) ).collect( Collectors.toList() );
+            List<Container> containers = containerService.getContainersByCenterId(containerForm.getContainerDto().getCenterId());
+            if (containerForm.getContainerDto().getComponentType().equals( "Red cells" ))
+                containers = containers.stream().filter( c -> c.getComponentType().equals( containerForm.getContainerDto().getComponentType() ) &&
+                        c.getBloodGroup().equals( containerForm.getContainerDto().getBloodGroup() )  &&
+                        c.getRh().equals( containerForm.getContainerDto().getRh() ))
+                        .collect( Collectors.toList() );
+            else
+                containers = containers.stream().filter( c -> c.getComponentType().equals( containerForm.getContainerDto().getComponentType() ) ).collect( Collectors.toList() );
             containers.sort( Comparator.comparing( Container::getExpirationDate ) );
 
             Integer nrContainers = containerForm.getNumberOfContainers();
