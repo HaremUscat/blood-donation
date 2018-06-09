@@ -10,16 +10,17 @@ const authApi = require('../api/auth-api');
 */
 class Login extends React.Component {
   constructor() {
-    super();
-    this.state = {
-      username: '',
-      password: ''
-    };
-    this.handleChangedUsername = this.handleChangedUsername.bind(this);
-    this.handleChangedPassword = this.handleChangedPassword.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.login = authApi.login.bind(this);
-    //localStorage.setItem("loggedInUser", "userfoo");  //TODO: remove this! for testing purposes only!
+      super();
+      this.state = {
+        username: '',
+        password: ''
+      };
+      this.handleChangedUsername = this.handleChangedUsername.bind(this);
+      this.handleChangedPassword = this.handleChangedPassword.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this.login = authApi.login.bind(this);
+      //localStorage.setItem("loggedInUser", "usr1");  //TODO: remove this! for testing purposes only!
+      //localStorage.setItem("loggedInUserRole", "Donor");  //TODO: remove this! for testing purposes only!
   }
 
   handleChangedUsername(event) {
