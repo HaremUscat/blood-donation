@@ -20,7 +20,7 @@ class Login extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
       this.login = authApi.login.bind(this);
       //localStorage.setItem("loggedInUser", "usr1");  //TODO: remove this! for testing purposes only!
-      //localStorage.setItem("loggedInUserRole", "Donor");  //TODO: remove this! for testing purposes only!
+      //localStorage.setItem("loggedInUserRole", "Hospital Personnel");  //TODO: remove this! for testing purposes only!
   }
 
   handleChangedUsername(event) {
