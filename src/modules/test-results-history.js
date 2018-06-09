@@ -12,7 +12,8 @@ class TestResultsHistory extends React.Component {
         this.state = {
             username: localStorage.getItem("loggedInUser"),
             loadedResults: [],
-            selectedResults: []
+            selectedResults: [],
+            noOfDonations: 0
         };
 
         this.noResultsPerPage = 10;
@@ -24,7 +25,7 @@ class TestResultsHistory extends React.Component {
         this.loadResults().then((data) => {
             let results = data.results.default;       //TODO: change this to the next line of code, this one is for testing purposes
             //let results = data.results;
-            this.setState({loadedResults: results, selectedResults: results.slice(0, this.noResultsPerPage)});
+            this.setState({loadedResults: results, selectedResults: results.slice(0, this.noResultsPerPage), noOfDonations: data.noOfDonations});
         });
     }
 
@@ -73,6 +74,18 @@ class TestResultsHistory extends React.Component {
                         {text: "TESTS", reference: "/upload-test-results", extraClasses: 'active-navbar-link'}
                     ]}/>
 
+                    <div className="container">
+                        <div className="row align-text-bottom justify-content-center" style={{paddingTop: '60px'}}>
+                            <div className="col-11">
+                                <p style={{fontSize: '25px', fontWeight: 'lighter', textAlign: 'center'}}>
+                                    Thank you for your contribution!
+                                    <br/>
+                                    You have donated {this.state.noOfDonations} times so far. Keep it up, people need your help!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* Received Results Table */}
                     <div>
                         <div className="container" style={{padding: '0px 10px', marginTop: '60px', marginBottom: '60px'}}>
@@ -83,7 +96,7 @@ class TestResultsHistory extends React.Component {
                                         <tr>
                                             <th>
                                                 <h5>
-                                                    Test Results
+                                                    Test Results History
                                                 </h5>
                                             </th>
                                             <th/>

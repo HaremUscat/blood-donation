@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c3c831a-c183-4b77-b960-fd790517c614" name="Default" comment="Made &quot;EnsureLoggedIn&quot; functional and changed the design of &quot;Register&quot; a bit.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/api/results-api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/test-results-table-body.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/foo-data/foo-test-results.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/modules/test-results-history.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/app.js" afterPath="$PROJECT_DIR$/src/modules/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/dates.js" afterPath="$PROJECT_DIR$/src/utils/dates.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/results-api.js" afterPath="$PROJECT_DIR$/src/api/results-api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/test-results-history.js" afterPath="$PROJECT_DIR$/src/modules/test-results-history.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,33 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test-results-history.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test-results-history.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/modules/test-results-history.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-324">
-              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="foo-test-results.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/foo-data/foo-test-results.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="121" column="17" lean-forward="false" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test-results-table-body.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/test-results-table-body.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+            <state relative-caret-position="135">
+              <caret line="77" column="112" lean-forward="false" selection-start-line="77" selection-start-column="112" selection-end-line="77" selection-end-column="112" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -165,11 +138,11 @@
         <option value="$PROJECT_DIR$/src/modules/login.js" />
         <option value="$PROJECT_DIR$/src/modules/logout.js" />
         <option value="$PROJECT_DIR$/src/modules/app.js" />
-        <option value="$PROJECT_DIR$/src/api/results-api.js" />
         <option value="$PROJECT_DIR$/src/utils/dates.js" />
         <option value="$PROJECT_DIR$/src/components/test-results-table-body.js" />
-        <option value="$PROJECT_DIR$/src/modules/test-results-history.js" />
         <option value="$PROJECT_DIR$/src/foo-data/foo-test-results.js" />
+        <option value="$PROJECT_DIR$/src/api/results-api.js" />
+        <option value="$PROJECT_DIR$/src/modules/test-results-history.js" />
       </list>
     </option>
   </component>
@@ -231,19 +204,13 @@
               <item name="Software Engineering" type="b2602c69:ProjectViewProjectNode" />
               <item name="Software Engineering" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="foo-data" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Software Engineering" type="b2602c69:ProjectViewProjectNode" />
               <item name="Software Engineering" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Software Engineering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Software Engineering" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,7 +282,7 @@
       <workItem from="1528127960029" duration="845000" />
       <workItem from="1528287349435" duration="564000" />
       <workItem from="1528453767743" duration="619000" />
-      <workItem from="1528534258259" duration="7918000" />
+      <workItem from="1528534258259" duration="8317000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed minor bug in app.js.">
       <created>1525636466143</created>
@@ -335,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131236000" />
+    <option name="totallyTimeSpent" value="131635000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -527,13 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/process-request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/box.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -614,30 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/logout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/received-donation-forms.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1376">
@@ -694,14 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/results-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/foo-data/foo-received-requests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -734,31 +662,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/test-results-history.js">
+    <entry file="file://$PROJECT_DIR$/src/foo-data/foo-test-results.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="526">
+          <caret line="109" column="28" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/test-results-table-body.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+        <state relative-caret-position="648">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/foo-data/foo-test-results.js">
+    <entry file="file://$PROJECT_DIR$/src/modules/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="121" column="17" lean-forward="false" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+        <state relative-caret-position="284">
+          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/logout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/results-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/process-request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/test-results-history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="77" column="112" lean-forward="false" selection-start-line="77" selection-start-column="112" selection-end-line="77" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
