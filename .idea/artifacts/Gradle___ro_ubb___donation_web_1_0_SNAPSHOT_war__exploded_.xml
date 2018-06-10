@@ -61,8 +61,13 @@
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.4" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.4" />
           <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Gradle: com.google.maps:google-maps-services:0.1.1" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.0.3.RELEASE" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.3" />
+          <element id="library" level="project" name="Gradle: com.squareup.okhttp:okhttp:2.0.0" />
+          <element id="library" level="project" name="Gradle: joda-time:joda-time:2.4" />
+          <element id="library" level="project" name="Gradle: com.squareup.okio:okio:1.0.0" />
         </element>
       </element>
     </root>

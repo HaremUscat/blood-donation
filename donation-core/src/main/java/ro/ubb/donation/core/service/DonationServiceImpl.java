@@ -122,5 +122,10 @@ public class DonationServiceImpl implements DonationService {
         donation.ifPresent(d-> this.donationRepository.delete(d));
     }
 
+    @Override
+    public List<Donation> findDonationByUsername(String username) {
+        return this.findAll().stream().filter( d -> d.getUser().getUsername().equals( username ) ).collect( Collectors.toList() );
+    }
+
 }
 

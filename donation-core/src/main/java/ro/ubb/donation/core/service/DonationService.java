@@ -28,4 +28,6 @@ public interface DonationService
                             int pulse, int bloodPresure, float weight, String donationBeneficiary );
 
     void deleteDonation(int donationId);
+
+    List<Donation> findDonationByUsername(String username);
 }

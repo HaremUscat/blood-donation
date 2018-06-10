@@ -16,6 +16,11 @@ public class ResultServiceImpl implements ResultService {
     private ResultRepository resultRepository;
 
     @Override
+    public List<Result> findAll() {
+        return resultRepository.findAll();
+    }
+
+    @Override
     public Optional<Result> findResult(int id) {
         return resultRepository.findById(id);
     }

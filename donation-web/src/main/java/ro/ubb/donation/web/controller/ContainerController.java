@@ -62,12 +62,15 @@ public class ContainerController {
         try{
             List<Container> containers = containerService.getContainersByCenterId(centerId);
             if (containerForm.getContainerDto().getComponentType().equals( "Red cells" ))
-                containers = containers.stream().filter( c -> c.getComponentType().equals( containerForm.getContainerDto().getComponentType() ) &&
-                        c.getBloodGroup().equals( containerForm.getContainerDto().getBloodGroup() )  &&
-                        c.getRh().equals( containerForm.getContainerDto().getRh() ))
+                containers = containers.stream()
+                        .filter( c -> c.getComponentType().equals( containerForm.getContainerDto().getComponentType() ) &&
+                                c.getBloodGroup().equals( containerForm.getContainerDto().getBloodGroup() )  &&
+                                c.getRh().equals( containerForm.getContainerDto().getRh() ))
                         .collect( Collectors.toList() );
             else
-                containers = containers.stream().filter( c -> c.getComponentType().equals( containerForm.getContainerDto().getComponentType() ) ).collect( Collectors.toList() );
+                containers = containers.stream()
+                        .filter( c -> c.getComponentType().equals( containerForm.getContainerDto().getComponentType() ) )
+                        .collect( Collectors.toList() );
             containers.sort( Comparator.comparing( Container::getExpirationDate ) );
 
             Integer nrContainers = containerForm.getHowManyToRemove();
