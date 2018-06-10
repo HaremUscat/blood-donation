@@ -38,37 +38,39 @@ public class FindDonorController {
         ClosestDonorResponse closestDonorResponse=null;
 
         if (c.isPresent()) {
-            String origin = c.get().getAddress();
+            String origin = replaceSpaceWithPlus(c.get().getAddress());
             //String origin = "Cluj+Napoca"; the address should be like this
             List<User> users = userService.findAll();
             URL url = null;
             for (User u: users) {
-                String dest = u.getAddress().getHomeAddress();
-                //String dest = "Targu+Mures";
-                try {
-                    url = new URL("https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + dest);
-                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                    conn.setRequestMethod("GET");
-                    String line, outputString = "";
-                    BufferedReader reader = new BufferedReader(
-                            new InputStreamReader(conn.getInputStream()));
-                    while ((line = reader.readLine()) != null) {
-                        outputString += line;
+                if (u.getAddress()!=null) {
+                    String dest = replaceSpaceWithPlus(u.getAddress().getHomeAddress());
+                    //String dest = "Targu+Mures";
+                    try {
+                        url = new URL("https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + dest);
+                        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                        conn.setRequestMethod("GET");
+                        String line, outputString = "";
+                        BufferedReader reader = new BufferedReader(
+                                new InputStreamReader(conn.getInputStream()));
+                        while ((line = reader.readLine()) != null) {
+                            outputString += line;
+                        }
+                        System.out.println(outputString);
+                        DistancePojo capRes = new Gson().fromJson(outputString, DistancePojo.class);
+                        String dist = capRes.getRows()[0].getElements()[0].getDistance().getText();
+
+                        String[] array = dist.split(" ");
+                        float nr = Float.valueOf(array[0]);
+                        results.put(u, nr);
+
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    } catch (ProtocolException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                    System.out.println(outputString);
-                    DistancePojo capRes = new Gson().fromJson(outputString, DistancePojo.class);
-                    String dist = capRes.getRows()[0].getElements()[0].getDistance().getText();
-
-                    String[] array = dist.split(" ");
-                    float nr = Float.valueOf(array[0]);
-                    results.put(u, nr);
-
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (ProtocolException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
                 }
             }
 
@@ -94,6 +96,11 @@ public class FindDonorController {
                     .build();
         }
         return closestDonorResponse;
+    }
+
+    public String replaceSpaceWithPlus(String initial){
+        String fin = initial.replace(" ", "+");
+        return fin;
     }
 
     public Map<User, Float> getClosestUsers(Map<User, Float> users){
