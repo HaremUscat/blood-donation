@@ -44,12 +44,10 @@ class TestResultsHistory extends React.Component {
             return (
                 <div>
                     <Navbar notLoggedIn={false} extraLinks={[
-                        {text: "REQUESTS", reference: "/received-requests", extraClasses: ''},
-                        {text: "DONORS", reference: "/received-donation-forms", extraClasses: ''},
-                        {text: "STOCK", reference: "/our-blood-stock", extraClasses: ''},
-                        {text: "CITY STOCKS", reference: "/city-blood-stocks", extraClasses: ''},
-                        {text: "FIND DONOR", reference: "/find-donor", extraClasses: ''},
-                        {text: "TESTS", reference: "/upload-test-results", extraClasses: 'active-navbar-link'}
+                        {text: "DASHBOARD", reference: "/user-dashboard", extraClasses: ''},
+                        {text: "NEXT DONATION", reference: "/next-donation", extraClasses: ''},
+                        {text: "TEST RESULTS", reference: "/test-results-history", extraClasses: 'active-navbar-link'},
+                        {text: "MY INFORMATION", reference: "/my-info", extraClasses: ''}
                     ]}/>
 
                     {/* No Results Section*/}
