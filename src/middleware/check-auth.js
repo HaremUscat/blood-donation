@@ -15,6 +15,7 @@ import AccessDenied from "../modules/access-denied";
 */
 
 const permissions = {
+    "administrator": ['/admin-dashboard', '/logout'],
     "donor": ['/user-dashboard', '/next-donation', '/my-info', '/test-results-history', '/logout'],
     "doctor": ['/new-request', '/sent-requests', '/patient-blood-need', '/city-blood-stocks', '/logout'],
     "hospital personnel": ['/our-blood-stock', '/find-donor', '/city-blood-stocks', '/received-requests', '/process-request', '/received-donation-forms', '/upload-test-results', '/logout']

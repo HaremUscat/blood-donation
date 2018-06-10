@@ -6,8 +6,10 @@ function redirectToFirstPage() {
         this.props.history.push('/user-dashboard');
     else if (currentRole.toLowerCase() === "doctor")
         this.props.history.push('/sent-requests');
-    else
+    else if ((currentRole.toLowerCase() === "hospital personnel"))
         this.props.history.push('/received-requests');
+    else
+        this.props.history.push('/admin-dashboard');
 }
 
 function login() {

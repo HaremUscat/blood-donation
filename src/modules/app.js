@@ -14,6 +14,7 @@ import ReceivedRequests from "./received-requests";
 import ReceivedDonationForms from "./received-donation-forms";
 import NextDonation from "./next-donation";
 import FindDonor from "./find-donor";
+import AdminDashboard from './admin-dashboard';
 import NewRequest from "./new-request";
 import TestResultsHistory from './test-results-history';
 import {
@@ -47,6 +48,7 @@ class App extends React.Component {
                     <Route path="/our-blood-stock" render={(props) => EnsureCorrectUserLoggedIn(OurStock, "/our-blood-stock", props)}/>
                     <Route path="/upload-test-results" render={(props) => EnsureCorrectUserLoggedIn(UploadTestResults, "/upload-test-results", props)}/>
                     <Route path="/find-donor" render={(props) => EnsureCorrectUserLoggedIn(FindDonor, "/find-donor", props)}/>
+                    <Route path="/admin-dashboard" render={(props) => EnsureCorrectUserLoggedIn(AdminDashboard, "/admin-dashboard", props)}/>
                 </div>
             </BrowserRouter>
         );
