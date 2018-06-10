@@ -20,6 +20,7 @@ public class ResultConverter extends AbstractConverter<Result, ResultDto> implem
                 .appointmentDate( result.getDonation().getAppointment_date().toString() )
                 .illnessInfo( result.getIllnessInfo() )
                 .illnessDiscovered( result.isIllnessDiscovered())
+                .result_pdf(result.getResultPdf())
                 .build();
     }
 }

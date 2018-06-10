@@ -12,4 +12,5 @@ public class ResultDto {
     private String appointmentDate;
     private boolean illnessDiscovered;
     private String illnessInfo;
+    private String result_pdf;
 }

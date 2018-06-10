@@ -12,6 +12,7 @@ import ro.ubb.donation.web.converter.ResultConverter;
 import ro.ubb.donation.web.dto.ResultDto;
 import ro.ubb.donation.web.requests.ResultForm;
 import ro.ubb.donation.web.response.InfoResponse;
+import ro.ubb.donation.web.response.ResultsResponse;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -31,13 +32,18 @@ public class ResultController {
     private UserService userService;
 
     @RequestMapping(value = "/results/{username}", method = RequestMethod.GET)
-    public Set<ResultDto> getAllResultsForUsername(@PathVariable String username){
+    public ResultsResponse getAllResultsForUsername(@PathVariable String username){
         List<Donation> donations = donationService.findDonationByUsername( username );
         donations = donations.stream().filter( d -> d.getResult() != null ).collect(Collectors.toList());
         List<Result> results = new ArrayList<>( );
         donations.forEach( d -> results.add( d.getResult() ) );
 
-        return new HashSet<>( resultConverter.convertModelsToDtos( results ) );
+        return ResultsResponse.builder()
+                .isError(false)
+                .message("These are the results!")
+                .status("success")
+                .results(new HashSet<>( resultConverter.convertModelsToDtos( results )))
+                .build();
     }
 
     @RequestMapping(value = "/results", method = RequestMethod.POST)

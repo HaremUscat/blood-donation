@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 import com.google.gson.Gson;
 import ro.ubb.donation.core.service.UserService;
+import ro.ubb.donation.web.dto.MatchingDonorDto;
 import ro.ubb.donation.web.requests.ClosestDonorRequest;
 import ro.ubb.donation.web.response.ClosestDonorResponse;
 import ro.ubb.donation.web.utils.DistancePojo;
@@ -29,23 +30,24 @@ public class FindDonorController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/closest-donors/{centerID}", method = RequestMethod.POST)
+    @RequestMapping(value = "/matching-donors/{centerID}", method = RequestMethod.POST)
     public ClosestDonorResponse getTheClosestNeighbour(
             @PathVariable final int centerID,
             @RequestBody final ClosestDonorRequest closestDonor) {
         Optional<Center> c = centerService.findCenter(centerID);
         Map<User , Float> results = new HashMap<>();
         ClosestDonorResponse closestDonorResponse=null;
-
+        List<MatchingDonorDto> donorsResponse;
         if (c.isPresent()) {
-            //String origin = c.get().getAddress() + " " +c.get().getCity();
-            String origin = "Cluj+Napoca+Nicolae+Balcescu";
+            String origin = replaceSpaceWithPlus(c.get().getAddress()+ " "+c.get().getCity());
+            //String origin = "Cluj+Napoca"; the address should be like this
             List<User> users = userService.findAll();
             URL url = null;
-            //for (User u: users) {
-                //if(u.getAddress()!=null) {
-                    //String dest = u.getAddress().getHomeAddress() + " " +  u.getAddress().getCity();
-                    String dest = "Targu+Mures";
+
+            for (User u: users) {
+                if (u.getAddress()!=null) {
+                    String dest = replaceSpaceWithPlus(u.getAddress().getCurrentHomeAddress()+" "+u.getAddress().getCurrentCity());
+                    //String dest = "Targu+Mures";
                     try {
                         url = new URL("https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + dest);
                         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -62,7 +64,7 @@ public class FindDonorController {
 
                         String[] array = dist.split(" ");
                         float nr = Float.valueOf(array[0]);
-                        //results.put(u, nr);
+                        results.put(u, nr);
 
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
@@ -72,31 +74,44 @@ public class FindDonorController {
                         e.printStackTrace();
                     }
                 }
-                    //continue;
-            //}
+            }
 
             List<User> closestUsers=results.keySet().stream().filter(p->p.getProfile().getRh().equals(closestDonor.getRh()) && p.getProfile().getBloodType().equals(closestDonor.getBloodType())).collect(Collectors.toList());
+            List<User> toRemove = new ArrayList<>();
             for (User us: results.keySet()){
                 if (!closestUsers.contains(us)){
-                    results.remove(us);
+                    toRemove.add(us);
                 }
             }
+            toRemove.forEach(results::remove);
+
+
             Map<User, Float> usersSorted = this.getClosestUsers(results);
-            closestDonorResponse = getFirstDonors(usersSorted);
-        //}else{
+            donorsResponse = transformDonors(usersSorted);
+
+
+            closestDonorResponse = ClosestDonorResponse.builder()
+                    .isError(false)
+                    .message("List of the closest donors")
+                    .status("Success")
+                    .donors(donorsResponse)
+                    .build();
+
+        }else{
+            donorsResponse = null;
             closestDonorResponse = ClosestDonorResponse.builder()
                     .isError(true)
-                    .message("No such center")
-                    .status("Error")
-                    .user1(null)
-                    .user2(null)
-                    .user3(null)
-                    .distance1("")
-                    .distance2("")
-                    .distance3("")
+                    .message("There are no close donors")
+                    .status("Failure")
+                    .donors(donorsResponse)
                     .build();
-        //}
+        }
         return closestDonorResponse;
+    }
+
+    public String replaceSpaceWithPlus(String initial){
+        String fin = initial.replace(" ", "+");
+        return fin;
     }
 
     public Map<User, Float> getClosestUsers(Map<User, Float> users){
@@ -107,43 +122,20 @@ public class FindDonorController {
         return result;
     }
 
-    public ClosestDonorResponse getFirstDonors(Map<User, Float> users){
-        int i=0;
-        User user1=null;
-        User user2=null;
-        User user3=null;
-        String distance1="";
-        String distance2="";
-        String distance3="";
-
+    public List<MatchingDonorDto> transformDonors(Map<User, Float> users){
+        List<MatchingDonorDto> result = new ArrayList<>();
         for (Map.Entry<User, Float> entry : users.entrySet())
-        {
-            if(i==0){
-                user1 = entry.getKey();
-                distance1 = entry.getValue().toString();
-            }else if(i==1){
-                user2 = entry.getKey();
-                distance2 = entry.getValue().toString();
-            }else{
-                user3 = entry.getKey();
-                distance3 = entry.getValue().toString();
-            }
-            System.out.println(entry.getKey() + "/" + entry.getValue());
+            result.add(MatchingDonorDto.builder()
+                    .firstName(entry.getKey().getProfile().getFirstName())
+                    .lastName(entry.getKey().getProfile().getLastName())
+                    .currentCity(entry.getKey().getAddress().getCurrentCity())
+                    .currentHomeAddress(entry.getKey().getAddress().getCurrentHomeAddress())
+                    .phone(entry.getKey().getProfile().getPhone())
+                    .email(entry.getKey().getProfile().getEmail())
+                    .distance(entry.getValue().toString())
+                    .build());
+        return result;
         }
-
-        ClosestDonorResponse closestDonorResponse = ClosestDonorResponse.builder()
-                .isError(false)
-                .message("List with 3 closest donors")
-                .status("Success")
-                .user1(user1)
-                .user2(user2)
-                .user3(user3)
-                .distance1(distance1)
-                .distance2(distance2)
-                .distance3(distance3)
-                .build();
-        return closestDonorResponse;
-    }
 
 }
 
