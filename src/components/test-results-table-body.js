@@ -17,8 +17,8 @@ class TestResultsTableBody extends React.Component {
     }
 
     downloadPdf(result) {
-        //window.open(result.resultPdf ,'_blank');  //TODO: asta va fi linkul de cloudinary
-        window.open('https://res.cloudinary.com/bloodyfast/image/upload/v1528584706/Lab_1_en_ambebw.pdf' ,'_blank');
+        window.open(result.result_pdf ,'_blank');  //TODO: asta va fi linkul de cloudinary
+        //window.open('https://res.cloudinary.com/bloodyfast/image/upload/v1528584706/Lab_1_en_ambebw.pdf' ,'_blank');
     }
 
     render() {

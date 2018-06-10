@@ -24,7 +24,7 @@ class UploadTestResults extends React.Component {
     }
 
     sendTestResults() {
-        uploadsApi.sendTestResults(this.state);
+        uploadsApi.sendTestResults(this.state).then(() => {window.location.reload();});
     }
 
     handleChangedTextField(event) {
@@ -44,6 +44,7 @@ class UploadTestResults extends React.Component {
             myInfo["illnessDiscovered"] = false;
             this.setState(myInfo);
         }
+        console.log(this.state);
     }
 
     render() {

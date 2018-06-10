@@ -56,4 +56,9 @@ function getDashboardInfo() {
     return axios.get('/dashboard-info/'+localStorage.getItem("loggedInUser"));
 }
 
-module.exports = {register, submitMyInfo, getMyInfo, getDashboardInfo};
+function registerDoctorOrStaff(data){
+    console.log(data);
+    return axios.post('/register/doctor-staff',data);
+}
+
+module.exports = {register, submitMyInfo, getMyInfo, getDashboardInfo, registerDoctorOrStaff};

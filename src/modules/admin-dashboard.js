@@ -17,20 +17,34 @@ class AdminDashboard extends React.Component {
         };
         this.handleChangedTextField = this.handleChangedTextField.bind(this);
         this.handleChangedUserType = this.handleChangedUserType.bind(this);
-        //this.registerDoctorOrStaff = usersApi.registerDoctorOrStaff.bind(this);     //TODO
+        this.logout = this.logout.bind(this);
+        this.registerDoctorOrStaff = usersApi.registerDoctorOrStaff.bind(this);
+        this.handleRegisterDoctorOrStaff = this.handleRegisterDoctorOrStaff.bind(this);
         //this.deleteDoctorOrStaff = usersApi.deleteDoctorOrStaff.bind(this);         //TODO
     }
 
     handleChangedTextField(event) {
-
+        let field = event.target.name;
+        let value = event.target.value;
+        let myInfo = this.state;
+        myInfo[field]=value;
+        this.setState(myInfo);
+        console.log(this.state);
     }
 
     handleChangedUserType(event) {
 
     }
 
-    registerDoctorOrStaff() {
-
+    handleRegisterDoctorOrStaff() {
+        let data = {
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password,
+            centerId: this.state.centerId,
+            userType: this.state.userType
+        };
+        this.registerDoctorOrStaff(data).then(()=>{window.location.reload();});
     }
 
     deleteDoctorOrStaff() {
@@ -38,7 +52,7 @@ class AdminDashboard extends React.Component {
     }
 
     logout() {
-
+        this.props.history.push('/logout');
     }
 
     render() {
@@ -49,16 +63,17 @@ class AdminDashboard extends React.Component {
                         <img src="/images/bloodyfast-logo.jpg" alt="BloodyFast logo" className="logo"/>
 
                         <Form>
-                            <Input type="text" placeholder="Username" onChange={this.handleChangedTextField}/>
-                            <Input type="text" placeholder="Email" onChange={this.handleChangedTextField}/>
-                            <Input type="password" placeholder="Password" onChange={this.handleChangedTextField}/>
-                            <Input type="centerId" placeholder="Center ID (only for center staff users)" onChange={this.handleChangedTextField}/>
+                            <Input type="text" name="username" placeholder="Username" onChange={this.handleChangedTextField}/>
+                            <Input type="text" name="email" placeholder="Email" onChange={this.handleChangedTextField}/>
+                            <Input type="password" name="password" placeholder="Password" onChange={this.handleChangedTextField}/>
+                            <Input type="centerId" name="centerId" placeholder="Center ID (only for center staff users)" onChange={this.handleChangedTextField}/>
+                            <Input type="text" name="userType" placeholder="User type" onChange={this.handleChangedTextField}/>
                         </Form>
 
                         <br/>
                         <br/>
 
-                        <BlockButton color='#ec0a0b' onClick={this.registerDoctorOrStaff} fontFamily="Questrial">REGISTER USER</BlockButton>
+                        <BlockButton color='#ec0a0b' onClick={this.handleRegisterDoctorOrStaff} fontFamily="Questrial">REGISTER USER</BlockButton>
 
                         <BlockButton color='#ec0a0b' onClick={this.deleteDoctorOrStaff} fontFamily="Questrial">REMOVE USER*</BlockButton>
 

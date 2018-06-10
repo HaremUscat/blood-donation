@@ -23,9 +23,9 @@ class TestResultsHistory extends React.Component {
 
     componentWillMount() {
         this.loadResults().then((data) => {
-            let results = data.results.default;       //TODO: change this to the next line of code, this one is for testing purposes
-            //let results = data.results;
-            this.setState({loadedResults: results, selectedResults: results.slice(0, this.noResultsPerPage), noOfDonations: data.noOfDonations});
+            //let results = data.results.default;       //TODO: change this to the next line of code, this one is for testing purposes
+            let results = data.data.results;
+            this.setState({loadedResults: results, selectedResults: results.slice(0, this.noResultsPerPage), noOfDonations: results.length});
         });
     }
 

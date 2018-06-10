@@ -55,7 +55,7 @@ class UploadTestResults extends React.Component {
     findDonors() {
         donationsApi.findDonors.bind(this)(localStorage.getItem("loggedInCenterId"), this.state.bloodGroup, this.state.rh)
             .then((res) => {
-                this.setState({loadedDonors: res.donors});
+                this.setState({loadedDonors: res.data.donors});
             })
     }
 
