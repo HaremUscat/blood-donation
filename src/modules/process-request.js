@@ -52,7 +52,7 @@ class ProcessRequest extends React.Component {
 
                 {/* Request Info */}
                 <div className="container">
-                    <div className="row align-text-bottom justify-content-center" style={{paddingTop: '60px', paddingBottom: '55px'}}>
+                    <div className="row align-text-center justify-content-center" style={{paddingTop: '60px', paddingBottom: '55px'}}>
                         <div className="col-11">
                             <p style={{fontSize: '25px', fontWeight: 'lighter', textAlign: 'center'}}>You are about to process the following request:</p>
                         </div>

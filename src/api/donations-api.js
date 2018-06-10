@@ -50,4 +50,38 @@ function saveRejection(donationFormID, _rejectionReason) {
     // });
 }
 
-module.exports = {submitDonation, getDonationFormInfo, updateDonation, getReceivedForms, saveAppointment, saveRejection};
+function findDonors(centerId, bloodGroup, rh) {
+    //return axios.get('/matching-donors', {centerId: centerId, bloodGroup: bloodGroup, rh: rh});
+    return new Promise((resolve, reject) => {
+        resolve({
+            donors: [
+                {
+                    firstName: 'Cami',
+                    lastName: 'Maze',
+                    currentHomeAddress: 'Str. Liviu Rebreanu, Bl. 15, Ap. 16',
+                    currentCity: 'Cluj-Napoca',
+                    phone: '0734567898',
+                    email: 'cami@gmail.com'
+                },
+                {
+                    firstName: 'Ruth',
+                    lastName: 'Dinu',
+                    currentHomeAddress: 'Str. Liviu Rebreanu, Bl. 5, Ap. 16',
+                    currentCity: 'Cluj-Napoca',
+                    phone: '0734567898',
+                    email: 'ruth@gmail.com'
+                },
+                {
+                    firstName: 'Laura',
+                    lastName: 'Mihai',
+                    currentHomeAddress: 'Str. Liviu Rebreanu, Bl. 3, Ap. 16',
+                    currentCity: 'Cluj-Napoca',
+                    phone: '0734567898',
+                    email: 'laura@gmail.com'
+                }
+            ]
+        });                           //TODO: remove these lines, sample data for front-end testing purposes
+    });
+}
+
+module.exports = {submitDonation, getDonationFormInfo, updateDonation, getReceivedForms, saveAppointment, saveRejection, findDonors};

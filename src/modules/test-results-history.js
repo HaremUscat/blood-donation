@@ -73,7 +73,7 @@ class TestResultsHistory extends React.Component {
                     ]}/>
 
                     <div className="container">
-                        <div className="row align-text-bottom justify-content-center" style={{paddingTop: '60px'}}>
+                        <div className="row align-text-center justify-content-center" style={{paddingTop: '60px'}}>
                             <div className="col-11">
                                 <p style={{fontSize: '25px', fontWeight: 'lighter', textAlign: 'center'}}>
                                     Thank you for your contribution!
