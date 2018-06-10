@@ -43,8 +43,8 @@ public class Main {
 
         Profile p2=profileService.createProfile("f", "l","02-02-2000", "f", "+", "984329", "+", "kdjsk", "98432", "no", "mo", "no");
 
-        User u2 = userService.createUser("user2", "pas2", true, doctor);
-        userService.updateUser(u2.getId(), u2.getUsername(), u2.getPassword(), u2.isLogged(), u2.getRole(), addr2, p2);
+//        User u2 = userService.createUser("user2", "pas2", true, doctor);
+//        userService.updateUser(u2.getId(), u2.getUsername(), u2.getPassword(), u2.isLogged(), u2.getRole(), addr2, p2);
 
         //addressService.deleteAddress(2);
         //profileService.deleteProfile(1);

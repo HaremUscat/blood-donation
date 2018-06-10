@@ -45,6 +45,11 @@ public class User {
         this.role = role;
     }
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "center_id")
+    private Center center;
+
+
     public void removeRole() {
         this.role = null;
     }

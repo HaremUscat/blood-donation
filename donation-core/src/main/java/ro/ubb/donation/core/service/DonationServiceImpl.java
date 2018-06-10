@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ro.ubb.donation.core.model.Donation;
+import ro.ubb.donation.core.model.Result;
 import ro.ubb.donation.core.model.User;
 import ro.ubb.donation.core.repository.DonationRepository;
 
@@ -56,7 +57,7 @@ public class DonationServiceImpl implements DonationService {
             d.setRejectionReason(rejectionReason);
             if(!appointmentDate.equals(""))
                 try{
-                    DateFormat format = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+                    DateFormat format = new SimpleDateFormat("dd-M-yyyy", Locale.ENGLISH);
                     Date date = format.parse(appointmentDate);
                     d.setAppointment_date(date);
                 }catch (Exception ex){
@@ -66,6 +67,19 @@ public class DonationServiceImpl implements DonationService {
         }
         return donation.orElse(null);
     }
+
+    @Override
+    @Transactional
+    public Donation updateDonationResult(int donationId, Result result){
+        Optional<Donation> donation = this.donationRepository.findById(donationId);
+        if(donation.isPresent()){
+            Donation d = donation.get();
+            d.setStatus("CLOSED");
+            d.setResult(result);
+        }
+        return donation.orElse(null);
+    }
+
 
     @Override
     @Transactional

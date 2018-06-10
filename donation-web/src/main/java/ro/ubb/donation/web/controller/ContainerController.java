@@ -99,7 +99,7 @@ public class ContainerController {
     {
         try{
             Optional<Center> center = this.centerService.findCenter(centerId);
-            DateFormat format = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+            DateFormat format = new SimpleDateFormat("dd-M-yyyy", Locale.ENGLISH);
             Date date = format.parse(containerForm.getContainerDto().getExpirationDate());
             center.ifPresent(center1 -> this.containerService.createContainer(date, center.get(),
                     containerForm.getContainerDto().getBloodGroup(),containerForm.getContainerDto().getRh(),containerForm.getContainerDto().getComponentType()));

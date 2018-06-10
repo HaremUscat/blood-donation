@@ -5,15 +5,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ro.ubb.donation.core.model.AuthManager;
+import ro.ubb.donation.core.model.Center;
 import ro.ubb.donation.core.model.Role;
 import ro.ubb.donation.core.model.User;
+import ro.ubb.donation.core.service.CenterService;
 import ro.ubb.donation.core.service.RoleService;
 import ro.ubb.donation.core.service.UserService;
 import ro.ubb.donation.web.converter.UserConverter;
 import ro.ubb.donation.web.dto.UserDto;
 import ro.ubb.donation.web.requests.LoginForm;
+import ro.ubb.donation.web.requests.RegistrationForm;
 import ro.ubb.donation.web.response.AuthenticationResponse;
 
+import javax.swing.text.html.Option;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -31,6 +35,9 @@ public class UserController {
 
     @Autowired
     private UserConverter userConverter;
+
+    @Autowired
+    private CenterService centerService;
 
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
@@ -91,10 +98,16 @@ public class UserController {
         if(user.isPresent()){
             User updatedUser = userService.updateUser(user.get().getId(),user.get().getUsername(),
                     user.get().getPassword(),true,user.get().getRole(), user.get().getAddress(), user.get().getProfile());
+            int centerId;
+            if (user.get().getCenter() != null)
+                centerId = user.get().getCenter().getId();
+            else
+                centerId = 0;
 
             return AuthenticationResponse.builder()
                     .status("Success")
                     .role(roleService.getRoleDescriptionById(user.get().getRole().getId()).orElse(null))
+                    .centerId(centerId)
                     .message("The user is now logged")
                     .isError(false)
                     .userDto(userConverter.convertModelToDto(updatedUser))
@@ -158,7 +171,7 @@ public class UserController {
         }
 
         Optional<Role> role = roleService.getRoleByDescription("Donor");
-        User user = userService.createUser(loginForm.getUsername(), loginForm.getPassword(), false, role.orElse(null));
+        User user = userService.createUser(loginForm.getUsername(), loginForm.getPassword(), false, role.orElse(null), null);
 
         UserDto userDto1 = userConverter.convertModelToDto(user);
 
@@ -197,6 +210,42 @@ public class UserController {
                 .role("")
                 .userDto(null)
                 .message("The user doesn't exist")
+                .build();
+
+    }
+
+    @RequestMapping(value = "/register/doctor-staff", method = RequestMethod.POST)
+    public AuthenticationResponse createDoctorStaff(@RequestBody final RegistrationForm registrationForm) {
+
+        System.out.println("A POST request was made on /register/doctor-staff");
+
+        Optional<User> userOptional = userService.getUser(registrationForm.getUsername());
+
+        if(userOptional.isPresent()) {
+            return AuthenticationResponse.builder()
+                    .status("failure")
+                    .userDto(null)
+                    .message("There already exists a user with this username.")
+                    .role("")
+                    .build();
+        }
+
+        Optional<Role> role = roleService.getRoleByDescription(registrationForm.getUserType());
+
+        Optional<Center> center;
+        User user;
+        center = this.centerService.findCenter(registrationForm.getCenterId());
+        if(center.isPresent())
+            user = userService.createUser(registrationForm.getUsername(), registrationForm.getPassword(), false, role.orElse(null), center.get());
+        else
+            user = userService.createUser(registrationForm.getUsername(), registrationForm.getPassword(), false, role.orElse(null), null);
+
+        UserDto userDto1 = userConverter.convertModelToDto(user);
+        return AuthenticationResponse.builder()
+                .status("success")
+                .role("Donor")
+                .userDto(userDto1)
+                .message("The user was successfully created")
                 .build();
 
     }

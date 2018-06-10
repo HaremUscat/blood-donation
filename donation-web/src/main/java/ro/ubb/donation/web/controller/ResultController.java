@@ -1,21 +1,19 @@
 package ro.ubb.donation.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ro.ubb.donation.core.model.Donation;
 import ro.ubb.donation.core.model.Result;
+import ro.ubb.donation.core.model.User;
 import ro.ubb.donation.core.service.DonationService;
 import ro.ubb.donation.core.service.ResultService;
+import ro.ubb.donation.core.service.UserService;
 import ro.ubb.donation.web.converter.ResultConverter;
 import ro.ubb.donation.web.dto.ResultDto;
+import ro.ubb.donation.web.requests.ResultForm;
+import ro.ubb.donation.web.response.InfoResponse;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
@@ -29,6 +27,9 @@ public class ResultController {
     @Autowired
     private ResultService resultService;
 
+    @Autowired
+    private UserService userService;
+
     @RequestMapping(value = "/results/{username}", method = RequestMethod.GET)
     public Set<ResultDto> getAllResultsForUsername(@PathVariable String username){
         List<Donation> donations = donationService.findDonationByUsername( username );
@@ -37,5 +38,24 @@ public class ResultController {
         donations.forEach( d -> results.add( d.getResult() ) );
 
         return new HashSet<>( resultConverter.convertModelsToDtos( results ) );
+    }
+
+    @RequestMapping(value = "/results", method = RequestMethod.POST)
+    public InfoResponse createResult(@RequestBody ResultForm resultForm)
+    {
+        Optional<User> userOptional = this.userService.findByCNP(resultForm.getCnp());
+        if(userOptional.isPresent()){
+            User user = userOptional.get();
+            Optional<Donation> donationOptional = this.donationService.findDonationByUser(user);
+            if(donationOptional.isPresent()){
+                Donation donation = donationOptional.get();
+                Result result = this.resultService.createResult(resultForm.isIllnessDiscovered(), resultForm.getIllnessInfo(),resultForm.getUploadedFileUrl());
+
+                this.donationService.updateDonationResult(donation.getDonation_id(), result);
+                return InfoResponse.builder().isError(false).message("Result was added successfully").status("success").build();
+            }
+            else return InfoResponse.builder().isError(true).message("There is no donation for this user!").status("error").build();
+        }
+        else return InfoResponse.builder().isError(true).message("There is no user with that CNP").status("error").build();
     }
 }

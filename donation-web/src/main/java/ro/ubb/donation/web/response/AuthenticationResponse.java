@@ -14,4 +14,5 @@ public class AuthenticationResponse {
     private UserDto userDto;
     private String role;
     private String message;
+    private int centerId;
 }

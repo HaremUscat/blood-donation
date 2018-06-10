@@ -1,6 +1,7 @@
 package ro.ubb.donation.core.service;
 
 import ro.ubb.donation.core.model.Donation;
+import ro.ubb.donation.core.model.Result;
 import ro.ubb.donation.core.model.User;
 
 import java.util.Date;
@@ -30,4 +31,6 @@ public interface DonationService
     void deleteDonation(int donationId);
 
     List<Donation> findDonationByUsername(String username);
+
+    Donation updateDonationResult(int donationId, Result result);
 }

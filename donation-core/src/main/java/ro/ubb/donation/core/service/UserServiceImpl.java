@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public User createUser(String username, String password, boolean logged, Role role) {
+    public User createUser(String username, String password, boolean logged, Role role, Center center) {
         log.trace("createUser: username={}, password={}, logged={}, role={}",
                 username, password, logged, role);
 
@@ -74,6 +74,7 @@ public class UserServiceImpl implements UserService {
                 .password(AuthManager.encrypt( password ))
                 .logged(logged)
                 .role(role)
+                .center(center)
                 .build();
         user = userRepository.save(user);
         log.trace("createUser: user={}", user);
@@ -100,6 +101,12 @@ public class UserServiceImpl implements UserService {
             return Optional.empty();
 
         return Optional.ofNullable(users.get(0));
+    }
+
+    @Override
+    public Optional<User> findByCNP(String cnp){
+        List<User> users = userRepository.findAll().stream().filter(u->u.getProfile()!=null).collect(Collectors.toList());
+        return users.stream().filter(u-> u.getProfile().getCnp().equals(cnp)).findFirst();
     }
 
 }
