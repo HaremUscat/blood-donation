@@ -28,7 +28,7 @@ function uploadToCloudinary (files) {
 }
 
 function sendTestResults(results) {
-    axios.post('/results', results);
+    return axios.post('/results', results);
     //alert(JSON.stringify(results));     //TODO: remove this shit
 }
 

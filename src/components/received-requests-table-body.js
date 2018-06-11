@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "../components/button";
+import {printBool} from "../utils/bools";
 
 class ReceivedRequestsTableBody extends React.Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class ReceivedRequestsTableBody extends React.Component {
                 <tr key={request.id}>
                     <td>
                         <div>
-                            <h5 style={{color: '#ec0a0b'}}>For: {request.beneficiaryName}, active donor - {request.activeDonor}</h5>
+                            <h5 style={{color: '#ec0a0b'}}>For: {request.beneficiaryName}, active donor - {printBool(request.activeDonor)}</h5>
                             <h5 style={{fontWeight: 'lighter', fontSize: '20px'}}>Needed at: {request.locationHospital}</h5>
                             <h6 style={{fontWeight: 'lighter'}}>Blood group: {request.bloodGroup}</h6>
                             <h6 style={{fontWeight: 'lighter'}}>Rh: {request.rh}</h6>

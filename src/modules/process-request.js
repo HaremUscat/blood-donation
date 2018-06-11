@@ -80,7 +80,7 @@ class ProcessRequest extends React.Component {
                 <div className="container">
                     <div className="row align-items-center" style={{minHeight: '40vh', paddingTop: '40px', paddingBottom: '40px'}}>
                         <Box image='/images/blood_bags.jpg' title='Step 1. Diminish the Stock'>
-                            Open <a href="/our-stock" target="_blank">"Stock" in a new tab</a> and remove the blood container(-s).
+                            Open <a href="/our-blood-stock" target="_blank">"Stock" in a new tab</a> and remove the blood container(-s).
                             <br/>
                             Not enough blood? Find the closest compatible donor on the <a href="/find-donor">"Find donor" page</a> and process this request at a later time.
                         </Box>
